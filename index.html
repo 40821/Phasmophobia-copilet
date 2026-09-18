@@ -285,11 +285,11 @@ body::before{
 /* ============================================================
    图鉴页（鬼魂类型 + 详情）
    ============================================================ */
-.ghost-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 8px;align-content:start}
+.ghost-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px 16px;align-content:start}
 .ghost-item{
   appearance:none;border:0;background:transparent;cursor:pointer;text-align:left;
-  font-family:"Ma Shan Zheng","Kaiti SC",serif;font-size:22px;color:var(--ink);
-  padding:2px 5px;border-radius:4px;position:relative;white-space:nowrap;
+  font-family:"Ma Shan Zheng","Kaiti SC",serif;font-size:27px;color:var(--ink);
+  padding:5px 9px;border-radius:4px;position:relative;white-space:nowrap;
 }
 .ghost-item:hover{color:var(--red-deep)}
 .ghost-item.sel{color:var(--red-deep)}
@@ -519,6 +519,8 @@ body.modal-open{overflow:hidden}
   .counter b{font-size:17px}
   .ghost-grid{gap:6px 12px}
   .ghost-name{font-size:26px}
+  .ghost-list{gap:6px 12px}
+  .ghost-item{font-size:26px}
   .legend{margin-top:8px}
   .ink-btn{margin-top:12px;padding:6px 16px}
 
@@ -574,6 +576,7 @@ body.modal-open{overflow:hidden}
   .tier-row{gap:4px;margin-bottom:6px}
   .ev-row{padding:5px 9px}
   .ghost-name{font-size:25px}
+  .ghost-item{font-size:25px}
   .media-item{padding:3px 8px}
   .map-grid{gap:5px}
   .map-card img{height:70px}
@@ -609,7 +612,7 @@ body.modal-open{overflow:hidden}
   .ev-meta small{font-size:11.5px;line-height:1.45}
   .counter{margin:2px 0 10px;font-size:13px}
   .legend{margin-top:10px;font-size:11.5px}
-  .ghost-item{font-size:19px}
+  .ghost-item{font-size:22px}
   .item-name{font-size:17px}
   .tier-row{gap:6px}
   .tier-card{padding:7px 8px}
