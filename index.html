@@ -1,0 +1,1951 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>恐鬼症 · 证据推鬼助手</title>
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;500;600;700&display=swap">
+<style>
+/* ============================================================
+   设计令牌
+   ============================================================ */
+:root{
+  --ink:#2e2419;
+  --ink-soft:#4a3c2a;
+  --pencil:#8a7a5f;
+  --red:#a63b2a;
+  --red-deep:#8c2f20;
+  --paper-1:#efe3c6;
+  --paper-2:#e6d7b4;
+  --paper-3:#ddcba4;
+  --paper-dark:#d6c49c;
+  --gold:#c9a15f;
+  --cream:#e8dcc0;
+  --bg-0:#06080c;
+  --bg-1:#0c0f16;
+  --noise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+}
+
+/* ============================================================
+   基础
+   ============================================================ */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Noto Serif SC","Songti SC","SimSun","STSong",serif;
+  background:var(--bg-0);
+  color:var(--ink);
+  min-height:100vh;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* 百叶窗暗室背景 */
+body::before{
+  content:"";position:fixed;inset:0;z-index:-2;
+  background:
+    radial-gradient(110% 70% at 50% -8%, rgba(150,170,210,.14), transparent 55%),
+    radial-gradient(140% 130% at 50% 45%, transparent 52%, rgba(0,0,0,.62) 100%),
+    repeating-linear-gradient(180deg, rgba(174,188,212,.055) 0 2px, rgba(4,6,10,.94) 2px 10px),
+    linear-gradient(180deg,#0b0e15 0%,#07090e 55%,#05070a 100%);
+}
+/* 轻微胶片噪点 */
+.grain{
+  position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+  background:var(--noise);background-size:240px 240px;
+}
+
+/* ============================================================
+   顶部固定 Dock 菜单
+   ============================================================ */
+.dockbar{
+  position:fixed;top:0;left:0;right:0;z-index:80;
+  padding:10px 14px;
+  background:linear-gradient(180deg, rgba(6,8,12,.94), rgba(9,11,18,.8));
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(232,220,192,.12);
+  box-shadow:0 10px 30px rgba(0,0,0,.45);
+}
+.dock{
+  display:flex;justify-content:center;gap:5px;max-width:1320px;margin:0 auto;
+}
+.dock .tab{
+  appearance:none;border:0;cursor:pointer;
+  font-family:"Noto Serif SC","Songti SC",serif;
+  font-size:14px;letter-spacing:2px;color:rgba(232,220,192,.62);
+  background:rgba(232,220,192,.05);
+  border:1px solid rgba(232,220,192,.12);
+  padding:7px 18px;border-radius:16px;white-space:nowrap;
+  transition:color .18s ease,background .18s ease,border-color .18s ease;
+}
+.dock .tab:hover{color:#f3e9d2;background:rgba(232,220,192,.12)}
+.dock .tab.active{
+  color:#2e2419;background:linear-gradient(160deg,var(--paper-1),var(--paper-3));
+  border-color:rgba(232,220,192,.4);
+  box-shadow:0 2px 10px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.5);
+}
+.topbar{max-width:1320px;margin:0 auto;padding:86px 22px 6px}
+.brand{
+  display:flex;align-items:baseline;gap:12px;margin-bottom:10px;
+}
+.brand .zh{
+  font-family:"Ma Shan Zheng","Kaiti SC","KaiTi","STKaiti",serif;
+  font-size:30px;color:var(--cream);letter-spacing:2px;
+  text-shadow:0 2px 8px rgba(0,0,0,.7);
+}
+.brand .en{
+  font-size:12px;letter-spacing:3px;color:rgba(232,220,192,.45);
+  text-transform:uppercase;
+}
+
+/* ============================================================
+   笔记本
+   ============================================================ */
+.stage{max-width:1320px;margin:22px auto 0;padding:0 22px}
+.book{
+  display:grid;grid-template-columns:minmax(0,1fr) 30px minmax(0,1fr);
+  border-radius:12px;
+  box-shadow:0 30px 80px rgba(0,0,0,.65),0 6px 22px rgba(0,0,0,.5);
+  transform:rotate(-.35deg);
+  transition:transform .3s ease;
+}
+.book:hover{transform:rotate(0deg)}
+.spine{
+  background:
+    repeating-linear-gradient(90deg, rgba(0,0,0,.3) 0 2px, transparent 2px 13px),
+    linear-gradient(180deg,#3b2f1e 0%,#241a0e 100%);
+  box-shadow:0 0 20px rgba(0,0,0,.55);
+  position:relative;
+}
+.spine::after{
+  content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;transform:translateX(-50%);
+  background:rgba(0,0,0,.5);
+}
+
+.page{
+  position:relative;
+  background:
+    radial-gradient(130% 100% at 15% 0%, rgba(158,124,60,.12), transparent 55%),
+    radial-gradient(120% 90% at 88% 100%, rgba(120,90,40,.12), transparent 55%),
+    linear-gradient(160deg,var(--paper-1),var(--paper-2) 55%,var(--paper-3));
+  padding:38px 44px 34px;
+  min-height:620px;
+}
+.page::before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.4;mix-blend-mode:multiply;
+  background:var(--noise);background-size:240px 240px;border-radius:inherit;
+}
+.page-left{border-radius:12px 0 0 12px;box-shadow:inset -16px 0 22px -14px rgba(70,45,10,.42),inset 0 1px 0 rgba(255,255,255,.45)}
+.page-right{border-radius:0 12px 12px 0;box-shadow:inset 16px 0 22px -14px rgba(70,45,10,.42),inset 0 1px 0 rgba(255,255,255,.45)}
+.page-num{
+  position:absolute;bottom:14px;font-family:"Ma Shan Zheng","Kaiti SC",serif;
+  font-size:15px;color:var(--pencil);opacity:.8;
+}
+.page-left .page-num{left:22px}
+.page-right .page-num{right:22px}
+
+/* 页面标题 */
+.page-title{
+  font-family:"Ma Shan Zheng","Kaiti SC","KaiTi",serif;
+  font-size:34px;color:var(--ink);letter-spacing:4px;position:relative;display:inline-block;
+}
+.page-title::after{
+  content:"";position:absolute;left:0;right:-14px;bottom:-6px;height:3px;
+  background:rgba(166,59,42,.55);transform:rotate(-1deg);border-radius:2px;
+}
+.page-title.small{font-size:26px}
+.pencil-note{
+  font-size:13px;color:var(--ink-soft);margin:14px 0 18px;letter-spacing:1px;opacity:.85;
+}
+.hand-note{
+  font-family:"Ma Shan Zheng","Kaiti SC",serif;font-size:15px;color:var(--red-deep);
+}
+
+/* ============================================================
+   左页：证据清单
+   ============================================================ */
+.ev-list{display:flex;flex-direction:column;gap:10px}
+.ev-row{
+  display:flex;align-items:flex-start;gap:12px;cursor:pointer;
+  padding:9px 12px;border-radius:8px;border:1px solid transparent;
+  transition:background .15s ease,border-color .15s ease;
+  user-select:none;
+}
+.ev-row:hover{background:rgba(70,45,10,.06);border-color:rgba(70,45,10,.14)}
+.ev-row.checked{
+  background:linear-gradient(90deg, rgba(255,214,110,.3), rgba(255,214,110,.04) 75%);
+  border-color:rgba(166,59,42,.28);
+}
+.ev-row.struck{
+  background:rgba(70,45,10,.045);
+  border-color:rgba(46,36,26,.12);
+  opacity:.62;
+}
+.ev-row.struck .ev-meta b, .ev-row.struck .ev-meta small{
+  text-decoration:line-through;text-decoration-thickness:1.5px;
+  text-decoration-color:rgba(166,59,42,.7);color:rgba(46,36,26,.5);
+}
+.ev-row.struck .ev-icon{opacity:.28;color:#4a3f2e}
+.ev-row.struck .box{border-color:rgba(46,36,26,.4);background:rgba(46,36,26,.08)}
+.ev-row.struck .box svg{opacity:1;transform:scale(1);stroke:#5a4f3c}
+.ev-row input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.box{
+  flex:none;width:21px;height:21px;margin-top:2px;border:2px solid rgba(46,36,26,.55);
+  border-radius:4px;position:relative;background:rgba(255,255,255,.25);
+  box-shadow:inset 0 1px 2px rgba(0,0,0,.12);
+}
+.ev-row.checked .box{border-color:var(--red)}
+.box svg{position:absolute;inset:0;margin:auto;opacity:0;transform:scale(.5);transition:opacity .12s ease,transform .12s ease}
+.ev-row.checked .box svg{opacity:1;transform:scale(1)}
+.ev-icon{flex:none;width:34px;height:34px;margin-top:-2px;color:var(--ink-soft)}
+.ev-icon svg{width:100%;height:100%}
+.ev-row.checked .ev-icon{color:var(--ink)}
+.ev-meta{display:flex;flex-direction:column;gap:2px}
+.ev-meta b{font-size:17px;font-weight:600;letter-spacing:1px;color:var(--ink)}
+.ev-meta small{font-size:12.5px;line-height:1.55;color:var(--ink-soft);opacity:.88}
+.ink-btn{
+  appearance:none;cursor:pointer;font-family:"Noto Serif SC","Songti SC",serif;
+  font-size:14px;letter-spacing:2px;color:var(--ink);
+  background:rgba(255,255,255,.3);border:1.5px solid rgba(46,36,26,.55);
+  border-radius:7px;padding:7px 18px;margin-top:20px;
+  transition:background .15s ease,transform .15s ease;
+}
+.ink-btn:hover{background:rgba(46,36,26,.12)}
+.ink-btn:active{transform:translateY(1px)}
+
+/* ============================================================
+   右页：鬼魂候选
+   ============================================================ */
+.counter{
+  display:inline-flex;align-items:baseline;gap:8px;margin:2px 0 16px;
+  font-size:14px;color:var(--ink-soft);
+}
+.counter b{font-size:19px;color:var(--red-deep);font-weight:700}
+.counter .excl{font-size:12.5px;color:var(--pencil)}
+.solo-note{margin-left:auto;font-family:"Ma Shan Zheng","Kaiti SC",serif;font-size:16px;color:var(--red-deep);transform:rotate(-2deg)}
+.ghost-grid{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:6px 10px;align-content:start;
+}
+.ghost-name{
+  appearance:none;border:0;background:transparent;cursor:pointer;text-align:left;
+  font-family:"Ma Shan Zheng","Kaiti SC","KaiTi",serif;
+  font-size:24px;letter-spacing:1px;color:var(--ink);
+  padding:2px 6px;border-radius:4px;position:relative;white-space:nowrap;
+  transition:opacity .2s ease,color .2s ease,transform .12s ease;
+}
+.ghost-name:hover{color:var(--red-deep);transform:translateX(2px)}
+.ghost-name.no{opacity:.16;color:#4a3f2e;cursor:default}
+.ghost-name.no:hover{color:#4a3f2e;transform:none}
+.ghost-name.sole::after{
+  content:"";position:absolute;left:50%;top:50%;width:118%;height:158%;
+  transform:translate(-50%,-50%) rotate(-4deg);pointer-events:none;
+  border:2px solid rgba(166,59,42,.8);border-radius:50% 46% 54% 48%;
+}
+.legend{margin-top:16px;font-size:12px;color:var(--pencil);letter-spacing:1px}
+.legend i{font-style:normal;color:var(--ink)}
+.warn-box{
+  margin-top:16px;padding:10px 14px;border:1.5px dashed rgba(166,59,42,.55);
+  border-radius:8px;background:rgba(166,59,42,.06);
+  font-size:13.5px;color:var(--red-deep);line-height:1.6;
+}
+
+/* ============================================================
+   空白页
+   ============================================================ */
+.blank{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center}
+.blank .b-hand{font-family:"Ma Shan Zheng","Kaiti SC",serif;font-size:30px;color:var(--pencil);opacity:.75}
+.blank .b-note{font-size:13px;color:var(--ink-soft);opacity:.6;letter-spacing:2px}
+
+/* ============================================================
+   主页（调查员手册）
+   ============================================================ */
+.manual p{font-size:14.5px;line-height:1.85;color:var(--ink);margin-bottom:14px;text-align:justify}
+.manual .hl{color:var(--red-deep);font-weight:600}
+.manual .sub{font-family:"Ma Shan Zheng","Kaiti SC",serif;font-size:22px;margin:8px 0 14px;color:var(--ink)}
+.ev-quick{display:flex;flex-direction:column;gap:9px}
+.ev-q{display:flex;align-items:center;gap:11px;padding:7px 10px;border-radius:7px;background:rgba(70,45,10,.05)}
+.ev-q .ev-icon{width:28px;height:28px;flex:none;color:var(--ink-soft)}
+.ev-q b{font-size:15px;font-weight:600}
+.ev-q small{font-size:12px;color:var(--ink-soft);line-height:1.5}
+.hunt-warn{
+  margin-top:16px;padding:11px 14px;border-left:4px solid var(--red);
+  background:rgba(166,59,42,.08);font-size:13px;line-height:1.7;color:var(--red-deep);
+}
+
+/* ============================================================
+   图鉴页（鬼魂类型 + 详情）
+   ============================================================ */
+.ghost-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 8px;align-content:start}
+.ghost-item{
+  appearance:none;border:0;background:transparent;cursor:pointer;text-align:left;
+  font-family:"Ma Shan Zheng","Kaiti SC",serif;font-size:22px;color:var(--ink);
+  padding:2px 5px;border-radius:4px;position:relative;white-space:nowrap;
+}
+.ghost-item:hover{color:var(--red-deep)}
+.ghost-item.sel{color:var(--red-deep)}
+.ghost-item.sel::after{
+  content:"";position:absolute;left:4px;right:2px;bottom:0;height:2px;
+  background:var(--red);transform:rotate(-1deg);border-radius:2px;
+}
+.detail{display:flex;flex-direction:column;gap:14px}
+.d-name{
+  font-family:"Ma Shan Zheng","Kaiti SC",serif;font-size:42px;color:var(--ink);letter-spacing:3px;
+  display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+}
+.d-name span{font-family:"Noto Serif SC",serif;font-size:14px;letter-spacing:2px;color:var(--pencil)}
+.d-stats{display:grid;grid-template-columns:1fr;gap:7px;padding:11px 14px;background:rgba(70,45,10,.06);border-radius:8px}
+.d-stats > div{display:flex;gap:10px;font-size:13.5px;line-height:1.6}
+.d-stats dt{flex:none;width:76px;color:var(--pencil)}
+.d-stats dd{color:var(--ink)}
+.d-block h4{
+  font-size:14px;color:var(--red-deep);letter-spacing:3px;margin-bottom:5px;position:relative;padding-left:12px;
+}
+.d-block h4::before{content:"";position:absolute;left:0;top:2px;bottom:2px;width:3px;background:var(--red);border-radius:2px;transform:rotate(-2deg)}
+.d-block p{font-size:14px;line-height:1.8;color:var(--ink);text-align:justify}
+.ev-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.ev-chip{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:13px;letter-spacing:1px;color:var(--ink);
+  border:1.5px solid rgba(46,36,26,.4);border-radius:20px;padding:3px 11px 3px 7px;
+  background:rgba(255,255,255,.3);
+}
+.ev-chip svg{width:15px;height:15px;color:var(--red-deep)}
+.d-note{
+  margin-top:6px;font-size:12.5px;color:var(--red-deep);line-height:1.6;
+  padding:8px 11px;border:1.5px dashed rgba(166,59,42,.5);border-radius:7px;background:rgba(166,59,42,.05);
+}
+
+
+/* ============================================================
+   物品页（道具一览 + 详情）
+   ============================================================ */
+.item-list{display:flex;flex-direction:column;gap:4px}
+.item-name{
+  appearance:none;border:0;background:transparent;cursor:pointer;text-align:left;
+  font-family:"Ma Shan Zheng","Kaiti SC",serif;font-size:20px;color:var(--ink);
+  padding:3px 6px;border-radius:5px;position:relative;white-space:normal;line-height:1.4;
+}
+.item-name small{font-family:"Noto Serif SC",serif;font-size:12px;color:var(--pencil);letter-spacing:1px;margin-left:6px}
+.item-name:hover{color:var(--red-deep)}
+.item-name.on{color:var(--red-deep);background:rgba(166,59,42,.07)}
+.item-name.on::after{content:"";position:absolute;left:4px;right:2px;bottom:1px;height:2px;background:var(--red);transform:rotate(-1deg);border-radius:2px}
+.item-img{
+  width:100%;max-width:760px;margin:6px auto 14px;display:block;border-radius:10px;
+  border:1.5px solid rgba(70,45,10,.28);box-shadow:0 6px 16px -8px rgba(0,0,0,.45);background:#fff;
+}
+.tier-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:14px}
+.tier-card{
+  display:flex;flex-direction:column;gap:6px;padding:10px 12px;border-radius:8px;
+  background:rgba(70,45,10,.06);border-left:3px solid rgba(166,59,42,.55);
+}
+.tier-card h4{font-size:14px;color:var(--red-deep);letter-spacing:1px;font-weight:600}
+.tier-card p{font-size:12.5px;line-height:1.7;color:var(--ink);text-align:justify}
+.card-grid{display:flex;flex-wrap:wrap;gap:10px}
+.card-cell{flex:0 0 calc(25% - 8px);min-width:86px;background:rgba(255,255,255,.38);border:1.5px solid rgba(46,36,26,.22);border-radius:8px;padding:7px 6px 8px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:2px}
+.card-cell img{width:100%;height:118px;object-fit:contain;border-radius:4px}
+.card-cell b{font-size:12px;color:var(--ink)}
+.card-cell i{font-size:10px;color:var(--ink-3);font-style:normal;letter-spacing:.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.card-cell span{font-size:10.5px;line-height:1.4;color:var(--ink-2)}
+@media (max-width:700px){.card-cell{flex:0 0 calc(33.33% - 7px)}.card-cell img{height:104px}}
+.red{color:var(--red-deep);font-weight:600}
+.item-note{
+  font-size:13.5px;line-height:1.9;color:var(--ink);text-align:justify;
+  padding:12px 14px;border:1.5px dashed rgba(166,59,42,.45);border-radius:8px;
+  background:rgba(166,59,42,.05);
+}
+.item-note h4{font-size:14px;color:var(--red-deep);letter-spacing:2px;margin-bottom:6px;font-weight:600}
+.item-note p{margin-top:5px}
+
+/* ============================================================
+   页脚
+   ============================================================ */
+.foot{
+  max-width:1320px;margin:34px auto 0;padding:0 22px 40px;text-align:center;
+  font-size:12px;color:rgba(232,220,192,.4);letter-spacing:1px;line-height:1.9;
+}
+
+/* ============================================================
+   弹窗（证据页点鬼名 → 全部特性）
+   ============================================================ */
+[hidden]{display:none!important}
+.modal-overlay{position:fixed;inset:0;z-index:90;background:rgba(3,5,9,.74);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;transition:opacity .18s ease}
+.modal-overlay.show{opacity:1}
+.modal-paper{position:relative;width:min(760px,100%);max-height:88vh;overflow:auto;border-radius:12px;background:radial-gradient(130% 100% at 15% 0%,rgba(158,124,60,.12),transparent 55%),radial-gradient(120% 90% at 88% 100%,rgba(120,90,40,.12),transparent 55%),linear-gradient(160deg,var(--paper-1),var(--paper-2) 60%,var(--paper-3));box-shadow:0 30px 90px rgba(0,0,0,.75);padding:36px 40px 32px;transform:translateY(12px);transition:transform .18s ease}
+.modal-overlay.show .modal-paper{transform:none}
+.modal-paper::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.4;mix-blend-mode:multiply;background:var(--noise);background-size:240px 240px;border-radius:inherit}
+.modal-body{position:relative;display:flex;flex-direction:column;gap:14px}
+.modal-close{position:absolute;top:12px;right:14px;z-index:2;width:34px;height:34px;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(46,36,26,.5);border-radius:50%;background:rgba(255,255,255,.3);color:var(--ink);cursor:pointer;transition:background .15s ease}
+.modal-close:hover{background:rgba(46,36,26,.12)}
+body.modal-open{overflow:hidden}
+.d-desc{font-size:14px;line-height:1.85;color:var(--ink-soft);text-align:justify;border-left:3px solid rgba(166,59,42,.5);padding-left:12px}
+.d-list{list-style:none;margin:2px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
+.d-list li{
+  position:relative;padding-left:16px;font-size:13.5px;line-height:1.7;
+  color:var(--ink);text-align:justify;
+}
+.d-list li::before{
+  content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;
+  background:var(--red-deep);border-radius:50% 45% 55% 50%;transform:rotate(18deg);
+  box-shadow:0 0 0 2px rgba(166,59,42,.18);
+}
+.d-block .d-list{margin-top:2px}
+
+/* ============================================================
+   响应式
+   ============================================================ */
+@media (max-width:900px){
+  .dockbar{padding:8px 8px}
+  .dock{justify-content:flex-start;overflow-x:auto;scrollbar-width:none}
+  .dock::-webkit-scrollbar{display:none}
+  .dock .tab{font-size:13px;letter-spacing:1px;padding:7px 13px;flex:none}
+  .topbar{padding:72px 10px 2px}
+  .book{grid-template-columns:minmax(0,1fr)}
+  .spine{display:none}
+  .page{border-radius:0;min-height:0;padding:24px 20px 22px}
+  .page-left{border-radius:12px 12px 0 0;box-shadow:inset 0 -14px 22px -16px rgba(70,45,10,.4)}
+  .page-right{border-radius:0 0 12px 12px;box-shadow:inset 0 14px 22px -16px rgba(70,45,10,.4)}
+  .ghost-grid,.ghost-list{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .ghost-name{font-size:21px}
+  .brand .zh{font-size:26px}
+  .book{transform:none}
+  .stage{margin:10px auto 0;padding:0 10px}
+  .page-title{font-size:27px}
+  .page-title.small{font-size:22px}
+  .pencil-note{margin:10px 0 12px}
+  .ev-row{padding:7px 9px}
+  .ev-meta b{font-size:15px}
+  .ev-meta small{font-size:11.5px;line-height:1.45}
+  .counter{margin:2px 0 10px;font-size:13px}
+  .legend{margin-top:10px;font-size:11.5px}
+  .ghost-item{font-size:19px}
+  .item-name{font-size:17px}
+  .tier-row{gap:6px}
+  .tier-card{padding:7px 8px}
+  .tier-card h4{font-size:12px}
+  .tier-card p{font-size:11px;line-height:1.6}
+  .item-note{font-size:12.5px;line-height:1.8}
+  .d-name{font-size:34px}
+  .d-stats{padding:9px 11px}
+  .d-stats > div{font-size:12.5px}
+  .d-block p{font-size:13px;line-height:1.75}
+  .d-desc{font-size:13px}
+  .d-list li{font-size:12.5px}
+  .ink-btn{padding:6px 15px;margin-top:14px}
+  .modal-paper{padding:28px 22px 24px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="dockbar">
+  <nav class="dock" id="tabs" aria-label="案件笔记本页签">
+    <button class="tab" data-route="home">主页</button>
+    <button class="tab" data-route="items">物品</button>
+    <button class="tab" data-route="cursed">诅咒道具</button>
+    <button class="tab" data-route="media">媒体</button>
+    <button class="tab" data-route="evidence">证据</button>
+    <button class="tab" data-route="ghost">鬼魂</button>
+  </nav>
+</div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="zh">调查员日志</span>
+    <span class="en">Phasmophobia · Ghost Evidence Identifier</span>
+  </div>
+</header>
+
+<main class="stage">
+  <div class="book" id="book">
+    <section class="page page-left" id="pageLeft"></section>
+    <div class="spine" aria-hidden="true"></div>
+    <section class="page page-right" id="pageRight"></section>
+  </div>
+</main>
+
+<div class="modal-overlay" id="ghostModal" hidden>
+  <div class="modal-paper">
+    <button class="modal-close" data-close-modal="1" aria-label="关闭">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="modal-body"></div>
+  </div>
+</div>
+
+<footer class="foot">
+  《恐鬼症》(Phasmophobia) 由 Kinetic Games 开发，本工具为玩家自制的非官方参考页。<br>
+  鬼魂特征与证据组合整理自玩家速查表；官方简介摘自游戏内图鉴（部分新鬼条目为官方英文文本翻译）。
+</footer>
+
+<script>
+"use strict";
+/* ============================================================
+   数据：七种证据
+   ============================================================ */
+const EVIDENCE = [
+  {id:"emf5",    name:"EMF 5级",  desc:"使用EMF读数器获得5级读数"},
+  {id:"dots",    name:"点阵投影仪", desc:"在DOTs投影灯光中目击幽灵干扰"},
+  {id:"uv",      name:"紫外线",   desc:"使用紫外线灯发现指纹、手印或脚印"},
+  {id:"freezing",name:"刺骨寒温", desc:"用温度计读取到低于0°C/32°F的温度"},
+  {id:"orb",     name:"灵球",     desc:"在视频中看到漂浮的灵球（通过摄像机、视频信号或头戴设备）"},
+  {id:"writing", name:"鬼魂笔迹", desc:"让幽灵在放置下来的灵写本上书写"},
+  {id:"box",     name:"通灵盒",   desc:"在询问幽灵后，通过灵魂盒听到回应"}
+];
+const EV_MAP = Object.fromEntries(EVIDENCE.map(e=>[e.id,e]));
+
+/* ============================================================
+   数据：30 种鬼魂（证据/特征来自玩家速查表，简介来自官方图鉴）
+   注：Windows 端编辑器「恐鬼症鬼魂编辑器.hta」会直接改写下方数组。
+   ============================================================ */
+const GHOSTS = [
+ {
+  "id": "aswang",
+  "name": "阿斯旺",
+  "en": "Aswang",
+  "speed": "变速 1.5m/s 起，锁定后最快",
+  "los": "有",
+  "special": "发现目标后极速",
+  "ev": [
+   "box",
+   "dots",
+   "uv"
+  ],
+  "trait": "当发现目标时，会加速追捕\n无法在官方躲藏点杀死玩家",
+  "tip": "",
+  "hunt": "同左",
+  "desc": "传闻以鲜血和尸体为食，阿斯旺凶残野蛮，却又能够混迹于城市之中。（译自官方英文图鉴）"
+ },
+ {
+  "id": "banshee",
+  "name": "女妖",
+  "en": "Banshee",
+  "speed": "常速 1.7m/s",
+  "los": "有",
+  "special": "无",
+  "ev": [
+   "orb",
+   "dots",
+   "uv"
+  ],
+  "trait": "锁定一名玩家进行猎杀，该玩家死亡或者离开房子前无视其他玩家\n拥有附身技能\n收音机有概率听到女妖尖叫（有33%概率替换掉耳语声）\n更有可能触发鬼魂唱歌事件",
+  "tip": "",
+  "hunt": "只追杀一个目标，对队友无感",
+  "desc": "女妖通过歌声吸引猎物。它在发起致命一击前会挑选猎物。互动和攻击都只锁定一名玩家。"
+ },
+ {
+  "id": "dayan",
+  "name": "达彦",
+  "en": "Dayan",
+  "speed": "玩家移动时加速",
+  "los": "有",
+  "special": "玩家移动时加速",
+  "ev": [
+   "emf5",
+   "orb",
+   "dots"
+  ],
+  "trait": "10米范围内有玩家走动时：猎杀理智阈值抬至65%，移速飙升至2.25m/s\n10米内玩家全部静止不动时：猎杀阈值降至45%\n玩家移动越频繁，鬼越狂暴高速；玩家静止蹲点，鬼反而变慢、更难开猎杀",
+  "tip": "",
+  "hunt": "玩家静止时它反而变慢、更难开猎",
+  "desc": "达彦源自于生前遭受了残酷生活者的灵魂。如今，即便已逝，她对任何靠近“起舞”的人都会保持高度警惕。"
+ },
+ {
+  "id": "deildegast",
+  "name": "界灵",
+  "en": "Deildegast",
+  "speed": "快速 3.0m/s",
+  "los": "无",
+  "special": "物品被移动时减速",
+  "ev": [
+   "emf5",
+   "writing",
+   "dots"
+  ],
+  "trait": "猎杀固定3m/s无视野加速；每拿/用一个独特物品减速0.1m/s，最低0.4m/s（约26个），猎杀后重置；调查开始时更强势",
+  "tip": "",
+  "hunt": "猎杀阈值50%（团队平均理智）",
+  "desc": "生前毁坏他人财产的界灵，死后对每一件不在原位的物品都念念不忘。它更习惯在调查初期占据上风，而生者与亡者都能通过移动物品减缓它的速度。（译自官方图鉴）"
+ },
+ {
+  "id": "demon",
+  "name": "恶魔",
+  "en": "Demon",
+  "speed": "常速 1.7m/s",
+  "los": "有",
+  "special": "无",
+  "ev": [
+   "freezing",
+   "uv",
+   "writing"
+  ],
+  "trait": "猎杀所需理智值为70%，有低概率无视理智直接开猎\n十字架有效范围5米（正常3米）\n消耗十字架抑制20秒（正常25秒）\n熏香阻止猎杀时间只有60秒，正常90秒",
+  "tip": "在埃奇菲尔德房屋地图，如果十字架在车上被咬了，几乎可以肯定是恶魔",
+  "hunt": "猎杀阈值更高（70%），间隔最短20秒",
+  "desc": "恶魔是我们遇到过最凶残的鬼。它会无缘无故地发起攻击，它似乎很享受猎杀的快感。恶魔会更早发猎杀。"
+ },
+ {
+  "id": "deogen",
+  "name": "雾影",
+  "en": "Deogen",
+  "speed": "极慢 0.4m/s(近) / 3m/s(远)",
+  "los": "有",
+  "special": "距离越远越快",
+  "ev": [
+   "box",
+   "orb",
+   "dots"
+  ],
+  "trait": "证据必给通灵盒，有专属音效（沉重的呼吸声）\n猎杀阈值40%，猎杀时全图透视（可穿墙）\n距离玩家越近速度越慢",
+  "tip": "",
+  "hunt": "永远知道玩家位置，无法躲藏",
+  "desc": "藏影于雾，化形于光。多年来它一直在躲避猎鬼师。据说这种鬼能追踪到最为隐蔽的猎物。它会不断地感知活人，你可以跑，但不能躲。"
+ },
+ {
+  "id": "gallu",
+  "name": "加鲁",
+  "en": "Gallu",
+  "speed": "常速 1.7m/s",
+  "los": "有",
+  "special": "三形态切换",
+  "ev": [
+   "emf5",
+   "box",
+   "uv"
+  ],
+  "trait": "拥有普通、狂暴、虚弱三形态循环切换，踩盐、十字架被毁、熏香、被玩家抱团都会触发形态切换\n狂暴状态速度提升，不会踩踏盐堆；虚弱状态速度变慢，十字架、熏香抑制效果大幅增强\n玩家扎堆抱团、原地不动时，加鲁会大幅提升活跃度与猎杀概率，蹲守抱团反而更容易触发猎杀",
+  "tip": "",
+  "hunt": "普通/狂暴/虚弱三形态循环，踩盐触发切换",
+  "desc": "作为恶魔的另一种形态，加鲁提醒着所有人：死亡终将降临。使用防护装备会激怒它，直到装备不再奏效。（译自官方英文图鉴）"
+ },
+ {
+  "id": "goryo",
+  "name": "御灵",
+  "en": "Goryo",
+  "speed": "常速 1.7m/s",
+  "los": "有",
+  "special": "无",
+  "ev": [
+   "emf5",
+   "dots"
+  ],
+  "trait": "点阵只能通过摄像机看见，看的时候鬼房里不能有玩家\n不会更换鬼房，无法远距离游荡\n小概率/灵异事件时离开鬼房，然后迅速回鬼房",
+  "tip": "",
+  "hunt": "不换房",
+  "desc": "御灵在通过点阵投影仪时，只有用摄像机才能看见。它通常只在周围没人的情况下才会出现在镜头内。"
+ },
+ {
+  "id": "hantu",
+  "name": "寒魔",
+  "en": "Hantu",
+  "speed": "常速 1.7m/s",
+  "los": "有",
+  "special": "温度越低越快",
+  "ev": [
+   "orb",
+   "freezing",
+   "uv"
+  ],
+  "trait": "猎杀速度与温度有关，高慢低快\n关电闸频繁，是其他鬼魂的两倍概率\n关电闸或在刺骨房猎杀时鬼魂吐白气",
+  "tip": "",
+  "hunt": "猎杀时吐白气",
+  "desc": "寒魔是一种罕见的鬼魂，它通常出现在炎热的环境里。它通常在寒冷的环境下发动攻击。低温会加快寒魔的移速。"
+ },
+ {
+  "id": "jinn",
+  "name": "巨灵",
+  "en": "Jinn",
+  "speed": "常速 1.7m/s",
+  "los": "有",
+  "special": "3m外 2.5m/s",
+  "ev": [
+   "emf5",
+   "orb",
+   "uv"
+  ],
+  "trait": "不会关电闸\n距离玩家较远时加速，靠近减速\n非猎杀期间概率在玩家身上发动技能，扣除25%理智，同时在电闸箱留下EMF反应",
+  "tip": "选好位置（远距离但可以第一时间看到鬼出来）等鬼魂从另一头出来，如果鬼魂的速度突然增加而不是缓慢提升，可确认是巨灵",
+  "hunt": "远距离加速，靠近减速",
+  "desc": "巨灵是一种地域意识很强的鬼魂，受到威胁时会发动攻击。它能以相当快的速度移动。如果目标在奔跑，它会以更快的速度移动。"
+ },
+ {
+  "id": "kormos",
+  "name": "盲灵",
+  "en": "Kormos",
+  "speed": "常速 1.7m/s",
+  "los": "有",
+  "special": "起步10%，锁定后加速",
+  "ev": [
+   "emf5",
+   "orb",
+   "uv"
+  ],
+  "trait": "听觉敏锐：能听见玩家脚步声且侦测范围很广（跑步30米，站着走路15米，蹲着走路10米）\n会不断侦测定位并移动至定位点\n听觉加速：听到玩家脚步声会以极快速度接近\n不会触发灵异现象（哈气/现身等）",
+  "tip": "猎杀时手持熏香静止+闭嘴+关闭所有电子设备，如果鬼魂经过没有触发击杀，可定位盲灵",
+  "hunt": "玩家不动它就随机巡逻",
+  "desc": "盲灵的名字意为“看不见之物”。它双目失明，却依靠异常敏锐的听觉追踪猎物。（译自官方英文图鉴）"
+ },
+ {
+  "id": "mare",
+  "name": "梦魇",
+  "en": "Mare",
+  "speed": "常速 1.7m/s",
+  "los": "有",
+  "special": "无",
+  "ev": [
+   "box",
+   "orb",
+   "writing"
+  ],
+  "trait": "不会开灯，Never！\n在有灯的房间会减少互动，有可能在玩家开灯后马上关灯并且留下EMF2级\n猎杀阈值开灯40，关灯60",
+  "tip": "没有技巧，它是个爱玩灯的可爱鬼所以给它多敲一行字",
+  "hunt": "开灯时降低攻击性（猎杀阈值开灯60%/黑暗40%）",
+  "desc": "梦魇是噩梦之源，它是黑暗中最强大的梦魇。它在黑暗中更有可能攻击你。"
+ },
+ {
+  "id": "moroi",
+  "name": "魔洛伊",
+  "en": "Moroi",
+  "speed": "慢速 1.5m/s",
+  "los": "有",
+  "special": "理智越低越快",
+  "ev": [
+   "box",
+   "orb",
+   "uv"
+  ],
+  "trait": "团队理智越低，鬼魂速度越快，此外还有视觉加速\n猎杀时点燃熏香致盲7.5秒（正常鬼5秒）\n会通过收音机或通灵盒为玩家释放诅咒，理智双倍流失，灯光无法阻止理智下降，理智药可以移除诅咒",
+  "tip": "",
+  "hunt": "猎杀时必给灵球证据",
+  "desc": "魔洛伊吸血鬼从坟墓中复活，从活人身上吸取能量，它会对受害者施加诅咒。只有通过解毒剂或者远距离移动才能治愈。目标越弱小，它越强大。"
+ },
+ {
+  "id": "myling",
+  "name": "鬼婴",
+  "en": "Myling",
+  "speed": "常速 1.7m/s",
+  "los": "有",
+  "special": "无",
+  "ev": [
+   "orb",
+   "uv",
+   "writing"
+  ],
+  "trait": "脚步声与音频只能在12米内被听见（一般鬼为20米）\n使用收音器会更频繁的听到超自然声音",
+  "tip": "",
+  "hunt": "脚步声12米外听不到（普通20米）",
+  "desc": "鬼婴是一种非常健谈和活跃的鬼魂。据说它在猎杀时悄无声息。无声猎杀。"
+ },
+ {
+  "id": "obake",
+  "name": "幻妖",
+  "en": "Obake",
+  "speed": "常速 1.7m/s",
+  "los": "有",
+  "special": "无",
+  "ev": [
+   "emf5",
+   "dots",
+   "uv"
+  ],
+  "trait": "证据必有指纹，16.7%概率六指，键盘和监狱房门留下五指\n门窗互动有概率不留指纹\n猎杀时每次闪烁有6.67%概率会变换鬼魂模型\n有时会使用能力使现有指纹持续时间减半",
+  "tip": "",
+  "hunt": "有时不留指纹；6.67%概率变换鬼魂模型",
+  "desc": "幻妖是一种可怕的变形鬼，它有多种形态。据说它会变化为人形吸引猎物。它与环境互动时很少留下痕迹。"
+ },
+ {
+  "id": "obambo",
+  "name": "奥班博",
+  "en": "Obambo",
+  "speed": "常速 1.7m/s",
+  "los": "有",
+  "special": "狂暴态加速",
+  "ev": [
+   "orb",
+   "dots",
+   "uv"
+  ],
+  "trait": "有平静和狂暴两种状态，游戏开始时为平静状态，首次大门打开一分钟后会切换成狂暴状态，然后状态切换为每两分钟切换一次状态\n平静状态下猎杀速度较慢，狂暴状态下猎杀速度快，猎杀时为狂暴状态猎杀时长则缩短20%\n平静猎杀阈值10%，狂暴65%",
+  "tip": "",
+  "hunt": "平静时更慢更难追，狂暴时更快",
+  "desc": "奥班博是某个从未真正安息的幽灵。它善变且防御性强，时而平静，时而激烈。"
+ },
+ {
+  "id": "oni",
+  "name": "赤鬼",
+  "en": "Oni",
+  "speed": "常速 1.7m/s",
+  "los": "无",
+  "special": "无",
+  "ev": [
+   "emf5",
+   "dots",
+   "freezing"
+  ],
+  "trait": "猎杀时很少隐身，且手电闪烁快\n非常活跃",
+  "tip": "",
+  "hunt": "猎杀时几乎不隐身（闪烁时间短）",
+  "desc": "赤鬼的特征和恶魔相似，拥有超强的力量。传言道周围有猎物时它会更加活跃。当有人在附近时，它会更加活跃。赤鬼也可以高速移动物品。"
+ },
+ {
+  "id": "onryo",
+  "name": "怨灵",
+  "en": "Onryo",
+  "speed": "常速 1.7m/s",
+  "los": "有",
+  "special": "无",
+  "ev": [
+   "box",
+   "orb",
+   "uv"
+  ],
+  "trait": "开猎时4米范围内的火焰会被吹灭阻止一次猎杀，阻猎时火焰比十字架优先级更高\n猎杀阈值60%\n无法在点燃的蜡烛三米内开启猎杀",
+  "tip": "",
+  "hunt": "蜡烛被吹灭后可能立刻开猎",
+  "desc": "怨灵通常称为“愤怒的灵魂”。它窃取垂死之人的灵魂以求复仇。它害怕任何形式的火焰。它会在熄灭火焰时发起攻击。"
+ },
+ {
+  "id": "phantom",
+  "name": "幻影",
+  "en": "Phantom",
+  "speed": "常速 1.7m/s",
+  "los": "有",
+  "special": "无",
+  "ev": [
+   "box",
+   "dots",
+   "uv"
+  ],
+  "trait": "给它拍照会使其鬼魂模型消失，包括鬼魂事件/猎杀/点阵模型\n鬼在照片中看不到模型，但是照片会被判定为鬼照\n猎杀时鬼魂模型每1-2秒闪烁一次，正常鬼0.3-1秒\n非猎杀时，锁定一名玩家并移动到其所在处，伴随EMF2级反应",
+  "tip": "",
+  "hunt": "猎杀时基本不可见（闪烁极短）",
+  "desc": "幻影是种能附身的鬼魂，它会让周围的人感到恐惧。用通灵板很容易召唤出来。注视幻影会大幅度降低理智。"
+ },
+ {
+  "id": "poltergeist",
+  "name": "捣蛋鬼",
+  "en": "Poltergeist",
+  "speed": "常速 1.7m/s",
+  "los": "有",
+  "special": "无",
+  "ev": [
+   "box",
+   "uv",
+   "writing"
+  ],
+  "trait": "可以同时投掷周围的所有物品，还投得比正常鬼远\n猎杀期间必然每0.5秒投掷一个物品，正常鬼50%概率每0.5秒投掷一个物品",
+  "tip": "",
+  "hunt": "猎杀时每0.5秒互动一次",
+  "desc": "捣蛋鬼是最著名的一种鬼。它可以通过操纵周围的物体来散播恐惧。它可以一次性投掷大量物体。"
+ },
+ {
+  "id": "raiju",
+  "name": "雷曾",
+  "en": "Raiju",
+  "speed": "常速 1.7m/s",
+  "los": "有",
+  "special": "靠近电器加速",
+  "ev": [
+   "emf5",
+   "orb",
+   "dots"
+  ],
+  "trait": "附近有电器打开时，猎杀阈值由50%变为65%，速度固定为2.5m/s，没有电器时为标准速度\n鬼魂事件与猎杀时电器干扰范围为15米，一般为10米\n哈气没有烟雾，Never！",
+  "tip": "噩梦难度下（只有两个证据），如果有EMF5级和灵球证据，可定为雷魂",
+  "hunt": "猎杀时可关闭设备减速它",
+  "desc": "雷曾是一种以电流为生的恶魔。虽然通常它很平静，但它充满电能时会躁动。它通过吸取附近电子设备的能量来加速。"
+ },
+ {
+  "id": "revenant",
+  "name": "亡魂",
+  "en": "Revenant",
+  "speed": "慢速 1.0m/s",
+  "los": "无",
+  "special": "发现玩家后 3m/s",
+  "ev": [
+   "orb",
+   "uv",
+   "writing"
+  ],
+  "trait": "猎杀时没有检测到玩家速度为1m/s，检测到玩家或前往检测到的玩家位置时速度为3m/s，到达目的地后速度在2.7秒内降至1m/s",
+  "tip": "",
+  "hunt": "发现玩家后高速移动至最后位置",
+  "desc": "亡魂移动缓慢，它会肆意攻击。它发现猎物时会高速移动。"
+ },
+ {
+  "id": "shade",
+  "name": "暗影",
+  "en": "Shade",
+  "speed": "常速 1.7m/s",
+  "los": "有",
+  "special": "无",
+  "ev": [
+   "emf5",
+   "freezing",
+   "writing"
+  ],
+  "trait": "猎杀阈值为35%（正常为50%）\n与玩家在同一房间内不互动（鬼魂笔记除外），也不开猎\n如果被道具召唤，有概率以黑影而不是完整形态出现，猎杀开始后回归正常形态",
+  "tip": "",
+  "hunt": "同左",
+  "desc": "暗影是个害羞鬼。只要人够多它就不敢活动。它更难被发现。"
+ },
+ {
+  "id": "spirit",
+  "name": "魂魄",
+  "en": "Spirit",
+  "speed": "常速 1.7m/s",
+  "los": "有",
+  "special": "无",
+  "ev": [
+   "emf5",
+   "box",
+   "writing"
+  ],
+  "trait": "熏香可以使其在180秒内无法开猎（一般鬼为90秒）",
+  "tip": "",
+  "hunt": "同左",
+  "desc": "魂魄是最常见的鬼魂。它只在有必要时才发动攻击。它极力捍卫自己的死亡之地，它会杀死任何久留此地的人。"
+ },
+ {
+  "id": "thaye",
+  "name": "刹耶",
+  "en": "Thaye",
+  "speed": "年轻 2.75m/s → 老 1.0m/s",
+  "los": "无",
+  "special": "随时间变老减速",
+  "ev": [
+   "orb",
+   "dots",
+   "writing"
+  ],
+  "trait": "玩家在附近或同一房间时不断衰老，猎杀阈值降低（最年轻75%~最老15%），互动减少，移速变慢",
+  "tip": "噩梦难度下（只有两个证据），如果有鬼魂笔记和点阵投影仪证据，可定为刹耶",
+  "hunt": "猎杀时间越长阈值越低",
+  "desc": "即使在灵界，它也会随着时间的推移迅速衰老。从我们所了解的情况来看，它在活人面前似乎衰老得更快。有人进入调查区域后，它会变得活跃、警戒和敏捷。"
+ },
+ {
+  "id": "mimic",
+  "name": "拟魂",
+  "en": "Mimic",
+  "speed": "复制其他鬼速度",
+  "los": "视情况",
+  "special": "视情况",
+  "ev": [
+   "box",
+   "orb",
+   "uv"
+  ],
+  "trait": "会复制其他鬼魂的能力特征，但不会复制其他鬼魂证据（有EMF5级/鬼魂笔记/点阵投影仪证据必然不是拟魂）\n特殊机制：必生成伪证据灵球，伪灵球只视觉可见，不稳定锁定鬼房偶尔飘向别处",
+  "tip": "",
+  "hunt": "复制其他鬼能力，行为不稳定",
+  "desc": "拟魂是一种变化无常的神秘鬼魂，它会模仿出其他鬼魂的特征和行为。我们不确定这种鬼有什么能力。"
+ },
+ {
+  "id": "twins",
+  "name": "孪魂",
+  "en": "Twins",
+  "speed": "双速 1.53/1.87m/s",
+  "los": "有",
+  "special": "无",
+  "ev": [
+   "emf5",
+   "box",
+   "freezing"
+  ],
+  "trait": "可多次短时间内在两个不同的地点产生互动\n不同地点发起猎杀的基础速度有轻微差异，在鬼房开猎1.5m/s，从大交互范围的某处地点开猎1.9m/s",
+  "tip": "",
+  "hunt": "两个猎杀速度（一快一慢）",
+  "desc": "孪魂会模仿各自行动。它们会交替攻击以迷惑猎物。它们都可以被激怒并对猎物发起攻击。"
+ },
+ {
+  "id": "wraith",
+  "name": "魅影",
+  "en": "Wraith",
+  "speed": "常速 1.7m/s",
+  "los": "有",
+  "special": "无",
+  "ev": [
+   "emf5",
+   "box",
+   "dots"
+  ],
+  "trait": "不踩盐，Never！\n非猎杀时，锁定一名玩家并移动到其所在处，留下EMF2或5级反应",
+  "tip": "",
+  "hunt": "同左",
+  "desc": "魅影是最危险的鬼魂之一。它也是唯一已知的会飞的鬼魂。有时它还会穿墙传送。它几乎不接触地面，没有足迹。"
+ },
+ {
+  "id": "yokai",
+  "name": "妖怪",
+  "en": "Yokai",
+  "speed": "常速 1.7m/s",
+  "los": "无",
+  "special": "无",
+  "ev": [
+   "box",
+   "orb",
+   "dots"
+  ],
+  "trait": "视力听力都不好（语音与电器的感知范围2.5米）\n玩家在其附近说话（会增加其活动强度）或使用通灵盒猎杀理智为80%，否则为30%",
+  "tip": "",
+  "hunt": "猎杀时听力范围仅2.5米",
+  "desc": "妖怪是一种常见的鬼魂，它对人类的声音感兴趣。它通常出没在人类家中。在它附近说话会激怒它，增加攻击欲望。"
+ },
+ {
+  "id": "yurei",
+  "name": "幽灵",
+  "en": "Yurei",
+  "speed": "常速 1.7m/s",
+  "los": "有",
+  "special": "无",
+  "ev": [
+   "orb",
+   "dots",
+   "freezing"
+  ],
+  "trait": "在附近点燃熏香可以把幽灵困在鬼房，持续60秒\n快速频繁开关门，可以把门全闭\n瞬间对门产生两次互动\n游荡频率高于其他鬼魂",
+  "tip": "非猎杀时间/非鬼魂事件关大门可定为幽灵",
+  "hunt": "同左",
+  "desc": "幽灵是回到现实世界的复仇之魂。它会让你丧失更多的理智。"
+ }
+];
+
+const ITEMS = [
+ {
+  "num": 1,
+  "name": "紫外线灯光",
+  "price": "2个 / $65",
+  "img": "https://aka.doubaocdn.com/s/BJbms5z5Xm",
+  "tiers": [
+   {
+    "t": "一级 · 默认装备",
+    "d": "默认右键开关紫外线手电筒。一级的聚光灯比三级狭窄，所以必需对准紫外线证据的方向照亮。"
+   },
+   {
+    "t": "二级 · 21级解锁",
+    "d": "默认按右键激活荧光棒，使用荧光棒后它会发光1分钟，在之后10秒内亮度减半。荧光棒按右键可以重复激活部分光线。"
+   },
+   {
+    "t": "三级 · 56级解锁",
+    "d": "默认右键开关紫外线手电筒。三级更大、更亮。"
+   }
+  ],
+  "use": "技巧：打开紫外线之后丢地上，朝向盐/门方向，盐分开撒，增加鬼魂踩盐概率。\n用法：把紫外线灯光照在有紫外线证据（碰门/踩盐/碰窗户/动开关/键盘）的平面上，几秒后让紫外线证据暂时亮起绿色（指纹/脚印）。用紫外线照射指纹和脚印后，取下紫外线灯仍然能在数秒内看到痕迹（自定义可以设置痕迹可看到时间），此时非常适合拍照。"
+ },
+ {
+  "num": 2,
+  "name": "点阵投影仪",
+  "price": "2个 / $65",
+  "img": "https://aka.doubaocdn.com/s/RECmLhvh0D",
+  "tiers": [
+   {
+    "t": "一级 · 默认装备",
+    "d": "一级点阵投影仪发出一道狭窄的聚光灯，可照射到5米长的距离。"
+   },
+   {
+    "t": "二级 · 29级解锁",
+    "d": "二级投影仪为区域灯光，可照射到2.5米的范围。"
+   },
+   {
+    "t": "三级 · 60级解锁",
+    "d": "三级投影仪能以约135°的范围旋转扫描，照射到的灯光会更广阔。照射范围为7米。"
+   }
+  ],
+  "use": "技巧：1级点阵可以丢地上，2/3级放在鬼房中间，尽量无遮挡，尽可能照到鬼魂运动的每个角落。\n运作方式：默认按F键可把点阵投影仪放在地上、桌上，二级和三级点阵投影仪也能放在墙上。有点阵证据的鬼魂偶尔会进入“点阵状态”，此时如果点阵投影仪照射到鬼魂的位置，会出现走动或爬着的影子。在摄像机内也可以看见影子。死亡的玩家无法通过点阵投影仪看见鬼魂。"
+ },
+ {
+  "num": 3,
+  "name": "鬼魂笔记",
+  "price": "2本 / $40",
+  "img": "https://aka.doubaocdn.com/s/byw86eTVmh",
+  "tiers": [
+   {
+    "t": "一级 · 默认装备",
+    "d": "互动范围（米）：3，互动频率：低。"
+   },
+   {
+    "t": "二级 · 23级解锁",
+    "d": "互动范围（米）：4，互动频率：中。"
+   },
+   {
+    "t": "三级 · 63级解锁",
+    "d": "互动范围（米）：5，互动频率：高。"
+   }
+  ],
+  "use": "技巧：鬼房内和鬼房门口都可以放一本，一定要按F放置。\n运作方式：默认长按F会显示透明的预览轮廓和互动范围，释放F放置。鬼魂笔记需要放置才能正常运作：扔出和拿着笔记无法生效。\n拍照奖励：根据拍摄距离的不同，鬼魂笔迹照片可以获得拍照奖励。"
+ },
+ {
+  "num": 4,
+  "name": "EMF读取仪",
+  "price": "2个 / $45",
+  "img": "https://aka.doubaocdn.com/s/V3tKr15USl",
+  "tiers": [
+   {
+    "t": "一级 · 默认装备",
+    "d": "检测到的EMF会有误差，最低读数为EMF的标准级别。如果读取仪同时检测到两个或以上的信号，将显示最高的EMF级别。五级为箭头指向最右边。"
+   },
+   {
+    "t": "二级 · 20级解锁",
+    "d": "二级EMF读取仪会显示标准的EMF级别，上面有五个LED灯，分别对应着五个EMF等级，五级显示为五个灯珠全亮。EMF读取仪检测到信号时会亮起不同数量的LED。读取仪同时检测到两个或以上的信号，将显示最高的EMF级别。"
+   },
+   {
+    "t": "三级 · 52级解锁",
+    "d": "三级读取仪可同时显示最近附近的三个EMF读数。每个信号将有不同的信息：级别显示为黑箭头，距离显示为x.xx米，方向显示为八个方向和中央。注意：五级显示为五条黑箭头，而并非数字！"
+   }
+  ],
+  "use": "技巧：1.打开之后丢鬼房，检测到有互动会有不同音效。2.增加鬼房中蜡烛数量，可以提高鬼魂互动概率，从而提高给5级概率。3.若鬼魂长时间无互动也不吹蜡烛，可以离开鬼房，在鬼房门口观察互动情况，由此判断是否为暗影。（暗影特性：人与鬼魂处于同一区域且距离较近时，鬼魂无互动/无猎杀）\n运作方式：手持EMF读取仪可读取EMF信号，默认右键开关。打开后扔在地上，EMF读取仪不会自动关闭。猎杀过程中，EMF读取仪会显示随机数值，出现故障，类似于猎杀过程中的灯光闪烁。作为一件电子设备，鬼魂现身或猎杀时会将10米内的EMF读取仪闪烁。在鬼魂猎杀时7.5米内手持打开读取仪会吸引鬼魂。\nEMF级别对照（二级LED颜色/鬼魂活动程度）：1蓝色无活动（打开时默认级别）；2绿色与物品互动；3黄色投掷物品；4橙色鬼魂现身或猎杀；5红色证据（25%几率）。"
+ },
+ {
+  "num": 5,
+  "name": "通灵盒",
+  "price": "2个 / $50",
+  "img": "https://aka.doubaocdn.com/s/HSVpkkYfVG",
+  "tiers": [
+   {
+    "t": "一级 · 默认装备",
+    "d": "麦克风指示灯亮红光（语音输入按键说话/切换模式时）。"
+   },
+   {
+    "t": "二级 · 27级解锁",
+    "d": "显示屏幕左上角麦克风图标闪烁黑色。"
+   },
+   {
+    "t": "三级 · 54级解锁",
+    "d": "MIC INPUT指示灯发亮。回应几率随通灵盒等级提升。"
+   }
+  ],
+  "use": "技巧：1.尽量用文本问（语音有可能会卡），问5-10句后无回复就去搬道具，下次再问。2.长时间无回复、卡证据情况，可以尝试多人/单人问。\n运作方式：为获得通灵盒回应，你需要——①关闭房间光源（除了装备发出的光，比如手电筒、紫外线灯光、火光、运动传感器和点阵投影仪），其它房间的光源可以开启，不需要关房门；②鬼魂在玩家附近，处于通灵盒起效范围之内；③要求单人回应的鬼魂只在房间里有一个人时才会回应，并不表示只回应团队中的某一个人。\n成功辨识语句后：一级鬼魂图标旁闪红光=听到没回应、闪白光=有回应；二级闪黑色X=没回应、闪黑色鬼魂图标=有回应；三级RESPONSE灯闪红光=没回应、闪白光=有回应。除了通灵盒显示以外，也会听到鬼魂回应。\n没回应的原因可能有：未满足以上要求、运气不好、鬼魂没通灵盒证据。站在扔在地上的已开启通灵盒附近提问也能获得回应。如果游戏未检测到任何麦克风输入，玩家在附近按局部通话或使用语音感测模式时，通灵盒每10秒随机自动提问。"
+ },
+ {
+  "num": 6,
+  "name": "温度计",
+  "price": "2个 / $30",
+  "img": "https://aka.doubaocdn.com/s/ecYRfULmx0",
+  "tiers": [
+   {
+    "t": "一级 · 默认装备",
+    "d": "温度计将测量其所在房间的温度，测量的温度会缓慢上升和下降。读数以左边为摄氏度（℃），右边为华氏度（°F）。"
+   },
+   {
+    "t": "二级 · 36级解锁",
+    "d": "手持右键打开温度计，持续按右键约3秒检测温度。默认显示读数为摄氏度。温度误差最多为准确温度加2℃。温度计将向玩家所面向的方向射出一道较短的射线来测试温度。"
+   },
+   {
+    "t": "三级 · 64级解锁",
+    "d": "持右键打开温度计，持续按右键约1.5秒显示温度，比2级温度计快一倍。默认显示读数为摄氏度。温度误差最多为准确温度加1℃。"
+   }
+  ],
+  "use": "技巧：1.一级温度计在0℃以下为刺骨寒温，二级和三级在0.9℃及以下为刺骨寒温。2.温度计多有波动，长时间测不到刺骨，测温度2分钟以上还是较低温度（接近0.9℃）可以大概率判断为无刺骨。\n运作方式：通过对比各个区域温度（房间/走廊均可为鬼房），找到温度较低的区域为鬼房。温度差为3度及以上大概率为鬼房（开局电闸打开时，鬼房温度下降速度较慢）。温度维持低于12℃（日出天气）、10℃（晴天、大雾天气）或7℃（冬季/其它天气），可能是鬼魂所在的房间。在室外或电闸长期未打开时难以用此规律定位鬼魂。"
+ },
+ {
+  "num": "7",
+  "name": "摄像机",
+  "price": "4个 / $50",
+  "img": "https://aka.doubaocdn.com/s/74Wi2q7QQD",
+  "tiers": [
+   {
+    "t": "一级 · 默认装备",
+    "d": "模型为：索尼 DCR-TRV260。"
+   },
+   {
+    "t": "二级 · 33级解锁",
+    "d": "模型为：松下 HCVX1K。"
+   },
+   {
+    "t": "三级 · 61级解锁",
+    "d": "模型为：索尼 CineAltaV（英文名称为 Venice）。"
+   }
+  ],
+  "use": "可以录制内容：动门/丢东西/吹蜡烛/开关灯/炸灯/坐椅子/猎杀/写笔记/运感/灵球/点阵鬼/黑影鬼/正常鬼。每种类型第一次录制算优质视频。\n技巧：1.查看灵球时可以多次查看鬼房内外（偶尔有灵球卡墙里一段时间的情况）。2.录制视频时可以右键长按持续录制，偶尔可以捕捉有效视频，不会跟照片一样存在空照。3.摄像机夜视模式玩阳光牧院可以看得非常清楚。\n运作方式：捡起来并离开货车后，摄像机会自动开机。摄像机可以手持或被放置，在监控电脑处可查看视频。你可以把摄像机放置三脚架上或平坦的表面，比如抽屉或桌子。瞄准有效的位置并长按F会显示摄像机的透明轮廓预览。一些位置预览可能很正常，但放下去可能就会翻倒。长按F并左右移动鼠标可以旋转预览位置，释放F放置。按E可捡起已放置的摄像机，包括三脚架上的摄像机。\n【红】手持右键可开关夜视模式，右键长按会一直开启录像功能。【/红】摄像机是两种探测灵球证据的方式之一，另一种是用一级头戴设备。灵球必需开夜视模式才看得到。"
+ },
+ {
+  "num": 8,
+  "name": "十字架",
+  "price": "2个 / $30",
+  "img": "https://aka.doubaocdn.com/s/xUie2s64t0",
+  "tiers": [
+   {
+    "t": "一级 · 8级解锁",
+    "d": "启用范围：3米（恶魔4.5米），阻挡猎杀1次。"
+   },
+   {
+    "t": "二级 · 37级解锁",
+    "d": "启用范围：4米（恶魔6米），阻挡猎杀2次。"
+   },
+   {
+    "t": "三级 · 90级解锁",
+    "d": "启用范围：5米（恶魔7.5米），阻挡猎杀2次。完整3级十字架可阻挡诅咒猎杀。"
+   }
+  ],
+  "use": "技巧：1.长按F会显示透明的预览轮廓和阻猎范围（有时候被墙等物品遮挡看不到透明的预览，找一个比较空的地方蹲着往远处看）。2.鬼房是比较小的房间时，放三级十字架在门口即可覆盖整个鬼房。3.希望鬼猎杀但是十字架又一直被啃的时候，可以将十字架拿着之后按Q切到别的物品（把十字架放兜里），这样十字架就不会被啃啦。\n用法：默认按F可放置十字架，长按F会显示十字架的启用范围（不受鬼魂类型影响）。十字架拿在手里、被抛出、被放置都会生效。每阻挡猎杀会将调查区域的灯关掉（似猎杀结束一样）。十字架启用时会发出火焰，整体发红。根据使用次数，十字架会有不同的外观。\n以下情况不会阻止鬼魂猎杀：①鬼魂不在十字架的范围内，即使十字架在鬼房里；②使用诅咒之物触发诅咒猎杀（3级十字架可消耗两次阻猎机会阻止诅咒道具猎杀）；③猎杀已经开始或在进行中。"
+ },
+ {
+  "num": 9,
+  "name": "火光",
+  "price": "4个 / $15",
+  "img": "https://aka.doubaocdn.com/s/OLpPA9sNwg",
+  "tiers": [
+   {
+    "t": "一级 · 12级解锁",
+    "d": "范围：2米，持续时间：3分钟，消耗品。"
+   },
+   {
+    "t": "二级 · 47级解锁",
+    "d": "范围：2米，持续时间：5分钟，消耗品。"
+   },
+   {
+    "t": "三级 · 79级解锁",
+    "d": "范围：2米，防水，可放置。"
+   }
+  ],
+  "use": "技巧：一级/二级火光为消耗品，要注意使用时间。燃烧的蜡烛可以将熏香点燃。\n使用方法：默认按F按键可把火光放置在表面上，放置火光会显示轮廓。如果火光横着放置（比如放在墙上），那么它会掉落并熄灭。\n点燃火光：在物品栏里有点火器时，手持火光可右键点燃。手持点火器或点燃的火光按F键也能点燃放在地上的火光。\n作用：鬼魂有几率与5米内的火光互动，并吹灭火焰。已点燃的火光芯碰撞另一个火光芯也可点燃。"
+ },
+ {
+  "num": 12,
+  "name": "运动传感器",
+  "price": "4个 / $100",
+  "img": "https://aka.doubaocdn.com/s/gzs6V6PeQh",
+  "tiers": [
+   {
+    "t": "一级 · 10级解锁",
+    "d": "可以被放置在墙上或者地面。放置后释放一道红色激光束显示探测范围。如果放置在墙上，会将信号传到厢式货车上的地点地图，并在地图上显示为一道红线。当玩家、鬼魂或者物品穿过激光束时，会放出持续2秒的亮光；地图上的红线会变绿6秒，同时显示器会发出提示声。没有显示在地图上的运动传感器也能够发出提示音。"
+   },
+   {
+    "t": "二级 · 45级解锁",
+    "d": "与一级类似，但增加了锥形探测模式。可以通过与它交互来切换其探测范围的形状。锥形探测模式下会放出两道激光束，玩家可以通过亮光亮起的先后顺序来判断鬼魂的移动方向。此外，二级运动传感器在检测到运动时自己就能发出提示音。"
+   },
+   {
+    "t": "三级 · 74级解锁",
+    "d": "只能放置在地面，并且拥有一个球形的探测范围。货车上的显示屏会显示其探测范围为一个红圈。当鬼魂进入或者离开探测范围时，传感器会快速地旋转至探测到鬼魂的方向，并且会放出一道亮光与提示音；在显示屏上，红圈会变为绿色。只有鬼魂可以触发三级运动传感器。"
+   }
+  ],
+  "use": "技巧：1.可以放在部分地图的天花板上。2.运感用于快速检测鬼魂位置，由此确定鬼房后可以放门口检测鬼魂是否出门（常用于测幽灵）。\n用法：默认按F按键将运动传感器放在各种平面上。放置后，可以通过与运动传感器交互来关闭它。"
+ },
+ {
+  "num": 13,
+  "name": "收音器",
+  "price": "2个 / $50",
+  "img": "https://aka.doubaocdn.com/s/TA6O7JV0Ve",
+  "tiers": [
+   {
+    "t": "一级 · 13级解锁",
+    "d": "一级收音器能检测其前方20米范围内的声音。"
+   },
+   {
+    "t": "二级 · 31级解锁",
+    "d": "二级收音器能检测其前方20米范围内的声音，并且有一个显示三组数字的显示屏。"
+   },
+   {
+    "t": "三级 · 72级解锁",
+    "d": "三级收音器与二级收音器类似，但增加了声纳功能，即玩家可以在屏幕上看到声音的位置来源，以及各自声音的音量。"
+   }
+  ],
+  "use": "技巧：常用于大图通过听到鬼魂互动确定鬼房位置。会被称为大锅。\n运作方式：收音器有两个功能。它允许玩家听到鬼魂平常的超自然声音（语音、低吼等）和脚步声。收音器只在建筑内部工作。使用收音器时，玩家能清晰听见瞄准方向的所有声音，无论是鬼魂产生的超自然声音、还是玩家产生的声音、或者是装备产生的声音或者只是环境噪音都会被捕捉到，同时还会降低其他方向的声音。\n收音器无视任何墙体，所以理论上层高<30米就可以进行跨楼层探测。\n听不见的声音：通常情况下，闲逛的鬼魂所发出的超自然声音和脚步声是无法听到的，玩家在使用了收音器后才能听到这些声音。频繁的超自然声音可能意味着鬼魂是鬼婴，女妖有几率发出特殊尖的叫声。"
+ },
+ {
+  "num": 14,
+  "name": "盐",
+  "price": "3个 / $50",
+  "img": "https://aka.doubaocdn.com/s/pCw5fUPkt3",
+  "tiers": [
+   {
+    "t": "一级 · 16级解锁",
+    "d": "可以使用2次，每次使用会在地面上留下较小的白色圆形盐堆。鬼魂踩盐后会在盐堆上留下类似鞋底的印记。"
+   },
+   {
+    "t": "二级 · 43级解锁",
+    "d": "可以使用3次，每次使用会在地面上留下长条状的粉色盐堆，这样鬼魂就更容易踩中它。鬼魂踩盐后盐堆中间的部分将会消失。"
+   },
+   {
+    "t": "三级 · 68级解锁",
+    "d": "可以使用3次，每次使用会在地面上留下长条状的黑色盐堆，与二级盐的形状相同。如果鬼魂在猎杀时踩中它，鬼魂的速度会在2秒内减少50%。如果鬼魂不在猎杀时踩中它，那么鬼魂会立即取消当前正在进行的游荡路径，并返回鬼魂房间。"
+   }
+  ],
+  "use": "技巧：1.魅影不会踩盐堆，因此路过3级盐堆上时也不会减速。2.有证据的情况下，一般会先撒一罐并分开撒盐，若踩盐没紫外线再继续撒。3.无证据的情况下，一般会把一罐盐撒在鬼魂猎杀的必经之路（测魅影），后续撒盐在鬼房门口测鬼魂是否出鬼房（测幽灵）。\n用法：手持盐罐瞄准地面，默认长按F会出现透明的预览轮廓，释放F放置盐堆。每罐盐可以使用2-3次，一局游戏最多可以放置6-9个盐堆。盐堆可以重叠放置。\n当鬼魂走到盐堆上时会留下脚印，无论鬼魂是否可见都可触发此事件。在鬼魂踩盐后的接下来几秒里，如果鬼魂有紫外线证据，那么鬼魂会在游荡处留下在紫外线灯光下可见的足迹。\n魅影永远不会在盐堆上留下脚印，它会忽视盐堆直接走过但不留下痕迹。在灵异事件中，三级盐不会减缓鬼魂速度。由于魅影完全忽视盐堆的存在，因此这些效果对魅影无效。玩家不会在盐堆上留下脚印。"
+ },
+ {
+  "num": 15,
+  "name": "理智药",
+  "price": "4个 / $20",
+  "img": "https://aka.doubaocdn.com/s/r5Ta7hTEE6",
+  "tiers": [
+   {
+    "t": "一级 · 11级解锁",
+    "d": "理智药的恢复时间：30秒。"
+   },
+   {
+    "t": "二级 · 39级解锁",
+    "d": "理智药的恢复时间：20秒。"
+   },
+   {
+    "t": "三级 · 77级解锁",
+    "d": "理智药的恢复时间：10秒。服用会有10秒的无限奔跑时间。无限奔跑效果不能重叠。"
+   }
+  ],
+  "use": "技巧：三级理智药常用于遛鬼时无体力，或是大佬花式遛鬼需要补充体力时使用。\n用法：拿起理智药，右键即可服用。服用理智药可以恢复玩家特定量的理智值，最高恢复至100%，而具体的恢复量则取决于难度——业余：40%；中级：35%；专家：30%；噩梦：25%；疯狂：20%；自定义：0%-100%。\n服用理智药会将它丢在地上，此时这一瓶会无法再服用。如果玩家的理智值高于95%，那么玩家无法服用理智药。\n根据理智药的等级，理智恢复速度会有所不同（但不影响理智药恢复的总理智）。为了能更准确地测量鬼魂的猎杀理智阈值，建议直到理智药的恢复时间结束后再回到调查区域。"
+ },
+ {
+  "num": 16,
+  "name": "熏香",
+  "price": "4个 / $15",
+  "img": "https://aka.doubaocdn.com/s/er9ILCUM2K",
+  "tiers": [
+   {
+    "t": "一级 · 9级解锁",
+    "d": "范围：3米，持续时间：5秒，猎杀时致盲鬼魂5秒（魔洛伊7.5秒）。"
+   },
+   {
+    "t": "二级 · 42级解锁",
+    "d": "范围：4米，持续时间：6秒，猎杀时致盲并减速鬼魂5秒（魔洛伊7.5秒）。"
+   },
+   {
+    "t": "三级 · 85级解锁",
+    "d": "范围：5米，燃烧持续时间：7秒，猎杀时致盲并禁锢鬼魂5秒（魔洛伊7.5秒）。"
+   }
+  ],
+  "use": "技巧：1.熏香在之前版本又称圣木（现在大家都叫香）。2.在较大鬼房使用熏香时，可以点燃后往里走，尽量覆盖鬼魂能活动到的地方，避免熏香没有熏到鬼魂从而在我们没有防备而被猎杀。3.记得拿打火机。\n用法：背包里有点火器时，手持熏香按右键可直接点燃。手持点火器也能点燃被丢下的熏香。\n点燃后熏香会燃烧5-7秒（根据等级），在点燃开始后90秒内鬼魂无法发起猎杀（恶魔60秒、魂魄180秒），若生效过程中点第二根熏香则无效，按照前一根熏香点燃的时间计时。"
+ },
+ {
+  "num": 17,
+  "name": "声音传感器",
+  "price": "4个 / $80",
+  "img": "https://aka.doubaocdn.com/s/JXqNQYuFug",
+  "tiers": [
+   {
+    "t": "一级 · 5级解锁",
+    "d": "默认探测模式。"
+   },
+   {
+    "t": "二级 · 32级解锁",
+    "d": "与一级相同的基础探测。"
+   },
+   {
+    "t": "三级 · 58级解锁",
+    "d": "有额外的两个模式。可以通过与其交互来切换其探测范围的形状，或者直接拿在手中切换。"
+   }
+  ],
+  "use": "一般不常用到，恐鬼症中最没用的道具。（个人认为）\n用法：声音传感器可以放置在地上。它会检测周围圆形区域的任何声音。检测区域在车载地图上高亮显示为橙色。它会检测到大多数由玩家和鬼魂制造出的声音，除了玩家讲话，并在声音传感器显示屏上显示柱状图。屏幕会显示检测到的所有声音音量之和，显示的数值每秒更新一次。\n0.1dB 等于声音传感器显示屏上的 1%。\n声音传感器默认能接收同一层里半径5米范围内的声音，也可以穿墙检测声音。点击声音传感器显示屏上的放大图标，可以扩大声音传感器的探测范围。在一些地图里，显示屏会显示更大的探测半径，但这似乎是游戏漏洞，不代表声音传感器的实际探测半径。"
+ },
+ {
+  "num": 18,
+  "name": "手电筒",
+  "price": "4个 / $30",
+  "img": "https://aka.doubaocdn.com/s/Y8avYk0Mta",
+  "tiers": [
+   {
+    "t": "一级 · 默认装备",
+    "d": "很暗很小。"
+   },
+   {
+    "t": "二级 · 19级解锁",
+    "d": "还行一般。"
+   },
+   {
+    "t": "三级 · 35级解锁",
+    "d": "很亮很广。"
+   }
+  ],
+  "use": "会调滤镜之后就用不上手电筒了，滤镜教程视频已出。\n使用：手持手电筒右键打开将为玩家提供锥形范围的小型光线。带在身上的手电筒可按T开关，不必手持手电筒以照出光线。如果手持手电筒开着，然后切换到其他物品用T关掉，切回手电筒会自动打开手电筒。\n放在工具腰带的手电筒发出的光线会跟随玩家头部移动。\n自定义难度可禁用手电筒，使得不会照出光源（一级和三级紫外线也同样被禁用）。"
+ },
+ {
+  "num": 19,
+  "name": "相机",
+  "price": "3个 / $40",
+  "img": "https://aka.doubaocdn.com/s/ElIDrjQJ6E",
+  "tiers": [
+   {
+    "t": "一级 · 3级解锁",
+    "d": "拍照冷却：3秒。"
+   },
+   {
+    "t": "二级 · 25级解锁",
+    "d": "拍照冷却：2秒。"
+   },
+   {
+    "t": "三级 · 70级解锁",
+    "d": "拍照冷却：1秒。"
+   }
+  ],
+  "use": "可以拍摄内容：EMF/十字架/骨头/脏水/鬼照（灵异/点阵）/紫外线（脚印指纹）/刺骨温度计/猎杀鬼照/笔记/诅咒道具/尸体。每种类型第一次拍算优质照片。\n技巧：1.空照有3次机会删除。2.拍鬼照任务时，点阵鬼/灵异鬼/猎杀拍到的都算鬼照。3.灵异鬼照（黑影/实体现身）和点阵鬼照属于同一类，猎杀期间鬼照属于另外一类，都拍到算两张优质照片。4.拍照时需要注意闪烁频率和相机拍照速度，可以点三级香禁锢鬼魂后找机会拍。\n用法：相机会在你离开货车后自动开机，按右键拍照。每台相机可无限拍照。\n当鬼魂在鬼魂事件或猎杀现身时，二级和三级相机屏幕和任何照片会受到干扰。受到干扰的照片在检测到目标的情况下还是会被认为合格的照片。"
+ },
+ {
+  "num": 20,
+  "name": "头戴设备",
+  "price": "4个 / $60",
+  "img": "https://aka.doubaocdn.com/s/McvykmpcWH",
+  "tiers": [
+   {
+    "t": "一级 · 13级解锁",
+    "d": "一级头戴设备可提供视频来源。镜头会随着穿戴玩家的视角随时移动。和普通的摄像机一样，头戴设备可以切换夜视来查看灵球。"
+   },
+   {
+    "t": "二级 · 49级解锁",
+    "d": "二级头戴设备作为头戴手电筒，如手电筒一样提供锥形范围的小型光线。玩家只有奔跑时才看得到头戴设备的一小部分。"
+   },
+   {
+    "t": "三级 · 82级解锁",
+    "d": "三级头戴设备作为夜视仪，让玩家的视线类似一级摄像机的夜视模式。头戴设备的夜视不能查看灵球。"
+   }
+  ],
+  "use": "技巧：常用三级夜视仪，鬼魂猎杀时会受到干扰，一般在遛鬼前需要关掉夜视仪，调滤镜之后就用不上了，滤镜教程视频已出。\n用法：默认按E键会将车上的头戴设备戴到玩家头上。空手时默认按F可放回原处。它不占用物品栏。默认长按T键可开关头戴设备的功能。"
+ },
+ {
+  "num": 21,
+  "name": "录音机",
+  "price": "2个 / $30",
+  "img": "https://aka.doubaocdn.com/s/l9M99hQBbP",
+  "tiers": [
+   {
+    "t": "一级 · 4级解锁",
+    "d": "范围：3米，收录声音显示：红色点变成绿色。"
+   },
+   {
+    "t": "二级 · 39级解锁",
+    "d": "范围：5米，收录声音屏幕显示强烈波纹。"
+   },
+   {
+    "t": "三级 · 60级解锁",
+    "d": "范围：5米，三级增加方位和距离指示器。"
+   }
+  ],
+  "use": "可以录制内容：吹蜡烛/EMF/通灵盒/哈气/猎杀/超自然声音。每种类型第一次录制算优质音频。\n技巧：右键长按，到处走动，录音和录像是不是都不会出现空的。会重复录制同一类声音，想完美通关需要注意这个。\n用法：默认按右键打开。右键长按会一直开启录音功能。"
+ }
+];
+/* ============================================================
+   证据图标（内联 SVG）
+   ============================================================ */
+const CURSED = [
+ {
+  "id": "ouija",
+  "name": "通灵板",
+  "en": "Ouija Board",
+  "img": "https://aka.doubaocdn.com/s/Ci1VZAvOpX",
+  "use": [
+   "放置在地面后，用语音或文本向鬼魂提问：鬼在哪个房间、尸骨在哪、鬼的年龄、是否在附近等。问题越有价值，扣除的理智越多。",
+   "每个成功回答的问题都会扣除理智；理智过低时使用，灵板会直接碎裂。",
+   "结束前必须说「Goodbye」关闭灵板；直接走开会碎裂并触发诅咒猎杀。",
+   "问「捉迷藏」（Hide and Seek）会立即触发诅咒猎杀。",
+   "开局理智充足时尽早使用，是最快定位鬼房和尸骨位置的信息型道具。"
+  ]
+ },
+ {
+  "id": "musicbox",
+  "name": "音乐盒",
+  "en": "Music Box",
+  "img": "https://aka.doubaocdn.com/s/iZOixsVlQT",
+  "use": [
+   "右键激活后，若鬼魂在 20 米内会响起摇篮曲，鬼魂会现身并缓慢走向音乐盒。",
+   "靠近鬼魂时每秒扣 2.5% 理智，完整听完最多可扣 75%。",
+   "鬼魂离得太近（约 5 米内）会触发诅咒猎杀；激活状态下把音乐盒丢下或扔出会立即开猎。",
+   "用于确认鬼魂当前位置与追踪移动路线，听音乐时保持距离并预留逃跑路线。"
+  ]
+ },
+ {
+  "id": "paw",
+  "name": "猴爪",
+  "en": "Monkey Paw",
+  "img": "https://aka.doubaocdn.com/s/0Jh93w9Yhl",
+  "use": [
+   "通过语音或菜单许愿，愿望数量随难度变化：简单 5 次、中等 4 次、困难 3 次。",
+   "「我想见到鬼」：触发一次灵异事件，随后进入诅咒猎杀。",
+   "「我想要更多活动」：两分钟内活动大幅提升，但所有出口会被锁住。",
+   "「我想要理智」：全员理智变为 50%。",
+   "「我想要生命」：复活一名已阵亡的队友，但可能以你自己死亡为代价。",
+   "每个愿望必有副作用（短暂失明、听力下降、锁门、理智流失或触发猎杀等），许愿前先规划好逃生路线。"
+  ]
+ },
+ {
+  "id": "doll",
+  "name": "巫毒娃娃",
+  "en": "Voodoo Doll",
+  "img": "https://aka.doubaocdn.com/s/OjWJcyekQi",
+  "use": [
+   "右键随机插入一根针，每根针强制触发一次鬼魂互动。",
+   "每根针扣 5% 理智；若插中「心针」额外扣 10% 并直接触发诅咒猎杀。",
+   "适合逼鬼互动来刷 EMF 5级、紫外线指纹、鬼魂笔迹等证据或任务进度。",
+   "插针顺序完全随机，0 理智时使用几乎必触发猎杀，务必留好退路。"
+  ]
+ },
+ {
+  "id": "mirror",
+  "name": "魔镜",
+  "en": "Haunted Mirror",
+  "img": "https://aka.doubaocdn.com/s/PnitdIaxlg",
+  "use": [
+   "注视镜面可实时显示鬼魂当前最爱的房间。",
+   "每秒扣 7.5% 理智；理智降到 20% 或更低时镜子碎裂并触发诅咒猎杀。",
+   "进图后立刻短促使用，锁定鬼房后马上前往，避免长时间注视。"
+  ]
+ },
+ {
+  "id": "tarot",
+  "name": "塔罗牌",
+  "en": "Tarot Cards",
+  "img": "https://aka.doubaocdn.com/s/DZ4tB16uXO",
+  "cards": [
+   {
+    "name": "命运之轮",
+    "en": "WHEEL OF FORTUNE",
+    "img": "https://aka.doubaocdn.com/s/EfB77EKv1V",
+    "d": "抽到绿面恢复 25% 理智，红面扣除 25% 理智。"
+   },
+   {
+    "name": "高塔",
+    "en": "THE TOWER",
+    "img": "https://aka.doubaocdn.com/s/yksvhDYaiQ",
+    "d": "大幅提升鬼魂的活动强度。"
+   },
+   {
+    "name": "死神",
+    "en": "DEATH",
+    "img": "https://aka.doubaocdn.com/s/lteWzdl1Sr",
+    "d": "立即触发一次诅咒猎杀。"
+   },
+   {
+    "name": "恶魔",
+    "en": "THE DEVIL",
+    "img": "https://aka.doubaocdn.com/s/ztpqK2EaRV",
+    "d": "触发一次鬼魂事件。"
+   },
+   {
+    "name": "隐者",
+    "en": "THE HERMIT",
+    "img": "https://aka.doubaocdn.com/s/iCrdUXiOnW",
+    "d": "将鬼魂困在当前房间 1 分钟。"
+   },
+   {
+    "name": "太阳",
+    "en": "THE SUN",
+    "img": "https://aka.doubaocdn.com/s/VvlhTHGPTQ",
+    "d": "理智恢复至 100%。"
+   },
+   {
+    "name": "月亮",
+    "en": "THE MOON",
+    "img": "https://aka.doubaocdn.com/s/bIXUkJMYtq",
+    "d": "理智直接归零。"
+   },
+   {
+    "name": "女祭司",
+    "en": "THE HIGH PRIESTESS",
+    "img": "https://aka.doubaocdn.com/s/g03uuI47fG",
+    "d": "复活一名已阵亡的队友。"
+   },
+   {
+    "name": "倒吊人",
+    "en": "THE HANGED MAN",
+    "img": "https://aka.doubaocdn.com/s/NcYKYmyxgE",
+    "d": "抽牌者立即死亡。"
+   },
+   {
+    "name": "愚者",
+    "en": "THE FOOL",
+    "img": "https://aka.doubaocdn.com/s/uVfmleOfWZ",
+    "d": "无效牌，复刻上一张牌的效果；猎杀期间抽到的牌都会变成愚者。"
+   }
+  ],
+  "use": [
+   "抽牌随机触发效果，共 10 种牌面，随机性极高。",
+   "猎杀期间抽到的牌全部会变成「愚者」；建议先找好躲藏点再抽牌，用于赌复活或恢复理智。"
+  ]
+ },
+ {
+  "id": "circle",
+  "name": "召唤法阵",
+  "en": "Summoning Circle",
+  "img": "https://aka.doubaocdn.com/s/SLZKK7RLyJ",
+  "use": [
+   "点燃法阵周围的 5 根红色蜡烛来召唤鬼魂。",
+   "每根蜡烛扣 16% 理智（共 80%）；全部点燃后鬼魂在法阵内显形约 5 秒，随后触发诅咒猎杀。",
+   "是拍摄鬼魂照片的最佳手段；点燃最后一根前保证理智高于 16%，并备好熏香与躲藏点。",
+   "若鬼魂已在猎杀中，显形环节会被跳过，直接进入猎杀。"
+  ]
+ }
+];
+
+const ICONS = {
+  emf5:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="4" width="10" height="14" rx="2"/><path d="M12 4V1.8"/><path d="M12 21.5v-2.5"/><path d="M9.5 21.5h5"/><path d="M10 9l4 4M14 9l-4 4"/><path d="M4.5 8.5c-1 1.4-1 4.6 0 6M19.5 8.5c1 1.4 1 4.6 0 6"/></svg>',
+  dots:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="12" height="8" rx="1.5"/><path d="M3 7.6h12"/><circle cx="6.2" cy="10" r=".55" fill="currentColor"/><circle cx="9" cy="10" r=".55" fill="currentColor"/><circle cx="11.8" cy="10" r=".55" fill="currentColor"/><path d="M15 9l5.2 5.2"/><path d="M17.8 12.6l3 3"/><circle cx="20.6" cy="15.4" r="1.1"/></svg>',
+  uv:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.2 5 4.8M8.8 7.8 7.4 6.4M5.4 10.4 4 9"/><rect x="8.5" y="4" width="9" height="4.6" rx="1.4" transform="rotate(-22 13 6.3)"/><path d="M12.5 7.6l5.2 5.2"/><path d="M15.6 12.6l3.4 3.4"/><path d="M18.4 13.2l2.6 2.6"/></svg>',
+  freezing:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4.5a2 2 0 1 1 4 0v8.8a4.4 4.4 0 1 1-4 0V4.5z"/><circle cx="12" cy="16.9" r="2"/><path d="M12 2.2v1.6"/><path d="M15.6 2.6l1.1-1.1M17.8 4.8l-1.1 1.1M17.8 2.6l1.1-1.1M15.6 4.8l1.1 1.1"/></svg>',
+  orb:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="12" height="8" rx="1.5"/><path d="M15 8l4-2.2v8.4L15 12"/><circle cx="8.6" cy="10" r="1"/><circle cx="19.4" cy="13.6" r="1.5" opacity=".85"/></svg>',
+  writing:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 5.5A2.5 2.5 0 0 1 7 3h12v14H7a2.5 2.5 0 0 0-2.5 2.5v-14z"/><path d="M8.5 8h7M8.5 11h5"/><path d="M16.5 15.5l3.6 3.6-1.6 1.6-3.6-3.6 1.6-1.6z"/></svg>',
+  box:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="10" rx="2"/><circle cx="12" cy="12" r="2.1"/><path d="M7 10.8c-.8 1-.8 2.4 0 3.4M17 10.8c.8 1 .8 2.4 0 3.4M9.3 9.7c-1 1.1-1 3.5 0 4.6M14.7 9.7c1 1.1 1 3.5 0 4.6"/></svg>'
+};
+
+/* ============================================================
+   状态
+   ============================================================ */
+const LS_KEY = "phasmo-evidence-v2";
+const state = { ev:{} };
+try{
+  const saved = JSON.parse(localStorage.getItem(LS_KEY) || "{}");
+  if(Array.isArray(saved)){
+    // 兼容旧版本存储（勾选 = 有）
+    saved.forEach(id=>{ if(EV_MAP[id]) state.ev[id] = "yes"; });
+  } else if(saved && typeof saved === "object"){
+    for(const id in saved){ if(EV_MAP[id] && (saved[id]==="yes" || saved[id]==="no")) state.ev[id] = saved[id]; }
+  }
+}catch(e){ /* 忽略损坏的存储 */ }
+
+let selGhostId = GHOSTS.length ? GHOSTS[0].id : "spirit";
+let selItemId = 0;
+let selCursedId = 0;
+
+function persist(){
+  try{ localStorage.setItem(LS_KEY, JSON.stringify(state.ev)); }catch(e){}
+}
+
+/* ============================================================
+   路由
+   ============================================================ */
+const ROUTES = ["home","items","cursed","media","evidence","ghost"];
+function parseHash(){
+  const h = location.hash || "#/evidence";
+  const [path, qs] = h.slice(1).split("?");
+  const route = path.split("/").filter(Boolean)[0] || "evidence";
+  const id = new URLSearchParams(qs || "").get("id");
+  return { route: ROUTES.includes(route) ? route : "evidence", id };
+}
+function navigate(route, id){
+  location.hash = id ? "#/" + route + "?id=" + encodeURIComponent(id) : "#/" + route;
+}
+
+/* ============================================================
+   判定逻辑
+   ============================================================ */
+function isCandidate(g){
+  for(const id in state.ev){
+    if(state.ev[id] === "yes" && !g.ev.includes(id)) return false;
+    if(state.ev[id] === "no"  &&  g.ev.includes(id)) return false;
+  }
+  return true;
+}
+function candidates(){ return GHOSTS.filter(isCandidate); }
+function toggleEvState(id){
+  const cur = state.ev[id] || "";
+  if(cur === "yes") state.ev[id] = "no";
+  else if(cur === "no") delete state.ev[id];
+  else state.ev[id] = "yes";
+}
+
+/* ============================================================
+   渲染辅助
+   ============================================================ */
+function evChips(evIds, big){
+  return '<div class="ev-chips' + (big ? " big" : "") + '">' + evIds.map(id=>{
+    const e = EV_MAP[id];
+    return '<span class="ev-chip">' + ICONS[id] + e.name + "</span>";
+  }).join("") + "</div>";
+}
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+/* 标红标记：编辑器中的【红】文字【/红】 → 红色文字 */
+function fmt(s){ return esc(s).replace(/【红】([\s\S]*?)【\/红】/g, '<span class="red">$1</span>'); }
+
+/* ============================================================
+   视图：证据页（工具主界面）
+   ============================================================ */
+function renderEvidenceLeft(){
+  const rows = EVIDENCE.map(e=>{
+    const v = state.ev[e.id] || "";
+    const cls = v === "yes" ? " checked" : (v === "no" ? " struck" : "");
+    const mark = v === "no"
+      ? '<svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="#5a4f3c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4 12 12M12 4 4 12"/></svg>'
+      : '<svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="#a63b2a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5 6.5 12 13 4.5"/></svg>';
+    return '<div class="ev-row' + cls + '" data-ev="' + e.id + '" role="button">' +
+      '<span class="box">' + mark + '</span>' +
+      '<span class="ev-icon">' + ICONS[e.id] + "</span>" +
+      '<span class="ev-meta"><b>' + e.name + "</b><small>" + e.desc + "</small></span>" +
+      "</div>";
+  }).join("");
+  return '<div class="page-title">证据</div>' +
+    '<p class="pencil-note">点击标记证据：<b class="hl">确认有</b> → 再点<b class="hl">划掉排除</b> → 再点取消。右侧清单会同步排除不可能的鬼魂。</p>' +
+    '<div class="ev-list">' + rows + "</div>" +
+    '<button class="ink-btn" data-reset="1">清除证据</button>';
+}
+
+function renderEvidenceRight(){
+  const cand = candidates();
+  const n = cand.length;
+  const solo = n === 1 ? cand[0] : null;
+  const grid = GHOSTS.map(g=>{
+    const ok = isCandidate(g);
+    const cls = ok ? (solo && solo.id===g.id ? "ghost-name sole" : "ghost-name") : "ghost-name no";
+    const evNames = g.ev.map(id=>EV_MAP[id].name).join(" · ");
+    return '<button class="' + cls + '" data-ghost="' + g.id + '" title="证据：' + evNames + '">' + g.name + "</button>";
+  }).join("");
+
+  let status = "";
+  if(n === 0){
+    status = '<div class="warn-box">没有符合全部证据的鬼魂——某个证据可能记错了，检查一下再勾选。</div>';
+  } else if(n === 1){
+    status = '<div class="solo-note">已锁定：' + solo.name + "</div>";
+  }
+
+  return '<div class="page-title small">证据</div>' +
+    '<p class="pencil-note">根据我们找到的证据，这种鬼可能是——</p>' +
+    '<div class="counter"><span>候选</span><b>' + n + '</b><span>/ ' + GHOSTS.length + '</span><span class="excl">已排除 ' + (GHOSTS.length-n) + " 种</span>" + status + "</div>" +
+    '<div class="ghost-grid">' + grid + "</div>" +
+    '<p class="legend"><i>亮色</i>＝仍有可能&ensp;·&ensp;淡色＝已排除（含"无"证据或缺"有"证据）&ensp;·&ensp;点击鬼名查看全部特性</p>';
+}
+
+/* ============================================================
+   视图：主页（调查员手册）
+   ============================================================ */
+function renderHomeLeft(){
+  return '<div class="page-title">调查员手册</div>' +
+    '<p class="pencil-note">—— 入门玩法速记 ——</p>' +
+    '<div class="manual">' +
+    '<p>《恐鬼症》（Phasmophobia）是一款多人合作恐怖调查游戏。你和队友受雇进入闹鬼地点，找出正在作祟的鬼魂类型——<span class="hl">找对了，任务才算完成。</span></p>' +
+    '<p class="sub">调查流程</p>' +
+    '<p>找到鬼房后，布置设备：EMF 读数器、通灵盒、温度计、紫外线灯、点阵投影仪、摄像机和灵写本。七种证据里，<span class="hl">每种鬼魂固定对应其中三种</span>；把确认到的证据逐项勾选，候选名单就会一步步缩小。</p>' +
+    '<p>证据不足或噩梦难度下，可以靠鬼魂的行为特征来定鬼——速度、开关灯、扔东西、猎杀方式，都是破案线索。切换到「鬼魂」页签，能看到每种鬼的完整资料。</p>' +
+    '<p class="sub">关于猎杀</p>' +
+    '<p>理智值越低，鬼魂越危险。它会突然开启猎杀：大门锁死、灯光闪烁、鬼魂实体化追杀玩家。这时可以躲进衣柜等藏身处，或用十字架、圣木（熏香）拖延保命。</p>' +
+    "</div>";
+}
+
+function renderHomeRight(){
+  const quick = EVIDENCE.map(e=>
+    '<div class="ev-q">' +
+      '<span class="ev-icon">' + ICONS[e.id] + "</span>" +
+      '<span><b>' + e.name + '</b><br><small>' + e.desc + "</small></span>" +
+    "</div>"
+  ).join("");
+  return '<div class="page-title small">证据速览</div>' +
+    '<p class="pencil-note">七种证据，找到三种即可锁定鬼魂。</p>' +
+    '<div class="ev-quick">' + quick + "</div>" +
+    '<div class="hunt-warn"><b>小贴士：</b>通灵盒需要单人、关灯、靠近鬼魂时提问才可能得到回应；灵球只能通过摄像机画面看到；点阵投影仪要架好设备再观察幽灵干扰。</div>';
+}
+
+/* ============================================================
+   视图：图鉴页（鬼魂类型 + 详情）
+   ============================================================ */
+function renderGhostList(){
+  const list = GHOSTS.map(g=>
+    '<button class="ghost-item' + (g.id===selGhostId ? " sel" : "") + '" data-ghost="' + g.id + '">' + g.name + "</button>"
+  ).join("");
+  return '<div class="page-title">鬼魂类型</div>' +
+    '<p class="pencil-note">选择一种鬼魂类型查看详情：</p>' +
+    '<div class="ghost-list">' + list + "</div>";
+}
+
+function renderGhostDetail(){
+  const g = GHOSTS.find(x=>x.id===selGhostId) || GHOSTS[0];
+  if(!g) return '<div class="blank"><p class="b-hand">暂无数据</p></div>';
+  return '<div class="detail">' + ghostDetailHTML(g) + "</div>";
+}
+
+/* ============================================================
+   鬼魂详情块（图鉴页 / 弹窗共用）
+   ============================================================ */
+function detailList(text){
+  return String(text || "").split("\n").filter(s=>s.trim())
+    .map(s=>'<li>' + fmt(s) + '</li>').join("");
+}
+function ghostDetailHTML(g){
+  const mimicNote = g.id === "mimic"
+    ? '<p class="d-note">注意：拟魂总会额外提供一个「假灵球」证据。勾选灵球并不能排除它——若行为像 A 鬼、证据却指向 B 鬼，考虑一下拟魂。</p>'
+    : "";
+  const tipBlock = g.tip
+    ? '<div class="d-block"><h4>定鬼技巧</h4><ul class="d-list">' + detailList(g.tip) + '</ul></div>'
+    : "";
+  return '<div class="d-name">' + esc(g.name) + "<span>" + esc(g.en) + "</span></div>" +
+    '<p class="d-desc">' + fmt(g.desc || "暂无官方简介。") + "</p>" +
+    '<dl class="d-stats">' +
+      '<div><dt>基础速度</dt><dd>' + esc(g.speed) + "</dd></div>" +
+      '<div><dt>视野内加速</dt><dd>' + esc(g.los) + "</dd></div>" +
+      '<div><dt>特殊加速</dt><dd>' + esc(g.special) + "</dd></div>" +
+    "</dl>" +
+    '<div class="d-block"><h4>特征</h4><ul class="d-list">' + detailList(g.trait) + '</ul></div>' +
+    '<div class="d-block"><h4>猎杀特征</h4><p>' + fmt(g.hunt) + "</p></div>" +
+    tipBlock +
+    '<div class="d-block"><h4>证据</h4>' + evChips(g.ev) + mimicNote + "</div>";
+}
+
+/* ============================================================
+   弹窗：证据页点击鬼名 → 展示全部特性
+   ============================================================ */
+function openModal(html){
+  const modal = document.getElementById("ghostModal");
+  modal.querySelector(".modal-body").innerHTML = html;
+  modal.hidden = false;
+  requestAnimationFrame(()=>modal.classList.add("show"));
+  document.body.classList.add("modal-open");
+}
+function closeModal(){
+  const modal = document.getElementById("ghostModal");
+  modal.hidden = true;
+  modal.classList.remove("show");
+  document.body.classList.remove("modal-open");
+}
+function openGhostModal(id){
+  const g = GHOSTS.find(x=>x.id===id);
+  if(!g) return;
+  openModal(ghostDetailHTML(g));
+}
+
+
+/* ============================================================
+   视图：物品页（道具一览 + 详情）
+   ============================================================ */
+function renderItemsLeft(){
+  return '<div class="page-title">物品</div>' +
+    '<p class="pencil-note">调查装备一览，点击查看详情：</p>' +
+    '<div class="item-list">' + ITEMS.map((it,i)=>
+      '<button class="item-name' + (i===selItemId ? " on" : "") + '" data-item="' + i + '">' + it.num + '. ' + esc(it.name) + '<small>' + esc(it.price) + '</small></button>'
+    ).join("") + '</div>';
+}
+function itemDetailHTML(it){
+  return '<div class="d-name">' + it.num + '. ' + esc(it.name) + '<span>' + esc(it.price) + '</span></div>' +
+    '<img class="item-img" src="' + it.img + '" alt="' + esc(it.name) + '" loading="lazy">' +
+    '<div class="tier-row">' + it.tiers.map(t=>
+      '<div class="tier-card"><h4>' + esc(t.t) + '</h4><p>' + fmt(t.d) + '</p></div>'
+    ).join("") + '</div>' +
+    '<div class="item-note"><h4>整体介绍</h4>' + it.use.split("\n").map(s=>s? '<p>' + fmt(s) + '</p>' : "").join("") + '</div>';
+}
+function renderItemsRight(){
+  return '<div class="blank"><p class="b-hand">点击左侧道具</p><p class="b-sub">详细介绍在小窗中展示</p></div>';
+}
+
+/* ============================================================
+   视图：诅咒道具页
+   ============================================================ */
+function renderCursedLeft(){
+  return '<div class="page-title">诅咒道具</div>' +
+    '<p class="pencil-note">每局只会生成其中一件，固定在地图特定位置。点击查看玩法：</p>' +
+    '<div class="item-list">' + CURSED.map((c,i)=>
+      '<button class="item-name' + (i===selCursedId ? " on" : "") + '" data-cursed="' + i + '">' + esc(c.name) + '<small>' + esc(c.en) + '</small></button>'
+    ).join("") + '</div>';
+}
+function cursedDetailHTML(c){
+  let html = '<div class="d-name">' + esc(c.name) + '<span>' + esc(c.en) + '</span></div>' +
+    '<img class="item-img" src="' + c.img + '" alt="' + esc(c.name) + '" loading="lazy">' +
+    '<div class="d-block"><h4>玩法与机制</h4><ul class="d-list">' + c.use.map(s=>'<li>' + fmt(s) + '</li>').join("") + '</ul></div>';
+  if(c.cards && c.cards.length){
+    html += '<div class="d-block"><h4>牌面一览</h4><div class="card-grid">' +
+      c.cards.map(k=>'<div class="card-cell"><img src="' + k.img + '" alt="' + esc(k.en) + '" loading="lazy"><b>' + esc(k.name) + '</b><i>' + esc(k.en) + '</i><span>' + fmt(k.d) + '</span></div>'
+      ).join("") + '</div></div>';
+  }
+  html += '<p class="d-note">诅咒道具（Cursed Possessions）：使用会扣除理智，并可能触发<b>诅咒猎杀</b>——比普通猎杀持续时间更长、无视宽限期立即开始。使用前先确认躲藏点与熏香位置。</p>';
+  return html;
+}
+function renderCursedRight(){
+  return '<div class="blank"><p class="b-hand">点击左侧诅咒道具</p><p class="b-sub">详细介绍在小窗中展示</p></div>';
+}
+
+/* ============================================================
+   视图：空白页
+   ============================================================ */
+function renderBlank(){
+  return '<div class="blank">' +
+    '<p class="b-hand">此页空白</p>' +
+    '<p class="b-note">—— 案件笔记尚未记录 ——</p>' +
+    "</div>";
+}
+
+/* ============================================================
+   总渲染
+   ============================================================ */
+function renderAll(){
+  const { route, id } = parseHash();
+  if(route === "ghost" && id) selGhostId = id;
+  if(route === "ghost" && !GHOSTS.some(g=>g.id===selGhostId)) selGhostId = GHOSTS[0].id;
+
+  document.querySelectorAll(".tab").forEach(t=>{
+    t.classList.toggle("active", t.dataset.route === route);
+  });
+
+  const L = document.getElementById("pageLeft");
+  const R = document.getElementById("pageRight");
+
+  if(route === "evidence"){
+    L.innerHTML = renderEvidenceLeft();
+    R.innerHTML = renderEvidenceRight();
+  } else if(route === "home"){
+    L.innerHTML = renderHomeLeft();
+    R.innerHTML = renderHomeRight();
+  } else if(route === "ghost"){
+    L.innerHTML = renderGhostList();
+    R.innerHTML = renderGhostDetail();
+  } else if(route === "items"){
+    L.innerHTML = renderItemsLeft();
+    R.innerHTML = renderItemsRight();
+  } else if(route === "cursed"){
+    L.innerHTML = renderCursedLeft();
+    R.innerHTML = renderCursedRight();
+  } else {
+    L.innerHTML = renderBlank();
+    R.innerHTML = renderBlank();
+  }
+  L.classList.toggle("page-left", true);
+  R.classList.toggle("page-right", true);
+}
+
+/* ============================================================
+   事件
+   ============================================================ */
+document.addEventListener("click", e=>{
+  const tab = e.target.closest("[data-route]");
+  if(tab){ navigate(tab.dataset.route); return; }
+
+  const closeM = e.target.closest("[data-close-modal]");
+  if(closeM){ closeModal(); return; }
+  if(e.target.classList && e.target.classList.contains("modal-overlay")){ closeModal(); return; }
+
+  const evRow = e.target.closest("[data-ev]");
+  if(evRow){ toggleEvState(evRow.dataset.ev); persist(); renderAll(); return; }
+
+  const cur = e.target.closest("[data-cursed]");
+  if(cur){
+    selCursedId = parseInt(cur.dataset.cursed,10);
+    renderAll();
+    openModal(cursedDetailHTML(CURSED[selCursedId] || CURSED[0]));
+    return;
+  }
+
+  const itm = e.target.closest("[data-item]");
+  if(itm){
+    selItemId = parseInt(itm.dataset.item,10);
+    renderAll();
+    openModal(itemDetailHTML(ITEMS[selItemId] || ITEMS[0]));
+    return;
+  }
+
+  const gn = e.target.closest("[data-ghost]");
+  if(gn){
+    const id = gn.dataset.ghost;
+    if(parseHash().route === "evidence"){ openGhostModal(id); return; }
+    selGhostId = id;
+    if(location.hash === "#/ghost?id=" + id){ renderAll(); }
+    else { navigate("ghost", id); }
+    return;
+  }
+
+  const reset = e.target.closest("[data-reset]");
+  if(reset){
+    state.ev = {};
+    persist();
+    renderAll();
+    return;
+  }
+});
+
+document.addEventListener("keydown", e=>{
+  if(e.key === "Escape") closeModal();
+});
+
+window.addEventListener("hashchange", renderAll);
+
+/* 首次渲染 */
+renderAll();
+</script>
+</body>
+</html>
