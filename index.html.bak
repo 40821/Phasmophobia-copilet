@@ -1449,7 +1449,7 @@ const ITEMS = [
   "num": "7",
   "name": "摄像机",
   "price": "4个 / $50",
-  "img": "摄像机.webp",
+  "img": "摄像机.jpg",
   "tiers": [
    {
     "t": "一级 · 默认装备",
@@ -2005,13 +2005,68 @@ const MEDIA = [
   "name": "照相机",
   "items": [
    {
-    "t": "紫外线两张",
-    "d": "一张指纹、一张脚印",
+    "t": "全身现身的鬼",
+    "d": "鬼魂完全实体化时拍摄",
+    "bonus": "$15"
+   },
+   {
+    "t": "半透明的鬼",
+    "d": "半透明形态",
+    "bonus": "$15"
+   },
+   {
+    "t": "鬼的影子",
+    "d": "阴影轮廓形态",
+    "bonus": "$15"
+   },
+   {
+    "t": "薄雾形态",
+    "d": "雾气状的鬼魂",
+    "bonus": "$15"
+   },
+   {
+    "t": "DOTS 中的鬼",
+    "d": "点阵投影仪上的身影",
+    "bonus": "$10"
+   },
+   {
+    "t": "EMF 5 级读数",
+    "d": "EMF 仪跳到 5 级时拍摄",
+    "bonus": "$10"
+   },
+   {
+    "t": "刺骨寒温",
+    "d": "温度计零下 / 可见哈气",
+    "bonus": "$10"
+   },
+   {
+    "t": "燃烧的十字架",
+    "d": "阻止猎杀后烧毁的十字架",
+    "bonus": "$10"
+   },
+   {
+    "t": "鬼魂笔记",
+    "d": "鬼在笔记上写下的字",
+    "bonus": "$10"
+   },
+   {
+    "t": "奥帛客指纹",
+    "d": "奥帛客留下的变形指纹",
+    "bonus": "$10"
+   },
+   {
+    "t": "紫外线指纹",
+    "d": "一张指纹",
     "bonus": "$5"
    },
    {
-    "t": "EMF 读数可",
-    "d": "读数为 5 级时更有价值",
+    "t": "紫外线脚印",
+    "d": "一组脚印",
+    "bonus": "$5"
+   },
+   {
+    "t": "普通 EMF 读数",
+    "d": "EMF 2~4 级读数",
     "bonus": "$5"
    },
    {
@@ -2021,38 +2076,13 @@ const MEDIA = [
    },
    {
     "t": "骨头",
-    "d": "找到并拍下骸骨（每局只有一根）",
+    "d": "每局仅一根骸骨",
     "bonus": "$5"
    },
    {
     "t": "诅咒道具",
-    "d": "魔镜、猴爪、通灵板等",
+    "d": "通灵板、魔镜、猴爪等",
     "bonus": "$5"
-   },
-   {
-    "t": "温度计刺骨寒温",
-    "d": "可以拍",
-    "bonus": "$5"
-   },
-   {
-    "t": "燃烧的十字架",
-    "d": "阻止猎杀后烧毁的十字架",
-    "bonus": "$5"
-   },
-   {
-    "t": "实体的鬼",
-    "d": "完全现身的鬼魂",
-    "bonus": "$10"
-   },
-   {
-    "t": "半透明的鬼",
-    "d": "半透明形态的鬼魂",
-    "bonus": "$10"
-   },
-   {
-    "t": "鬼的影子",
-    "d": "阴影轮廓形态",
-    "bonus": "$10"
    },
    {
     "t": "尸体",
@@ -2066,13 +2096,63 @@ const MEDIA = [
   "name": "摄像机",
   "items": [
    {
+    "t": "鬼变形",
+    "d": "女妖等在镜头前改变形态",
+    "bonus": "$20"
+   },
+   {
+    "t": "狩猎的鬼",
+    "d": "猎杀中的鬼魂",
+    "bonus": "$20"
+   },
+   {
+    "t": "现身的鬼",
+    "d": "全身 / 半透明 / 影子 / 薄雾",
+    "bonus": "$15"
+   },
+   {
+    "t": "DOTS 中的鬼",
+    "d": "夜视下点阵投影仪的身影",
+    "bonus": "$10"
+   },
+   {
+    "t": "鬼魂光点",
+    "d": "夜视下的鬼 Orb（证据）",
+    "bonus": "$10"
+   },
+   {
+    "t": "燃烧的十字架",
+    "d": "烧毁的十字架",
+    "bonus": "$10"
+   },
+   {
+    "t": "被踩过的盐",
+    "d": "鬼魂在盐堆上留下脚印",
+    "bonus": "$10"
+   },
+   {
+    "t": "鬼魂笔记",
+    "d": "鬼在笔记上写字",
+    "bonus": "$10"
+   },
+   {
+    "t": "灯闪烁",
+    "d": "灯不正常地闪烁",
+    "bonus": "$10"
+   },
+   {
+    "t": "灯爆炸",
+    "d": "灯泡被鬼炸掉",
+    "bonus": "$10"
+   },
+   {
     "t": "门互动",
-    "d": "鬼推动/开关门",
+    "d": "鬼推动 / 开关门",
     "bonus": "$5"
    },
    {
-    "t": "灯互动",
-    "d": "开灯、关灯、闪灯、炸灯",
+    "t": "开关灯",
+    "d": "灯自行开关",
     "bonus": "$5"
    },
    {
@@ -2081,39 +2161,24 @@ const MEDIA = [
     "bonus": "$5"
    },
    {
-    "t": "踩过的盐",
-    "d": "盐堆上的脚印",
+    "t": "火焰熄灭",
+    "d": "蜡烛 / 火堆被吹灭",
     "bonus": "$5"
    },
    {
-    "t": "熄灭的火焰",
-    "d": "蜡烛/打火机被吹灭",
+    "t": "运动触发",
+    "d": "运动传感器被触发",
     "bonus": "$5"
    },
    {
-    "t": "检测到的运动（运感）",
-    "d": "运动传感器触发",
-    "bonus": "$5"
-   },
-   {
-    "t": "现身（实体鬼、半透明鬼、鬼的影子）",
-    "d": "现身时灯光泛红",
-    "bonus": "$10"
-   },
-   {
-    "t": "狩猎的鬼",
-    "d": "猎杀中的鬼魂",
-    "bonus": "$20"
-   },
-   {
-    "t": "燃烧的十字架",
-    "d": "烧毁的十字架",
+    "t": "保险丝跳闸",
+    "d": "鬼拉掉保险丝",
     "bonus": "$5"
    },
    {
     "t": "尸体",
-    "d": "尸体",
-    "bonus": "$10"
+    "d": "队友或自己的尸体",
+    "bonus": "$5"
    }
   ]
  },
@@ -2122,48 +2187,83 @@ const MEDIA = [
   "name": "录音机",
   "items": [
    {
-    "t": "猎杀中的鬼",
+    "t": "狩猎中的鬼",
     "d": "猎杀时鬼魂发出的声音",
     "bonus": "$20"
    },
    {
-    "t": "通灵盒的回复",
+    "t": "鬼魂事件",
+    "d": "鬼魂事件中现身的声音",
+    "bonus": "$15"
+   },
+   {
+    "t": "薄雾形态",
+    "d": "雾气状鬼魂的声音",
+    "bonus": "$15"
+   },
+   {
+    "t": "女妖尖叫",
+    "d": "录到基本锁定女妖",
+    "bonus": "$10"
+   },
+   {
+    "t": "达彦呼吸声",
+    "d": "盲灵靠近时的呼吸声",
+    "bonus": "$10"
+   },
+   {
+    "t": "通灵盒回复",
     "d": "鬼魂通过通灵盒答话",
     "bonus": "$10"
    },
    {
-    "t": "EMF 5 级",
-    "d": "EMF 读数器 5 级声音",
+    "t": "EMF 5 级声",
+    "d": "EMF 跳到 5 级时的声响",
     "bonus": "$10"
-   },
-   {
-    "t": "超自然的说话",
-    "d": "鬼魂低语/说话声",
-    "bonus": "$5"
-   },
-   {
-    "t": "超自然的笑声",
-    "d": "鬼魂的笑声",
-    "bonus": "$5"
-   },
-   {
-    "t": "超自然的尖叫（女妖特征）",
-    "d": "录到基本锁定女妖",
-    "bonus": "$5"
-   },
-   {
-    "t": "熄灭的火焰",
-    "d": "火焰被鬼吹灭的声音",
-    "bonus": "$5"
    },
    {
     "t": "燃烧的十字架",
     "d": "十字架燃烧的声音",
+    "bonus": "$10"
+   },
+   {
+    "t": "鬼魂笔记声",
+    "d": "鬼在笔记上写字的声音",
+    "bonus": "$10"
+   },
+   {
+    "t": "超自然说话",
+    "d": "鬼魂的说话声",
     "bonus": "$5"
    },
    {
-    "t": "播放的音乐",
-    "d": "会哭的娃娃/音乐盒的声音可录下",
+    "t": "超自然笑声",
+    "d": "鬼魂的笑声",
+    "bonus": "$5"
+   },
+   {
+    "t": "超自然低语",
+    "d": "鬼魂的低语声",
+    "bonus": "$5"
+   },
+   {
+    "t": "超自然呻吟",
+    "d": "鬼魂的呻吟声",
+    "bonus": "$5"
+   },
+   {
+    "t": "火焰熄灭声",
+    "d": "火焰被鬼吹灭",
+    "bonus": "$5"
+   },
+   {
+    "t": "音乐盒",
+    "d": "音乐盒播放的音乐",
+    "bonus": "$5"
+   },
+   {
+    "t": "扭曲音乐",
+    "d": "被鬼干扰的音乐声",
     "bonus": "$5"
    }
   ]
@@ -2171,19 +2271,94 @@ const MEDIA = [
 ];
 const NEWS = [
  {
+  "ver": "2026-08-11",
+  "date": "2026-08-11",
+  "tag": "开发预览",
+  "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840310314354216",
+  "title": "Phasmophobia Quality of Life Part 2 Preview",
+  "items": [
+   "《恐鬼症》生活质量 Part 2 更新预览"
+  ]
+ },
+ {
+  "ver": "2026-07-14",
+  "date": "2026-07-14",
+  "tag": "开发预览",
+  "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1837955055366422",
+  "title": "Phasmophobia Quality of Life Preview #2",
+  "items": [
+   "《恐鬼症》生活质量更新预览 #2"
+  ]
+ },
+ {
+  "ver": "2026-07-02",
+  "date": "2026-07-02",
+  "tag": "开发预览",
+  "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165568121",
+  "title": "Phasmophobia Quality of Life Update Preview",
+  "items": [
+   "《恐鬼症》生活质量更新预览"
+  ]
+ },
+ {
+  "ver": "2026-06-24",
+  "date": "2026-06-24",
+  "tag": "官方公告",
+  "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165546119",
+  "title": "Phasmophobia 2026 and Beyond",
+  "items": [
+   "《恐鬼症》2026 及未来展望"
+  ]
+ },
+ {
+  "ver": "v0.17.1.5",
+  "date": "2026-06-03",
+  "tag": "热修复",
+  "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1834602721184795",
+  "title": "Phasmophobia - Hotfix v0.17.1.5",
+  "items": [
+   "《恐鬼症》热修复 v0.17.1.5"
+  ]
+ },
+ {
+  "ver": "2026-05-21",
+  "date": "2026-05-21",
+  "tag": "官方公告",
+  "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1833334318568929",
+  "title": "Phasmophobia - Double XP & Rewards",
+  "items": [
+   "各位幽灵猎人：2026 年 5 月 22 日至 5 月 25 日期间，完成的所有合同均可获得双倍经验与奖励，祝游玩愉快。"
+  ]
+ },
+ {
+  "ver": "v0.17.1.3",
+  "date": "2026-05-19",
+  "tag": "热修复",
+  "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832700592800634",
+  "title": "Phasmophobia - Hotfix v0.17.1.3",
+  "items": [
+   "《恐鬼症》热修复 v0.17.1.3"
+  ]
+ },
+ {
   "ver": "2026-09-19",
   "date": "2026-09-19",
   "tag": "官方公告",
   "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844115010495294",
   "title": "6th Anniversary Twitch Drop & Double XP",
-  "items": []
+  "items": [
+   "六周年纪念活动：Twitch 直播掉宝 + 双倍经验与奖励"
+  ]
  },
  {
   "ver": "v0.18.0.1",
   "date": "2026-07-28",
   "tag": "热修复",
   "items": [
-   "Welcome back, Ghost Hunters. We've deployed a small hotfix to address feedback on the Equipment and Item slot assignments. Patch notes below: ChangesItems and Equipment will now be assigned a slot in the order they are picked up from 1-3. Flashlights will no longer be locked to 1. Igniters will default to 4."
+   "欢迎回来，幽灵猎人。我们推送了一个小型热修复，回应大家关于装备与物品栏位分配的反馈。",
+   "改动：物品与装备现在按拾取顺序分配到 1–3 号栏位。",
+   "手电筒不再固定锁定在 1 号位。",
+   "点火器默认放在 4 号位。"
   ],
   "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1839041357038727"
  },
@@ -2192,7 +2367,19 @@ const NEWS = [
   "date": "2026-07-28",
   "tag": "更新公告",
   "items": [
-   "Welcome back, Ghost Hunters. Today we have deployed an update for Phasmophobia that addresses several issues that were raised following last week’s update. Thank you to everyone who provided feedback and helped us identify these issues.Full patch notes below. FixesFixed an issue that caused Photo Cameras to interfere with other player animations.Fixed an issue that caused the Photo Camera’s Use animation to not play in Multiplayer.Fixed an issue that caused the Photo Camera to take an extra photo when dropped while taking a photo.Fixed an issue that caused the Photo Camera to take a photo if picked up by another player after being dropped while being used by the original player.Fixed an issue that caused Twitch Drop reward ID Card & Badge cosmetics to be missing.Fixed an issue that would cause items to get stuck or fall through the floor when dropped in Multiplayer.Fixed an issue that caused videos of a Hunting Ghost to not count towards the Apocalypse challenge.Fixed an issue that allowed Ghosts to be able to enter several hiding spots in 13 Willow Street.This also fixes similar issues in 6 Tanglewood Drive, 42 Edgefield Road and 10 Ridgeview Court.Fixed an issue that caused the Incense to not appear as Used if the animation was cancelled by opening the Journal.VR - Fixed an issue that caused unstable FPS whilst in the Truck.VR - Fixed an issue that caused players to become stuck while loading in to a Multiplayer game on Bleasdale Farmhouse.Known IssuesIf a Flashlight is not picked up, hotkeys are assigned in this order: 2, 3, 1. If a Flashlight is picked up, it will default to 1. A following patch will address this issue, with Equipment being assigned in the order they are picked up. Igniters will however always default to 4."
+   "欢迎回来，幽灵猎人。今天我们推送了一次更新，解决上周更新后反馈的若干问题，感谢大家的反馈与帮助。",
+   "修复：相机会干扰其他玩家动画的问题。",
+   "修复：多人游戏中照相机的使用动画不播放的问题。",
+   "修复：拍照时丢弃相机会额外多拍一张的问题。",
+   "修复：原使用者拍照时被他人捡起相机会误拍的问题。",
+   "修复：Twitch 掉宝奖励的 ID 卡与徽章饰品缺失的问题。",
+   "修复：多人游戏中丢弃的物品会卡住或穿过地板的问题。",
+   "修复：猎杀中鬼魂的录像不计入「天启」挑战的问题。",
+   "修复：鬼魂能进入 13 Willow Street 多处躲藏点的问题（同时修复 6 Tanglewood Drive、42 Edgefield Road、10 Ridgeview Court 的同类问题）。",
+   "修复：打开日记取消动画后熏香未显示为「已使用」的问题。",
+   "VR：修复卡车内帧率不稳定的问题。",
+   "VR：修复在 Bleasdale Farmhouse 加载多人游戏时玩家卡住的问题。",
+   "已知问题：若未拾取手电筒，快捷键顺序为 2、3、1；拾取后默认在 1 号位。后续补丁会改为按拾取顺序分配栏位，点火器则始终默认为 4。"
   ],
   "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1839041357037983"
  },
@@ -2294,6 +2481,7 @@ try{
 let selGhostId = GHOSTS.length ? GHOSTS[0].id : "spirit";
 let selItemId = 0;
 let selCursedId = 0;
+let selMediaId = "photo";
 
 function persist(){
   try{ localStorage.setItem(LS_KEY, JSON.stringify(state.ev)); }catch(e){}
@@ -2615,16 +2803,29 @@ function renderCursedRight(){
 /* ============================================================
    视图：空白页
    ============================================================ */
+const MEDIA_ICONS = {
+  photo: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="3"/><circle cx="12" cy="14" r="4.5"/><path d="M8.5 7L10 4h4l1.5 3"/></svg>',
+  cam:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="15" height="12" rx="2.5"/><path d="M17 10l5-3v10l-5-3"/><circle cx="7" cy="12" r="2.5"/></svg>',
+  rec:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2.5"/><circle cx="8" cy="12" r="3"/><circle cx="16" cy="12" r="3"/><rect x="4.5" y="16.2" width="15" height="1.6" rx="0.8"/></svg>'
+};
+function mediaMaxBonus(m){
+  const val = b => parseInt(String(b||'').replace(/[^0-9]/g,''),10)||0;
+  let mx = 0; (m.items||[]).forEach(it=>{ mx = Math.max(mx, val(it.bonus)); });
+  return mx;
+}
 function renderMediaLeft(){
-  const photo = MEDIA.find(m=>m.id==="photo") || MEDIA[0];
   return '<div class="page-title">媒体</div>' +
-    '<p class="pencil-note">每类内容首次记录（Unique）全额，重复记录贬值；二 / 三级设备每件再 +$1 / +$2。下表按奖励从高到低排列。</p>' +
-    mediaBlock(photo);
+    '<p class="pencil-note">左侧选设备，右侧看可记录的事件与奖励；首拍（Unique）全额，重复记录贬值。</p>' +
+    '<div class="item-list">' + MEDIA.map(m=>
+      '<button class="item-name' + (m.id===selMediaId ? " on" : "") + '" data-media="' + m.id + '">' +
+      '<span class="item-ico">' + MEDIA_ICONS[m.id] + '</span>' +
+      '<span class="item-lbl">' + esc(m.name) + '<small>' + m.items.length + ' 类 · 最高 $' + mediaMaxBonus(m) + '</small></span>' +
+      '</button>'
+    ).join("") + '</div>';
 }
 function renderMediaRight(){
-  const cam  = MEDIA.find(m=>m.id==="cam") || MEDIA[1];
-  const rec  = MEDIA.find(m=>m.id==="rec") || MEDIA[2];
-  return mediaBlock(cam) + mediaBlock(rec);
+  const m = MEDIA.find(x=>x.id===selMediaId) || MEDIA[0];
+  return mediaBlock(m);
 }
 function mediaBlock(m){
   const icons = {
@@ -2866,6 +3067,9 @@ document.addEventListener("click", e=>{
     if(!isPC()) openModal(itemDetailHTML(ITEMS[selItemId] || ITEMS[0]));
     return;
   }
+
+  const md = e.target.closest("[data-media]");
+  if(md){ selMediaId = md.dataset.media; renderAll(); return; }
 
   const gn = e.target.closest("[data-ghost]");
   if(gn){
