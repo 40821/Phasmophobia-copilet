@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
 <title>恐鬼症 · 推鬼助手</title>
+<link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://sf3-scmcdn-cn.feishucdn.com" crossorigin>
 <link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Ma+Shan+Zheng&text=%E3%80%81%E3%80%82%E3%80%8A%E3%80%8B%E4%B8%80%E4%B8%89%E4%B8%8A%E4%B8%8B%E4%B8%8D%E4%B8%8E%E4%B8%94%E4%B8%A4%E4%B8%AA%E4%B8%AD%E4%B8%BA%E4%B8%BB%E4%B9%88%E4%B9%8B%E4%B9%90%E4%B9%9F%E4%BA%86%E4%BA%8B%E4%BA%8C%E4%BA%92%E4%BA%94%E4%BA%A1%E4%BA%A4%E4%BA%AE%E4%BA%BA%E4%BB%8B%E4%BB%8E%E4%BB%A3%E4%BB%A5%E4%BB%AA%E4%BB%B6%E4%BB%B7%E4%BC%8A%E4%BC%8D%E4%BC%9A%E4%BC%A0%E4%BC%BC%E4%BD%86%E4%BD%8D%E4%BD%8E%E4%BD%93%E4%BD%9C%E4%BD%BF%E4%BE%9B%E4%BE%9D%E4%BF%A1%E5%80%8D%E5%80%92%E5%80%BC%E5%83%8F%E5%85%88%E5%85%89%E5%85%8B%E5%85%A5%E5%85%A8%E5%85%AB%E5%85%B3%E5%85%B6%E5%85%B7%E5%86%85%E5%86%9C%E5%86%B7%E5%87%86%E5%87%8F%E5%87%A0%E5%87%BA%E5%88%86%E5%88%87%E5%88%A4%E5%88%AB%E5%88%B0%E5%88%B6%E5%88%B9%E5%88%BA%E5%88%BB%E5%89%8D%E5%8A%9B%E5%8A%9F%E5%8A%A0%E5%8A%A8%E5%8A%A9%E5%8A%B1%E5%8C%BA%E5%8D%81%E5%8D%87%E5%8D%8A%E5%8D%8E%E5%8D%9A%E5%8D%B0%E5%8D%B3%E5%8D%B4%E5%8E%85%E5%8E%A2%E5%8F%82%E5%8F%8A%E5%8F%8B%E5%8F%91%E5%8F%96%E5%8F%98%E5%8F%A0%E5%8F%AA%E5%8F%AB%E5%8F%AC%E5%8F%AF%E5%8F%B3%E5%8F%B7%E5%8F%B8%E5%90%84%E5%90%88%E5%90%8A%E5%90%8C%E5%90%8D%E5%90%8E%E5%90%91%E5%90%AF%E5%90%B8%E5%90%B9%E5%91%98%E5%91%BC%E5%91%BD%E5%92%8C%E5%92%92%E5%93%81%E5%93%88%E5%93%AD%E5%94%A4%E5%99%A8%E5%9B%9E%E5%9B%B0%E5%9B%B4%E5%9B%BE%E5%9C%86%E5%9C%88%E5%9C%A8%E5%9C%B0%E5%9D%A6%E5%9E%8B%E5%9F%83%E5%9F%9F%E5%9F%BA%E5%A0%86%E5%A1%94%E5%A2%83%E5%A2%99%E5%A2%9E%E5%A3%B0%E5%A4%87%E5%A4%8D%E5%A4%96%E5%A4%9A%E5%A4%9C%E5%A4%9F%E5%A4%A7%E5%A4%AA%E5%A4%AB%E5%A4%AE%E5%A4%B1%E5%A4%B4%E5%A5%87%E5%A5%94%E5%A5%96%E5%A5%A5%E5%A5%B3%E5%A6%82%E5%A6%96%E5%A8%83%E5%A9%B4%E5%AA%92%E5%AD%90%E5%AD%97%E5%AD%AA%E5%AE%83%E5%AE%8C%E5%AE%98%E5%AE%9A%E5%AE%9E%E5%AE%B6%E5%AE%B9%E5%AF%92%E5%AF%B9%E5%B0%84%E5%B0%86%E5%B0%8F%E5%B0%91%E5%B0%94%E5%B0%96%E5%B0%A4%E5%B0%B1%E5%B0%B8%E5%B0%BC%E5%B1%80%E5%B1%8F%E5%B7%A5%E5%B7%A6%E5%B7%A8%E5%B7%AB%E5%B7%AE%E5%B7%B1%E5%B7%B2%E5%B8%83%E5%B8%8C%E5%B8%B8%E5%B9%85%E5%B9%95%E5%B9%B6%E5%B9%BB%E5%B9%BD%E5%B9%BF%E5%BA%8F%E5%BA%94%E5%BA%95%E5%BA%A6%E5%BB%93%E5%BC%80%E5%BC%8F%E5%BC%A0%E5%BC%BA%E5%BD%92%E5%BD%93%E5%BD%95%E5%BD%A2%E5%BD%A6%E5%BD%B1%E5%BE%81%E5%BE%84%E5%BE%88%E5%BE%97%E5%BE%A1%E5%BE%B7%E5%BF%85%E5%BF%97%E5%BF%AB%E6%80%81%E6%80%A7%E6%80%A8%E6%80%AA%E6%81%90%E6%81%A2%E6%81%AF%E6%81%B6%E6%84%8F%E6%84%9A%E6%84%9F%E6%85%A2%E6%88%8F%E6%88%90%E6%88%96%E6%88%B4%E6%88%BF%E6%89%80%E6%89%8B%E6%89%8D%E6%89%93%E6%89%94%E6%89%A3%E6%89%AB%E6%89%BE%E6%8A%95%E6%8A%9B%E6%8A%BD%E6%8B%89%E6%8B%8D%E6%8B%9F%E6%8B%A5%E6%8B%BF%E6%8C%81%E6%8C%87%E6%8C%89%E6%8C%A1%E6%8D%A2%E6%8D%A3%E6%8D%AE%E6%8E%92%E6%8E%A2%E6%8E%A5%E6%8E%A8%E6%8F%8F%E6%8F%90%E6%91%84%E6%91%98%E6%92%AD%E6%94%B6%E6%94%BE%E6%95%88%E6%95%B0%E6%95%B4%E6%96%87%E6%96%AD%E6%96%AF%E6%96%B0%E6%96%B9%E6%97%8B%E6%97%A0%E6%97%A5%E6%97%B6%E6%97%BA%E6%98%8E%E6%98%93%E6%98%BE%E6%99%AE%E6%99%BA%E6%9A%97%E6%9B%B4%E6%9B%BE%E6%9C%80%E6%9C%88%E6%9C%89%E6%9C%8D%E6%9C%9B%E6%9C%9F%E6%9C%AC%E6%9C%BA%E6%9D%80%E6%9D%9F%E6%9D%A1%E6%9D%A5%E6%9D%BE%E6%9D%BF%E6%9E%97%E6%9E%9C%E6%9E%AB%E6%9E%B6%E6%9F%A5%E6%9F%B3%E6%A0%87%E6%A0%91%E6%A0%B7%E6%A0%B9%E6%A0%BC%E6%A2%A6%E6%A3%80%E6%A3%92%E6%A8%A1%E6%AC%A1%E6%AD%A2%E6%AD%A3%E6%AD%A4%E6%AD%BB%E6%AF%81%E6%AF%8F%E6%AF%92%E6%AF%94%E6%B0%8F%E6%B0%94%E6%B0%B4%E6%B0%B8%E6%B1%A1%E6%B2%A1%E6%B3%95%E6%B3%9B%E6%B3%A2%E6%B3%A8%E6%B4%9B%E6%B4%BB%E6%B5%81%E6%B5%8B%E6%B6%88%E6%B8%A9%E6%B8%B8%E6%BA%90%E6%BF%80%E7%81%AB%E7%81%AD%E7%81%AF%E7%81%B5%E7%82%B8%E7%82%B9%E7%83%81%E7%83%88%E7%83%9B%E7%83%A7%E7%84%B0%E7%84%B6%E7%85%A7%E7%86%84%E7%86%8F%E7%87%83%E7%88%AA%E7%89%88%E7%89%8C%E7%89%A7%E7%89%A9%E7%89%B9%E7%8A%B6%E7%8B%A9%E7%8B%AD%E7%8B%B1%E7%8C%8E%E7%8C%B4%E7%8E%87%E7%8E%A9%E7%8E%AF%E7%8E%B0%E7%8F%A0%E7%8F%AD%E7%90%83%E7%90%86%E7%94%A8%E7%94%B1%E7%94%B5%E7%94%B7%E7%95%8C%E7%95%99%E7%97%87%E7%99%BD%E7%9A%84%E7%9B%90%E7%9B%91%E7%9B%92%E7%9B%AE%E7%9B%B2%E7%9B%B4%E7%9B%B8%E7%9C%8B%E7%9D%80%E7%9E%AC%E7%9F%AD%E7%9F%B3%E7%A1%80%E7%A1%AE%E7%A4%BA%E7%A5%9E%E7%A5%AD%E7%A6%81%E7%A6%BB%E7%A7%92%E7%A7%B0%E7%A7%BB%E7%A9%BF%E7%AA%84%E7%AB%8B%E7%AC%91%E7%AC%94%E7%AD%89%E7%AD%92%E7%AD%94%E7%AE%80%E7%AE%AD%E7%B1%B3%E7%B1%BB%E7%B2%89%E7%B4%A2%E7%B4%AB%E7%B9%81%E7%BA%A2%E7%BA%A6%E7%BA%A7%E7%BA%B3%E7%BA%B9%E7%BA%BF%E7%BB%84%E7%BB%8F%E7%BB%AD%E7%BB%B4%E7%BB%BF%E7%BC%93%E7%BD%97%E7%BD%AE%E7%BF%BB%E8%80%83%E8%80%85%E8%80%8C%E8%80%97%E8%80%B6%E8%81%9A%E8%83%BD%E8%84%8F%E8%84%9A%E8%87%AA%E8%87%B3%E8%87%B4%E8%88%8D%E8%88%AC%E8%89%B2%E8%8B%B1%E8%8C%83%E8%8D%A1%E8%8D%A7%E8%8D%AF%E8%8E%B1%E8%8F%B2%E8%90%A5%E8%9B%8B%E8%9C%A1%E8%A1%8C%E8%A1%97%E8%A1%A8%E8%A2%AB%E8%A3%85%E8%A4%90%E8%A7%81%E8%A7%86%E8%A7%92%E8%A7%A3%E8%A7%A6%E8%AE%A1%E8%AE%A4%E8%AE%A9%E8%AE%B0%E8%AE%BE%E8%AF%81%E8%AF%85%E8%AF%91%E8%AF%95%E8%AF%9D%E8%AF%AD%E8%AF%AF%E8%AF%B4%E8%AF%BB%E8%B0%83%E8%B4%A7%E8%B5%96%E8%B5%A4%E8%B5%B7%E8%B6%85%E8%B7%91%E8%B7%9D%E8%B7%AF%E8%B8%A9%E8%BA%AB%E8%BD%A6%E8%BD%AC%E8%BD%AE%E8%BE%83%E8%BE%93%E8%BE%B9%E8%BE%BE%E8%BF%87%E8%BF%90%E8%BF%91%E8%BF%94%E8%BF%98%E8%BF%99%E8%BF%9B%E8%BF%9C%E8%BF%B9%E9%80%81%E9%80%8F%E9%80%9A%E9%80%9F%E9%81%93%E9%82%A3%E9%83%A8%E9%83%BD%E9%87%8A%E9%87%8C%E9%87%8D%E9%87%8F%E9%89%B4%E9%92%9F%E9%94%81%E9%94%A2%E9%94%A5%E9%94%AE%E9%95%9C%E9%95%BF%E9%97%A8%E9%97%AA%E9%97%AD%E9%97%B4%E9%97%B8%E9%98%88%E9%98%94%E9%98%9F%E9%98%B2%E9%98%B3%E9%98%B4%E9%98%B5%E9%98%BB%E9%98%BF%E9%99%84%E9%99%8D%E9%99%90%E9%99%A2%E9%99%A4%E9%9A%8F%E9%9A%90%E9%9B%B6%E9%9B%B7%E9%9B%BE%E9%9C%80%E9%9D%9E%E9%9D%A2%E9%9E%8B%E9%9F%B3%E9%A1%B5%E9%A1%BA%E9%A1%BF%E9%A2%91%E9%A2%9D%E9%A3%8E%E9%A3%9E%E9%A4%90%E9%A6%99%E9%AA%A8%E9%AA%B8%E9%AB%98%E9%AC%BC%E9%AD%82%E9%AD%84%E9%AD%85%E9%AD%87%E9%AD%94%E9%B2%81%E9%BA%A6%E9%BB%91%E9%BB%98%E9%BE%99%EF%BC%81%EF%BC%88%EF%BC%89%EF%BC%8C%EF%BC%9A%EF%BC%9B">
 <link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap">
@@ -329,16 +330,25 @@ body::before{
 /* ============================================================
    物品页（道具一览 + 详情）
    ============================================================ */
-.item-list{display:flex;flex-direction:column;gap:4px}
+.item-list{display:flex;flex-direction:column;gap:9px}
 .item-name{
   appearance:none;border:0;background:transparent;cursor:pointer;text-align:left;
   font-family:"Ma Shan Zheng","Kaiti SC",serif;font-size:20px;color:var(--ink);
-  padding:3px 6px;border-radius:5px;position:relative;white-space:normal;line-height:1.4;
+  padding:9px 10px;border-radius:9px;position:relative;white-space:normal;line-height:1.35;
+  display:flex;align-items:center;gap:11px;
 }
+.item-ico{
+  flex:none;width:24px;height:24px;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--pencil);
+}
+.item-ico svg{width:22px;height:22px;display:block}
+.item-lbl{flex:1;min-width:0}
 .item-name small{font-family:"Noto Serif SC",serif;font-size:12px;color:var(--pencil);letter-spacing:1px;margin-left:6px}
-.item-name:hover{color:var(--red-deep)}
-.item-name.on{color:var(--red-deep);background:rgba(166,59,42,.07)}
-.item-name.on::after{content:"";position:absolute;left:4px;right:2px;bottom:1px;height:2px;background:var(--red);transform:rotate(-1deg);border-radius:2px}
+.item-name:hover{color:var(--red-deep);background:rgba(166,59,42,.06)}
+.item-name.on{color:var(--red-deep);background:rgba(166,59,42,.12)}
+.item-name.on .item-ico{color:var(--red-deep)}
+.item-name.on::after{content:"";position:absolute;left:10px;right:8px;bottom:1px;height:2px;background:var(--red);transform:rotate(-1deg);border-radius:2px}
 .item-img{
   width:100%;max-width:760px;margin:6px auto 14px;display:block;border-radius:10px;
   border:1.5px solid rgba(70,45,10,.28);box-shadow:0 6px 16px -8px rgba(0,0,0,.45);background:#fff;
@@ -364,8 +374,7 @@ body::before{
 .tr-chip{appearance:none;border:1.5px solid rgba(46,36,26,.35);background:rgba(255,255,255,.42);color:var(--ink-2);border-radius:14px;padding:5px 10px;font-size:12px;cursor:pointer;transition:all .15s ease;font-family:inherit}
 .tr-chip:hover{border-color:var(--red);color:var(--ink)}
 .tr-chip.on{background:rgba(166,59,42,.88);border-color:var(--red);color:#f6ead0;box-shadow:0 1px 6px rgba(166,59,42,.35)}
-.map-overview img,.map-detail img{width:100%;display:block;border-radius:10px;box-shadow:0 2px 14px rgba(46,36,26,.28)}
-.map-overview img{max-height:430px;width:auto;height:auto;object-fit:contain}
+.map-detail img{width:100%;display:block;border-radius:10px;box-shadow:0 2px 14px rgba(46,36,26,.28)}
 .map-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 .map-card{appearance:none;background:rgba(255,255,255,.55);border:1.5px solid rgba(46,36,26,.28);border-radius:12px;padding:8px;cursor:pointer;text-align:left;font-family:inherit;transition:all .15s ease;display:flex;flex-direction:column;gap:4px}
 .map-card:hover{border-color:var(--red);box-shadow:0 3px 12px rgba(46,36,26,.2)}
@@ -373,6 +382,16 @@ body::before{
 .map-card-name{font-size:13px;font-weight:700;color:var(--ink);line-height:1.3}
 .map-card-en{font-size:10px;color:var(--ink-soft);letter-spacing:.4px;line-height:1.3;font-weight:600}
 .map-info{padding-top:6px}
+/* 地图：左侧列表 + 右侧大图（v1.1） */
+.map-list{display:flex;flex-direction:column;gap:8px;max-height:calc(100vh - 195px);overflow-y:auto;padding-right:4px}
+.map-list::-webkit-scrollbar{width:6px}
+.map-list::-webkit-scrollbar-thumb{background:rgba(46,36,26,.25);border-radius:3px}
+.map-list-item{appearance:none;background:rgba(255,255,255,.55);border:1.5px solid rgba(46,36,26,.28);border-radius:10px;padding:8px 12px;cursor:pointer;text-align:left;font-family:inherit;transition:all .15s ease;display:flex;flex-direction:column;gap:1px;width:100%;flex:none}
+.map-list-item:hover{border-color:var(--red);box-shadow:0 3px 10px rgba(46,36,26,.18)}
+.map-list-item.active{border-color:var(--red);background:rgba(166,59,42,.14);box-shadow:inset 3px 0 0 var(--red)}
+.map-list-name{font-size:14px;font-weight:700;color:var(--ink);line-height:1.3}
+.map-list-en{font-size:10px;color:var(--ink-soft);letter-spacing:.4px;line-height:1.3;font-weight:600}
+.map-detail-img{display:block;width:100%;max-height:calc(100vh - 235px);object-fit:contain;border-radius:10px;box-shadow:0 2px 14px rgba(46,36,26,.28);cursor:zoom-in;background:#1c1410}
 .map-name{font-size:22px;margin:0 0 2px;color:var(--ink)}
 .map-en{color:var(--ink-soft);margin:0 0 16px;font-size:13px;font-weight:600}
 .media-block{margin-bottom:22px}
@@ -380,9 +399,14 @@ body::before{
 .media-ico{width:34px;height:34px;display:flex;align-items:center;justify-content:center;border:1.8px solid rgba(46,36,26,.55);border-radius:10px;background:rgba(255,255,255,.35);color:var(--red-deep)}
 .media-ico svg{width:20px;height:20px}
 .media-head h3{margin:0;font-size:17px;color:var(--ink)}
-.media-list{display:flex;flex-direction:column;gap:7px}
-.media-item{display:flex;gap:9px;align-items:center;background:rgba(255,255,255,.42);border:1px solid rgba(46,36,26,.18);border-radius:10px;padding:7px 10px}
-  .media-bonus{margin-left:auto;flex:none;font-family:"Comic Sans MS","Chalkboard SE","Xingkai SC","STXingkai","Kaiti SC","KaiTi","Yuanti SC",cursive;font-weight:700;font-size:13px;color:#6e5c40;background:linear-gradient(180deg,#eee2cb,#dfcdab);border:1px solid rgba(110,92,64,.38);border-radius:8px;padding:2px 8px;box-shadow:0 1px 2px rgba(0,0,0,.1);white-space:nowrap}
+.media-list{display:flex;flex-direction:column;gap:6px}
+.media-item{display:flex;gap:10px;align-items:center;background:rgba(255,255,255,.46);border:1px solid rgba(46,36,26,.18);border-radius:10px;padding:8px 11px;transition:border-color .15s ease}
+.media-item:hover{border-color:rgba(166,59,42,.45)}
+.media-bonus{flex:none;font-family:"Comic Sans MS","Chalkboard SE","Xingkai SC","STXingkai","Kaiti SC","KaiTi","Yuanti SC",cursive;font-weight:700;font-size:13px;border-radius:8px;padding:3px 10px;white-space:nowrap;border:1px solid rgba(110,92,64,.38)}
+.media-bonus.lv3{background:linear-gradient(180deg,#b84a34,#96351f);color:#fbe9cf;border-color:rgba(120,40,20,.5);box-shadow:0 1px 6px rgba(166,59,42,.45)}
+.media-bonus.lv2{background:linear-gradient(180deg,#e7c98f,#d4ad66);color:#4a3413;border-color:rgba(140,100,40,.45)}
+.media-bonus.lv1{background:linear-gradient(180deg,#eee2cb,#dfcdab);color:#6e5c40}
+.media-count{margin-left:auto;flex:none;font-size:11px;color:var(--pencil);letter-spacing:.5px;background:rgba(46,36,26,.07);border-radius:999px;padding:2px 9px;white-space:nowrap}
 
   /* 公告板块 */
   .news-list{display:flex;flex-direction:column;gap:11px}
@@ -418,8 +442,7 @@ body::before{
   .np-btn.primary:hover{filter:brightness(1.1)}
   .np-btn.ghost{color:var(--ink);background:rgba(255,255,255,.55);border:1px solid rgba(46,36,26,.3)}
   .np-btn.ghost:hover{background:rgba(255,255,255,.85)}
-.media-num{flex:0 0 20px;height:20px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--red-deep);color:#f6ead0;font-size:11px;font-weight:700;margin-top:1px}
-.media-txt{font-size:13.5px;line-height:1.45;color:var(--ink)}
+.media-txt{flex:1;min-width:0;font-size:13.5px;line-height:1.45;color:var(--ink)}
 .media-txt b{font-weight:600}
 .media-txt span{color:var(--ink-soft);font-size:12.5px}
 @media (max-width:900px){
@@ -453,7 +476,6 @@ body::before{
 @keyframes imgspin{to{transform:rotate(360deg)}}
 .map-full-name{color:#f0e6cf;font-size:19px;margin:0 0 2px;text-align:center;font-weight:700}
 .map-full-en{color:#b8a888;font-size:12.5px;margin:0 0 10px;text-align:center;letter-spacing:.5px}
-.map-overview{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
 .item-note{
   font-size:13.5px;line-height:1.9;color:var(--ink);text-align:justify;
   padding:12px 14px;border:1.5px dashed rgba(166,59,42,.45);border-radius:8px;
@@ -530,8 +552,10 @@ body.modal-open{overflow:hidden}
   .tr-chip{padding:4px 9px;font-size:11.5px}
 
   /* 物品页 */
-  .item-list{gap:3px}
-  .item-name{font-size:18px}
+  .item-list{gap:6px}
+  .item-name{font-size:18px;padding:7px 9px;gap:9px}
+  .item-ico{width:21px;height:21px}
+  .item-ico svg{width:19px;height:19px}
   .d-name{font-size:34px}
   .item-img{width:auto;max-width:100%;max-height:500px;margin:4px auto 10px}
   .tier-row{gap:6px;margin-bottom:8px}
@@ -546,10 +570,10 @@ body.modal-open{overflow:hidden}
   .media-ico svg{width:17px;height:17px}
   .media-head h3{font-size:15px}
   .media-list{gap:4px}
-  .media-item{padding:4px 8px}
-  .media-num{flex-basis:18px;height:18px;font-size:10.5px}
+  .media-item{padding:5px 9px}
   .media-txt{font-size:12.5px;line-height:1.4}
   .media-txt span{font-size:11.5px}
+  .media-bonus{font-size:12px;padding:2px 8px}
 
   /* 地图页 */
   .map-grid{grid-template-columns:repeat(3,1fr);gap:6px}
@@ -557,7 +581,6 @@ body.modal-open{overflow:hidden}
   .map-card img{height:76px}
   .map-card-name{font-size:12px}
   .map-card-en{font-size:9px}
-  .map-overview img{max-width:100%;max-height:430px;width:auto;height:auto;margin:0 auto;display:block}
 }
 /* 较矮屏幕（901-1100px 高）再紧凑一档 */
 @media (min-width:901px) and (max-height:1100px){
@@ -626,8 +649,11 @@ body.modal-open{overflow:hidden}
   .d-desc{font-size:13px}
   .d-list li{font-size:12.5px}
   .ink-btn{padding:6px 15px;margin-top:14px}
-  .map-overview{display:block;width:100%;padding:0;border:0;background:none}
-  .map-overview img{width:100%;height:auto;max-height:none;object-fit:contain;display:block;margin:0 auto}
+  .map-list{max-height:34vh;gap:6px}
+  .map-list-item{padding:7px 10px}
+  .map-list-name{font-size:13px}
+  .map-list-en{font-size:9px}
+  .map-detail-img{max-height:none;width:100%;height:auto}
   .modal-paper{padding:28px 22px 24px}
 }
 @media (prefers-reduced-motion:reduce){
@@ -766,7 +792,7 @@ const GHOSTS = [
   "ev": [
    "emf5",
    "orb",
-   "dots"
+   "box"
   ],
   "trait": "10米范围内有玩家走动时：猎杀理智阈值抬至65%，移速飙升至2.25m/s\n10米内玩家全部静止不动时：猎杀阈值降至45%\n玩家移动越频繁，鬼越狂暴高速；玩家静止蹲点，鬼反而变慢、更难开猎杀",
   "tip": "",
@@ -901,8 +927,8 @@ const GHOSTS = [
   "special": "3m外 2.5m/s",
   "ev": [
    "emf5",
-   "orb",
-   "uv"
+   "uv",
+   "freezing"
   ],
   "trait": "不会关电闸\n距离玩家较远时加速，靠近减速\n非猎杀期间概率在玩家身上发动技能，扣除25%理智，同时在电闸箱留下EMF反应",
   "tip": "选好位置（远距离但可以第一时间看到鬼出来）等鬼魂从另一头出来，如果鬼魂的速度突然增加而不是缓慢提升，可确认是巨灵",
@@ -920,9 +946,9 @@ const GHOSTS = [
   "los": "有",
   "special": "起步10%，锁定后加速",
   "ev": [
-   "emf5",
    "orb",
-   "uv"
+   "uv",
+   "box"
   ],
   "trait": "听觉敏锐：能听见玩家脚步声且侦测范围很广（跑步30米，站着走路15米，蹲着走路10米）\n会不断侦测定位并移动至定位点\n听觉加速：听到玩家脚步声会以极快速度接近\n不会触发灵异现象（哈气/现身等）",
   "tip": "猎杀时手持熏香静止+闭嘴+关闭所有电子设备，如果鬼魂经过没有触发击杀，可定位盲灵",
@@ -959,10 +985,10 @@ const GHOSTS = [
   "special": "理智越低越快",
   "ev": [
    "box",
-   "orb",
-   "uv"
+   "writing",
+   "freezing"
   ],
-  "trait": "团队理智越低，鬼魂速度越快，此外还有视觉加速\n猎杀时点燃熏香致盲7.5秒（正常鬼5秒）\n会通过收音机或通灵盒为玩家释放诅咒，理智双倍流失，灯光无法阻止理智下降，理智药可以移除诅咒",
+  "trait": "【红】团队理智越低，鬼魂速度越快【/红】此外还有视觉加速\n猎杀时点燃熏香致盲7.5秒（正常鬼5秒）\n会通过收音机或通灵盒为玩家释放诅咒，理智双倍流失，灯光无法阻止理智下降，理智药可以移除诅咒",
   "tip": "",
   "hunt": "猎杀时必给灵球证据",
   "desc": "魔洛伊吸血鬼从坟墓中复活，从活人身上吸取能量，它会对受害者施加诅咒。只有通过解毒剂或者远距离移动才能治愈。目标越弱小，它越强大。",
@@ -1050,7 +1076,7 @@ const GHOSTS = [
   "ev": [
    "box",
    "orb",
-   "uv"
+   "freezing"
   ],
   "trait": "开猎时4米范围内的火焰会被吹灭阻止一次猎杀，阻猎时火焰比十字架优先级更高\n猎杀阈值60%\n无法在点燃的蜡烛三米内开启猎杀",
   "tip": "",
@@ -1128,8 +1154,8 @@ const GHOSTS = [
   "special": "发现玩家后 3m/s",
   "ev": [
    "orb",
-   "uv",
-   "writing"
+   "writing",
+   "freezing"
   ],
   "trait": "猎杀时没有检测到玩家速度为1m/s，检测到玩家或前往检测到的玩家位置时速度为3m/s，到达目的地后速度在2.7秒内降至1m/s",
   "tip": "",
@@ -1171,7 +1197,7 @@ const GHOSTS = [
   ],
   "trait": "熏香可以使其在180秒内无法开猎（一般鬼为90秒）",
   "tip": "",
-  "hunt": "同左",
+  "hunt": "同上",
   "desc": "魂魄是最常见的鬼魂。它只在有必要时才发动攻击。它极力捍卫自己的死亡之地，它会杀死任何久留此地的人。",
   "tr": []
  },
@@ -1204,8 +1230,8 @@ const GHOSTS = [
   "special": "视情况",
   "ev": [
    "box",
-   "orb",
-   "uv"
+   "uv",
+   "freezing"
   ],
   "trait": "会复制其他鬼魂的能力特征，但不会复制其他鬼魂证据（有EMF5级/鬼魂笔记/点阵投影仪证据必然不是拟魂）\n特殊机制：必生成伪证据灵球，伪灵球只视觉可见，不稳定锁定鬼房偶尔飘向别处",
   "tip": "",
@@ -1297,7 +1323,7 @@ const ITEMS = [
   "num": 1,
   "name": "紫外线灯光",
   "price": "2个 / $65",
-  "img": "https://aka.doubaocdn.com/s/BJbms5z5Xm",
+  "img": "紫外线灯光.png",
   "tiers": [
    {
     "t": "一级 · 默认装备",
@@ -1318,7 +1344,7 @@ const ITEMS = [
   "num": 2,
   "name": "点阵投影仪",
   "price": "2个 / $65",
-  "img": "https://aka.doubaocdn.com/s/RECmLhvh0D",
+  "img": "点阵投影仪.png",
   "tiers": [
    {
     "t": "一级 · 默认装备",
@@ -1339,7 +1365,7 @@ const ITEMS = [
   "num": "3",
   "name": "鬼魂笔记",
   "price": "2本 / $40",
-  "img": "https://aka.doubaocdn.com/s/byw86eTVmh",
+  "img": "鬼魂笔记.png",
   "tiers": [
    {
     "t": "一级 · 默认装备",
@@ -1357,10 +1383,10 @@ const ITEMS = [
   "use": "技巧：鬼房内和鬼房门口都可以放一本，【红】一定要按F放置。【/红】\n运作方式：默认长按F会显示透明的预览轮廓和互动范围，释放F放置。鬼魂笔记需要放置才能正常运作：扔出和拿着笔记无法生效。\n拍照奖励：根据拍摄距离的不同，鬼魂笔迹照片可以获得拍照奖励。"
  },
  {
-  "num": 4,
+  "num": "4",
   "name": "EMF读取仪",
   "price": "2个 / $45",
-  "img": "https://aka.doubaocdn.com/s/V3tKr15USl",
+  "img": "EMF.png",
   "tiers": [
    {
     "t": "一级 · 默认装备",
@@ -1375,13 +1401,13 @@ const ITEMS = [
     "d": "三级读取仪可同时显示最近附近的三个EMF读数。每个信号将有不同的信息：级别显示为黑箭头，距离显示为x.xx米，方向显示为八个方向和中央。注意：五级显示为五条黑箭头，而并非数字！"
    }
   ],
-  "use": "技巧：1.打开之后丢鬼房，检测到有互动会有不同音效。2.增加鬼房中蜡烛数量，可以提高鬼魂互动概率，从而提高给5级概率。3.若鬼魂长时间无互动也不吹蜡烛，可以离开鬼房，在鬼房门口观察互动情况，由此判断是否为暗影。（暗影特性：人与鬼魂处于同一区域且距离较近时，鬼魂无互动/无猎杀）\n运作方式：手持EMF读取仪可读取EMF信号，默认右键开关。打开后扔在地上，EMF读取仪不会自动关闭。猎杀过程中，EMF读取仪会显示随机数值，出现故障，类似于猎杀过程中的灯光闪烁。作为一件电子设备，鬼魂现身或猎杀时会将10米内的EMF读取仪闪烁。在鬼魂猎杀时7.5米内手持打开读取仪会吸引鬼魂。\nEMF级别对照（二级LED颜色/鬼魂活动程度）：1蓝色无活动（打开时默认级别）；2绿色与物品互动；3黄色投掷物品；4橙色鬼魂现身或猎杀；5红色证据（25%几率）。"
+  "use": "技巧：1.打开之后丢鬼房，检测到有互动会有不同音效。\n2.增加鬼房中蜡烛数量，可以提高鬼魂互动概率，从而提高给5级概率。\n3.若鬼魂长时间无互动也不吹蜡烛，可以离开鬼房，在鬼房门口观察互动情况，由此判断是否为暗影。（暗影特性：人与鬼魂处于同一区域且距离较近时，鬼魂无互动/无猎杀）\n运作方式：手持EMF读取仪可读取EMF信号，默认右键开关。打开后扔在地上，EMF读取仪不会自动关闭。猎杀过程中，EMF读取仪会显示随机数值，出现故障，类似于猎杀过程中的灯光闪烁。作为一件电子设备，鬼魂现身或猎杀时会将10米内的EMF读取仪闪烁。在鬼魂猎杀时7.5米内手持打开读取仪会吸引鬼魂。\nEMF级别对照（二级LED颜色/鬼魂活动程度）：1蓝色无活动（打开时默认级别）；2绿色与物品互动；3黄色投掷物品；4橙色鬼魂现身或猎杀；5红色证据（25%几率）。"
  },
  {
   "num": "5",
   "name": "通灵盒",
   "price": "2个 / $50",
-  "img": "https://aka.doubaocdn.com/s/HSVpkkYfVG",
+  "img": "通灵盒.webp",
   "tiers": [
    {
     "t": "一级 · 默认装备",
@@ -1396,13 +1422,13 @@ const ITEMS = [
     "d": "MIC INPUT指示灯发亮。回应几率随通灵盒等级提升。"
    }
   ],
-  "use": "技巧：1.尽量用文本问（语音有可能会卡），问5-10句后无回复就去搬道具，下次再问。2.长时间无回复、卡证据情况，可以尝试多人/单人问。\n运作方式：为获得通灵盒回应，你需要——【红】①关闭房间光源【/红】（除了装备发出的光，比如手电筒、紫外线灯光、火光、运动传感器和点阵投影仪），其它房间的光源可以开启，不需要关房门；【红】②鬼魂在玩家附近【/红】，处于通灵盒起效范围之内；【红】③要求单人回应的鬼魂只在房间里有一个人时才会回应【/红】，并不表示只回应团队中的某一个人。\n成功辨识语句后：一级鬼魂图标旁闪红光=听到没回应、闪白光=有回应；二级闪黑色X=没回应、闪黑色鬼魂图标=有回应；三级RESPONSE灯闪红光=没回应、闪白光=有回应。除了通灵盒显示以外，也会听到鬼魂回应。\n没回应的原因可能有：未满足以上要求、运气不好、鬼魂没通灵盒证据。站在扔在地上的已开启通灵盒附近提问也能获得回应。如果游戏未检测到任何麦克风输入，玩家在附近按局部通话或使用语音感测模式时，通灵盒每10秒随机自动提问。"
+  "use": "技巧：1.尽量用文本问（语音有可能会卡），问5-10句后无回复就去搬道具，下次再问。\n2.长时间无回复、卡证据情况，可以尝试多人/单人问。\n运作方式：为获得通灵盒回应，你需要——【红】①关闭房间光源【/红】（除了装备发出的光，比如手电筒、紫外线灯光、火光、运动传感器和点阵投影仪），其它房间的光源可以开启，不需要关房门；【红】②鬼魂在玩家附近【/红】，处于通灵盒起效范围之内；【红】③要求单人回应的鬼魂只在房间里有一个人时才会回应【/红】，并不表示只回应团队中的某一个人。\n成功辨识语句后：一级鬼魂图标旁闪红光=听到没回应、闪白光=有回应；二级闪黑色X=没回应、闪黑色鬼魂图标=有回应；三级RESPONSE灯闪红光=没回应、闪白光=有回应。除了通灵盒显示以外，也会听到鬼魂回应。\n没回应的原因可能有：未满足以上要求、运气不好、鬼魂没通灵盒证据。站在扔在地上的已开启通灵盒附近提问也能获得回应。如果游戏未检测到任何麦克风输入，玩家在附近按局部通话或使用语音感测模式时，通灵盒每10秒随机自动提问。"
  },
  {
   "num": "6",
   "name": "温度计",
   "price": "2个 / $30",
-  "img": "https://aka.doubaocdn.com/s/ecYRfULmx0",
+  "img": "温度计.webp",
   "tiers": [
    {
     "t": "一级 · 默认装备",
@@ -1417,13 +1443,13 @@ const ITEMS = [
     "d": "持右键打开温度计，持续按右键约1.5秒显示温度，比2级温度计快一倍。默认显示读数为摄氏度。温度误差最多为准确温度加1℃。"
    }
   ],
-  "use": "技巧：1.一级温度计在0℃以下为刺骨寒温，二级和三级在1℃以下为刺骨寒温。2.温度计多有波动，长时间测不到刺骨，测温度2分钟以上还是较低温度（接近0.9℃）可以大概率判断为无刺骨。\n运作方式：通过对比各个区域温度（房间/走廊均可为鬼房），找到温度较低的区域为鬼房。温度差为3度及以上大概率为鬼房（开局电闸打开时，鬼房温度下降速度较慢）。温度维持低于12℃（日出天气）、10℃（晴天、大雾天气）或7℃（冬季/其它天气），可能是鬼魂所在的房间。在室外或电闸长期未打开时难以用此规律定位鬼魂。"
+  "use": "技巧：1.一级温度计在0℃以下为刺骨寒温，二级和三级在1℃以下为刺骨寒温。\n2.温度计多有波动，长时间测不到刺骨，测温度2分钟以上还是较低温度（接近0.9℃）可以大概率判断为无刺骨。\n运作方式：通过对比各个区域温度（房间/走廊均可为鬼房），找到温度较低的区域为鬼房。温度差为3度及以上大概率为鬼房（开局电闸打开时，鬼房温度下降速度较慢）。温度维持低于12℃（日出天气）、10℃（晴天、大雾天气）或7℃（冬季/其它天气），可能是鬼魂所在的房间。在室外或电闸长期未打开时难以用此规律定位鬼魂。"
  },
  {
   "num": "7",
   "name": "摄像机",
   "price": "4个 / $50",
-  "img": "https://aka.doubaocdn.com/s/74Wi2q7QQD",
+  "img": "摄像机.webp",
   "tiers": [
    {
     "t": "一级 · 默认装备",
@@ -1438,13 +1464,13 @@ const ITEMS = [
     "d": "模型为：索尼 CineAltaV（英文名称为 Venice）。"
    }
   ],
-  "use": "可以录制内容：动门/丢东西/吹蜡烛/开关灯/炸灯/坐椅子/猎杀/写笔记/运感/灵球/点阵鬼/黑影鬼/正常鬼。每种类型第一次录制算优质视频。\n技巧：1.查看灵球时可以多次查看鬼房内外（偶尔有灵球卡墙里一段时间的情况）。2.录制视频时可以右键长按持续录制，偶尔可以捕捉有效视频，不会跟照片一样存在空照。3.摄像机夜视模式玩阳光牧院可以看得非常清楚。\n运作方式：捡起来并离开货车后，摄像机会自动开机。摄像机可以手持或被放置，在监控电脑处可查看视频。你可以把摄像机放置三脚架上或平坦的表面，比如抽屉或桌子。瞄准有效的位置并长按F会显示摄像机的透明轮廓预览。一些位置预览可能很正常，但放下去可能就会翻倒。长按F并左右移动鼠标可以旋转预览位置，释放F放置。按E可捡起已放置的摄像机，包括三脚架上的摄像机。\n【红】手持右键可开关夜视模式，右键长按会一直开启录像功能。【/红】摄像机是两种探测灵球证据的方式之一，另一种是用一级头戴设备。灵球必需开夜视模式才看得到。"
+  "use": "可以录制内容：动门/丢东西/吹蜡烛/开关灯/炸灯/坐椅子/猎杀/写笔记/运感/灵球/点阵鬼/黑影鬼/正常鬼。每种类型第一次录制算优质视频。\n技巧：1.查看灵球时可以多次查看鬼房内外（偶尔有灵球卡墙里一段时间的情况）。\n2.录制视频时可以右键长按持续录制，偶尔可以捕捉有效视频，不会跟照片一样存在空照。\n3.摄像机夜视模式玩阳光牧院可以看得非常清楚。\n运作方式：捡起来并离开货车后，摄像机会自动开机。摄像机可以手持或被放置，在监控电脑处可查看视频。你可以把摄像机放置三脚架上或平坦的表面，比如抽屉或桌子。瞄准有效的位置并长按F会显示摄像机的透明轮廓预览。一些位置预览可能很正常，但放下去可能就会翻倒。长按F并左右移动鼠标可以旋转预览位置，释放F放置。按E可捡起已放置的摄像机，包括三脚架上的摄像机。\n【红】手持右键可开关夜视模式，右键长按会一直开启录像功能。【/红】摄像机是两种探测灵球证据的方式之一，另一种是用一级头戴设备。灵球必需开夜视模式才看得到。"
  },
  {
   "num": "8",
   "name": "十字架",
   "price": "2个 / $30",
-  "img": "https://aka.doubaocdn.com/s/xUie2s64t0",
+  "img": "十字架.webp",
   "tiers": [
    {
     "t": "一级 · 8级解锁",
@@ -1459,13 +1485,13 @@ const ITEMS = [
     "d": "启用范围：5米（恶魔7.5米），阻挡猎杀2次。完整3级十字架可阻挡诅咒猎杀。"
    }
   ],
-  "use": "技巧：1.长按F会显示透明的预览轮廓和阻猎范围（有时候被墙等物品遮挡看不到透明的预览，找一个比较空的地方蹲着往远处看）。2.鬼房是比较小的房间时，放三级十字架在门口即可覆盖整个鬼房。3.希望鬼猎杀但是十字架又一直被啃的时候，可以将十字架拿着之后按Q切到别的物品（把十字架放兜里），这样十字架就不会被啃啦。\n【红】用法：默认按F可放置十字架，长按F会显示十字架的启用范围（不受鬼魂类型影响）。【/红】十字架拿在手里、被抛出、被放置都会生效。每阻挡猎杀会将调查区域的灯关掉（似猎杀结束一样）。十字架启用时会发出火焰，整体发红。根据使用次数，十字架会有不同的外观。\n以下情况不会阻止鬼魂猎杀：①鬼魂不在十字架的范围内，即使十字架在鬼房里；②使用诅咒之物触发诅咒猎杀（3级十字架可消耗两次阻猎机会阻止诅咒道具猎杀）；③猎杀已经开始或在进行中。"
+  "use": "技巧：1.长按F会显示透明的预览轮廓和阻猎范围（有时候被墙等物品遮挡看不到透明的预览，找一个比较空的地方蹲着往远处看）。\n2.鬼房是比较小的房间时，放三级十字架在门口即可覆盖整个鬼房。\n3.希望鬼猎杀但是十字架又一直被啃的时候，可以将十字架拿着之后按Q切到别的物品（把十字架放兜里），这样十字架就不会被啃啦。\n【红】用法：默认按F可放置十字架，长按F会显示十字架的启用范围（不受鬼魂类型影响）。【/红】十字架拿在手里、被抛出、被放置都会生效。每阻挡猎杀会将调查区域的灯关掉（似猎杀结束一样）。十字架启用时会发出火焰，整体发红。根据使用次数，十字架会有不同的外观。\n以下情况不会阻止鬼魂猎杀：①鬼魂不在十字架的范围内，即使十字架在鬼房里；②使用诅咒之物触发诅咒猎杀（3级十字架可消耗两次阻猎机会阻止诅咒道具猎杀）；③猎杀已经开始或在进行中。"
  },
  {
   "num": "9",
   "name": "火光",
   "price": "4个 / $15",
-  "img": "https://aka.doubaocdn.com/s/OLpPA9sNwg",
+  "img": "火光.webp",
   "tiers": [
    {
     "t": "一级 · 12级解锁",
@@ -1486,7 +1512,7 @@ const ITEMS = [
   "num": "10",
   "name": "三脚架",
   "price": "3个 / $25",
-  "img": "https://aka.doubaocdn.com/s/sNJ8qC1SZ3",
+  "img": "三脚架.png",
   "tiers": [
    {
     "t": "一级 · 14级解锁",
@@ -1507,7 +1533,7 @@ const ITEMS = [
   "num": 11,
   "name": "点火器",
   "price": "4个 / $10",
-  "img": "https://aka.doubaocdn.com/s/YDJrcGLXDc",
+  "img": "点火器.png",
   "tiers": [
    {
     "t": "一级 · 12级解锁",
@@ -1528,7 +1554,7 @@ const ITEMS = [
   "num": 12,
   "name": "运动传感器",
   "price": "4个 / $100",
-  "img": "https://aka.doubaocdn.com/s/gzs6V6PeQh",
+  "img": "运动传感器.webp",
   "tiers": [
    {
     "t": "一级 · 10级解锁",
@@ -1549,7 +1575,7 @@ const ITEMS = [
   "num": 13,
   "name": "收音器",
   "price": "2个 / $50",
-  "img": "https://aka.doubaocdn.com/s/TA6O7JV0Ve",
+  "img": "收音器.webp",
   "tiers": [
    {
     "t": "一级 · 13级解锁",
@@ -1570,7 +1596,7 @@ const ITEMS = [
   "num": 14,
   "name": "盐",
   "price": "3个 / $50",
-  "img": "https://aka.doubaocdn.com/s/pCw5fUPkt3",
+  "img": "盐.webp",
   "tiers": [
    {
     "t": "一级 · 16级解锁",
@@ -1591,7 +1617,7 @@ const ITEMS = [
   "num": 15,
   "name": "理智药",
   "price": "4个 / $20",
-  "img": "https://aka.doubaocdn.com/s/r5Ta7hTEE6",
+  "img": "理智药.webp",
   "tiers": [
    {
     "t": "一级 · 11级解锁",
@@ -1612,7 +1638,7 @@ const ITEMS = [
   "num": 16,
   "name": "熏香",
   "price": "4个 / $15",
-  "img": "https://aka.doubaocdn.com/s/er9ILCUM2K",
+  "img": "熏香.webp",
   "tiers": [
    {
     "t": "一级 · 9级解锁",
@@ -1633,7 +1659,7 @@ const ITEMS = [
   "num": 17,
   "name": "声音传感器",
   "price": "4个 / $80",
-  "img": "https://aka.doubaocdn.com/s/JXqNQYuFug",
+  "img": "声音传感器.webp",
   "tiers": [
    {
     "t": "一级 · 5级解锁",
@@ -1654,7 +1680,7 @@ const ITEMS = [
   "num": 18,
   "name": "手电筒",
   "price": "4个 / $30",
-  "img": "https://aka.doubaocdn.com/s/Y8avYk0Mta",
+  "img": "手电筒.webp",
   "tiers": [
    {
     "t": "一级 · 默认装备",
@@ -1675,7 +1701,7 @@ const ITEMS = [
   "num": 19,
   "name": "相机",
   "price": "3个 / $40",
-  "img": "https://aka.doubaocdn.com/s/ElIDrjQJ6E",
+  "img": "相机.webp",
   "tiers": [
    {
     "t": "一级 · 3级解锁",
@@ -1696,7 +1722,7 @@ const ITEMS = [
   "num": 20,
   "name": "头戴设备",
   "price": "4个 / $60",
-  "img": "https://aka.doubaocdn.com/s/McvykmpcWH",
+  "img": "头戴设备.webp",
   "tiers": [
    {
     "t": "一级 · 13级解锁",
@@ -1717,7 +1743,7 @@ const ITEMS = [
   "num": 21,
   "name": "录音机",
   "price": "2个 / $30",
-  "img": "https://aka.doubaocdn.com/s/l9M99hQBbP",
+  "img": "录音机.webp",
   "tiers": [
    {
     "t": "一级 · 4级解锁",
@@ -1743,7 +1769,7 @@ const CURSED = [
   "id": "ouija",
   "name": "通灵板",
   "en": "Ouija Board",
-  "img": "https://aka.doubaocdn.com/s/Ci1VZAvOpX",
+  "img": "通灵板.jpg",
   "use": [
    "放置在地面后，用语音或文本向鬼魂提问：鬼在哪个房间、尸骨在哪、鬼的年龄、是否在附近等。问题越有价值，扣除的理智越多。",
    "每个成功回答的问题都会扣除理智；理智过低时使用，灵板会直接碎裂。",
@@ -1756,7 +1782,7 @@ const CURSED = [
   "id": "musicbox",
   "name": "音乐盒",
   "en": "Music Box",
-  "img": "https://aka.doubaocdn.com/s/iZOixsVlQT",
+  "img": "音乐盒.jpg",
   "use": [
    "右键激活后，若鬼魂在 20 米内会响起摇篮曲，鬼魂会现身并缓慢走向音乐盒。",
    "靠近鬼魂时每秒扣 2.5% 理智，完整听完最多可扣 75%。",
@@ -1768,7 +1794,7 @@ const CURSED = [
   "id": "paw",
   "name": "猴爪",
   "en": "Monkey Paw",
-  "img": "https://aka.doubaocdn.com/s/0Jh93w9Yhl",
+  "img": "猴爪.jpg",
   "use": [
    "通过语音或菜单许愿，愿望数量随难度变化：简单 5 次、中等 4 次、困难 3 次。",
    "「我想见到鬼」：触发一次灵异事件，随后进入诅咒猎杀。",
@@ -1782,7 +1808,7 @@ const CURSED = [
   "id": "doll",
   "name": "巫毒娃娃",
   "en": "Voodoo Doll",
-  "img": "https://aka.doubaocdn.com/s/OjWJcyekQi",
+  "img": "巫毒娃娃.jpg",
   "use": [
    "右键随机插入一根针，每根针强制触发一次鬼魂互动。",
    "每根针扣 5% 理智；若插中「心针」额外扣 10% 并直接触发诅咒猎杀。",
@@ -1794,7 +1820,7 @@ const CURSED = [
   "id": "mirror",
   "name": "魔镜",
   "en": "Haunted Mirror",
-  "img": "https://aka.doubaocdn.com/s/PnitdIaxlg",
+  "img": "魔镜.jpg",
   "use": [
    "注视镜面可实时显示鬼魂当前最爱的房间。",
    "每秒扣 7.5% 理智；理智降到 20% 或更低时镜子碎裂并触发诅咒猎杀。",
@@ -1805,66 +1831,66 @@ const CURSED = [
   "id": "tarot",
   "name": "塔罗牌",
   "en": "Tarot Cards",
-  "img": "https://aka.doubaocdn.com/s/DZ4tB16uXO",
+  "img": "塔罗牌.jpg",
   "cards": [
    {
     "name": "命运之轮",
     "en": "WHEEL OF FORTUNE",
-    "img": "https://aka.doubaocdn.com/s/EfB77EKv1V",
+    "img": "塔罗-命运之轮.jpg",
     "d": "抽到绿面恢复 25% 理智，红面扣除 25% 理智。"
    },
    {
     "name": "高塔",
     "en": "THE TOWER",
-    "img": "https://aka.doubaocdn.com/s/yksvhDYaiQ",
+    "img": "塔罗-高塔.jpg",
     "d": "大幅提升鬼魂的活动强度。"
    },
    {
     "name": "死神",
     "en": "DEATH",
-    "img": "https://aka.doubaocdn.com/s/lteWzdl1Sr",
+    "img": "塔罗-死神.jpg",
     "d": "立即触发一次诅咒猎杀。"
    },
    {
     "name": "恶魔",
     "en": "THE DEVIL",
-    "img": "https://aka.doubaocdn.com/s/ztpqK2EaRV",
+    "img": "塔罗-恶魔.jpg",
     "d": "触发一次鬼魂事件。"
    },
    {
     "name": "隐者",
     "en": "THE HERMIT",
-    "img": "https://aka.doubaocdn.com/s/iCrdUXiOnW",
+    "img": "塔罗-隐者.jpg",
     "d": "将鬼魂困在当前房间 1 分钟。"
    },
    {
     "name": "太阳",
     "en": "THE SUN",
-    "img": "https://aka.doubaocdn.com/s/VvlhTHGPTQ",
+    "img": "塔罗-太阳.jpg",
     "d": "理智恢复至 100%。"
    },
    {
     "name": "月亮",
     "en": "THE MOON",
-    "img": "https://aka.doubaocdn.com/s/bIXUkJMYtq",
+    "img": "塔罗-月亮.jpg",
     "d": "理智直接归零。"
    },
    {
     "name": "女祭司",
     "en": "THE HIGH PRIESTESS",
-    "img": "https://aka.doubaocdn.com/s/g03uuI47fG",
+    "img": "塔罗-女祭司.jpg",
     "d": "复活一名已阵亡的队友。"
    },
    {
     "name": "倒吊人",
     "en": "THE HANGED MAN",
-    "img": "https://aka.doubaocdn.com/s/NcYKYmyxgE",
+    "img": "塔罗-倒吊人.jpg",
     "d": "抽牌者立即死亡。"
    },
    {
     "name": "愚者",
     "en": "THE FOOL",
-    "img": "https://aka.doubaocdn.com/s/uVfmleOfWZ",
+    "img": "塔罗-愚者.jpg",
     "d": "无效牌，复刻上一张牌的效果；猎杀期间抽到的牌都会变成愚者。"
    }
   ],
@@ -1877,7 +1903,7 @@ const CURSED = [
   "id": "circle",
   "name": "召唤法阵",
   "en": "Summoning Circle",
-  "img": "https://aka.doubaocdn.com/s/SLZKK7RLyJ",
+  "img": "召唤法阵.jpg",
   "use": [
    "点燃法阵周围的 5 根红色蜡烛来召唤鬼魂。",
    "每根蜡烛扣 16% 理智（共 80%）；全部点燃后鬼魂在法阵内显形约 5 秒，随后触发诅咒猎杀。",
@@ -1887,88 +1913,90 @@ const CURSED = [
  }
 ];
 
-/* 地图（总览 + 13 张具体平面图） */
-const MAP_OVERVIEW = "https://aka.doubaocdn.com/s/ur3EmfOvUk";
+/* 地图（13 张具体平面图） */
 const MAPS = [
  {
   "id": "tanglewood",
   "name": "糖乐屋",
   "en": "6 Tanglewood Drive",
-  "img": "https://aka.doubaocdn.com/s/ecuxC6C9UU"
+  "img": "地图-坦格伍德6号.png"
  },
  {
   "id": "edgefield",
   "name": "埃奇菲尔德42号",
   "en": "42 Edgefield Road",
-  "img": "https://aka.doubaocdn.com/s/NPOxXxPtCz"
+  "img": "地图-埃奇菲尔德42号.jpg"
  },
  {
   "id": "ridgeview",
   "name": "里奇维尤10号",
   "en": "10 Ridgeview Court",
-  "img": "https://aka.doubaocdn.com/s/lD4PkUVi0P"
+  "img": "地图-里奇维尤10号.jpg"
  },
  {
   "id": "willow",
   "name": "柳树街13号",
   "en": "13 Willow Street",
-  "img": "https://aka.doubaocdn.com/s/kMlbKhf9CR"
+  "img": "地图-柳树街13号.jpg"
  },
  {
   "id": "nells",
   "name": "尼尔餐厅",
   "en": "Nell's Diner",
-  "img": "https://aka.doubaocdn.com/s/U6ZtUe3NVi"
+  "img": "地图-尼尔餐厅.png"
  },
  {
   "id": "woodwind",
   "name": "林风营地",
   "en": "Camp Woodwind",
-  "img": "https://aka.doubaocdn.com/s/ZBGMoA4r6u"
+  "img": "地图-林风营地.jpg"
  },
  {
   "id": "maple",
   "name": "枫林营地",
   "en": "Maple Lodge Campsite",
-  "img": "https://aka.doubaocdn.com/s/7ywgV0MHuG"
+  "img": "地图-枫林营地.jpg"
  },
  {
   "id": "grafton",
   "name": "格拉夫顿农舍",
   "en": "Grafton Farmhouse",
-  "img": "https://aka.doubaocdn.com/s/H466XJEY2a"
+  "img": "地图-格拉夫顿农舍.jpg"
  },
  {
   "id": "bleasdale",
   "name": "布莱斯代尔农舍",
   "en": "Bleasdale Farmhouse",
-  "img": "https://aka.doubaocdn.com/s/mZOydPUp4U"
+  "img": "地图-布莱斯代尔农舍.jpg"
  },
  {
   "id": "point_hope",
   "name": "希望角灯塔",
   "en": "Point Hope Lighthouse",
-  "img": "https://aka.doubaocdn.com/s/0HN78gKKup"
+  "img": "地图-希望角灯塔.jpg"
  },
  {
   "id": "prison",
   "name": "监狱",
   "en": "Prison",
-  "img": "https://aka.doubaocdn.com/s/X7V8BGLDX5"
+  "img": "地图-监狱.jpg"
  },
  {
   "id": "brownstone",
   "name": "褐石高中",
   "en": "Brownstone High School",
-  "img": "https://aka.doubaocdn.com/s/wV39SZTSjs"
+  "img": "地图-褐石高中.jpg"
  },
  {
   "id": "sunny_meadows",
   "name": "阳光牧院",
   "en": "Sunny Meadows Mental Institution",
-  "img": "https://aka.doubaocdn.com/s/VPZTXThTEl"
+  "img": "地图-阳光牧院.jpg"
  }
 ];
+
+/* 当前选中的地图（地图板块：左侧列表 → 右侧大图） */
+let selMapId = MAPS[0].id;
 
 /* 媒体（照相机 / 摄像机 / 录音机 可记录内容） */
 const MEDIA = [
@@ -2080,7 +2108,7 @@ const MEDIA = [
    {
     "t": "燃烧的十字架",
     "d": "烧毁的十字架",
-    "bonus": "$10"
+    "bonus": "$5"
    },
    {
     "t": "尸体",
@@ -2093,6 +2121,11 @@ const MEDIA = [
   "id": "rec",
   "name": "录音机",
   "items": [
+   {
+    "t": "猎杀中的鬼",
+    "d": "猎杀时鬼魂发出的声音",
+    "bonus": "$20"
+   },
    {
     "t": "通灵盒的回复",
     "d": "鬼魂通过通灵盒答话",
@@ -2137,6 +2170,32 @@ const MEDIA = [
  }
 ];
 const NEWS = [
+ {
+  "ver": "2026-09-19",
+  "date": "2026-09-19",
+  "tag": "官方公告",
+  "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844115010495294",
+  "title": "6th Anniversary Twitch Drop & Double XP",
+  "items": []
+ },
+ {
+  "ver": "v0.18.0.1",
+  "date": "2026-07-28",
+  "tag": "热修复",
+  "items": [
+   "Welcome back, Ghost Hunters. We've deployed a small hotfix to address feedback on the Equipment and Item slot assignments. Patch notes below: ChangesItems and Equipment will now be assigned a slot in the order they are picked up from 1-3. Flashlights will no longer be locked to 1. Igniters will default to 4."
+  ],
+  "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1839041357038727"
+ },
+ {
+  "ver": "v0.18.0.1",
+  "date": "2026-07-28",
+  "tag": "更新公告",
+  "items": [
+   "Welcome back, Ghost Hunters. Today we have deployed an update for Phasmophobia that addresses several issues that were raised following last week’s update. Thank you to everyone who provided feedback and helped us identify these issues.Full patch notes below. FixesFixed an issue that caused Photo Cameras to interfere with other player animations.Fixed an issue that caused the Photo Camera’s Use animation to not play in Multiplayer.Fixed an issue that caused the Photo Camera to take an extra photo when dropped while taking a photo.Fixed an issue that caused the Photo Camera to take a photo if picked up by another player after being dropped while being used by the original player.Fixed an issue that caused Twitch Drop reward ID Card & Badge cosmetics to be missing.Fixed an issue that would cause items to get stuck or fall through the floor when dropped in Multiplayer.Fixed an issue that caused videos of a Hunting Ghost to not count towards the Apocalypse challenge.Fixed an issue that allowed Ghosts to be able to enter several hiding spots in 13 Willow Street.This also fixes similar issues in 6 Tanglewood Drive, 42 Edgefield Road and 10 Ridgeview Court.Fixed an issue that caused the Incense to not appear as Used if the animation was cancelled by opening the Journal.VR - Fixed an issue that caused unstable FPS whilst in the Truck.VR - Fixed an issue that caused players to become stuck while loading in to a Multiplayer game on Bleasdale Farmhouse.Known IssuesIf a Flashlight is not picked up, hotkeys are assigned in this order: 2, 3, 1. If a Flashlight is picked up, it will default to 1. A following patch will address this issue, with Equipment being assigned in the order they are picked up. Igniters will however always default to 4."
+  ],
+  "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1839041357037983"
+ },
  {
   "ver": "v0.19.0.2",
   "date": "2026-09-17",
@@ -2463,6 +2522,41 @@ function openGhostModal(id){
 }
 
 
+/* 物品 / 诅咒道具左侧小图标（简约白色描边） */
+const ITEM_ICONS = {
+  "紫外线灯光": '<path d="M7 17L17 7"/><path d="M14 3l7 7"/><circle cx="5.5" cy="18.5" r="1.6"/>',
+  "点阵投影仪": '<circle cx="12" cy="12" r="1.7"/><circle cx="6" cy="6" r="1.3"/><circle cx="18" cy="6" r="1.3"/><circle cx="6" cy="18" r="1.3"/><circle cx="18" cy="18" r="1.3"/><circle cx="12" cy="5.5" r="1.3"/><circle cx="12" cy="18.5" r="1.3"/><circle cx="5.5" cy="12" r="1.3"/><circle cx="18.5" cy="12" r="1.3"/>',
+  "鬼魂笔记": '<path d="M5 4h11a2 2 0 012 2v14H7a2 2 0 01-2-2z"/><path d="M9 8h6M9 12h6"/>',
+  "EMF读取仪": '<rect x="5" y="4" width="14" height="16" rx="2"/><path d="M8 9v3M12 9v6M16 9v2"/>',
+  "通灵盒": '<rect x="4" y="8" width="16" height="9" rx="2"/><path d="M8 12h.01M12 12h.01M16 12h.01"/><path d="M12 8V5"/>',
+  "温度计": '<path d="M10 4a1.5 1.5 0 013 0v8.3a4 4 0 11-3 0z"/>',
+  "摄像机": '<rect x="2" y="7" width="13" height="10" rx="2"/><path d="M15 10l6-3v10l-6-3"/>',
+  "十字架": '<path d="M10 3h4v5h5v4h-5v9h-4v-9H5V8h5z"/>',
+  "火光": '<path d="M12 3c3 4 5 6 5 9a5 5 0 01-10 0c0-3 2-5 5-9z"/>',
+  "三脚架": '<path d="M12 4v9"/><path d="M12 13l-5 7M12 13l5 7"/><path d="M9 6h6"/>',
+  "点火器": '<rect x="8" y="5" width="8" height="16" rx="2"/><path d="M12 8c1.6 1.6 1.6 3 0 4.5"/>',
+  "运动传感器": '<circle cx="12" cy="12" r="3"/><path d="M12 3a9 9 0 019 9"/><path d="M12 6a6 6 0 016 6"/>',
+  "收音器": '<path d="M6 18L15 9"/><circle cx="17" cy="7" r="3"/>',
+  "盐": '<path d="M4 18h16l-2-4H6z"/><path d="M12 14V8"/><circle cx="12" cy="6" r="1.4"/>',
+  "理智药": '<rect x="9" y="3" width="6" height="18" rx="3"/><path d="M9 12h6"/>',
+  "熏香": '<path d="M9 21V8l6-3v13"/><path d="M12 5c-1-2 1-3 0-5"/>',
+  "声音传感器": '<path d="M4 10a8 8 0 000 4"/><path d="M20 10a8 8 0 010 4"/><circle cx="12" cy="12" r="1.6"/>',
+  "手电筒": '<path d="M4 8h9l4 4-4 4H4z"/><path d="M18 9l3-2M18 15l3 2"/><path d="M8 8v8"/>',
+  "相机": '<rect x="3" y="7" width="18" height="13" rx="2"/><circle cx="12" cy="13.5" r="3.4"/><path d="M8 7l2-3h4l2 3"/>',
+  "头戴设备": '<path d="M4 13a8 8 0 0116 0"/><rect x="3" y="12" width="4" height="7" rx="1.5"/><rect x="17" y="12" width="4" height="7" rx="1.5"/>',
+  "录音机": '<rect x="5" y="4" width="14" height="16" rx="2"/><circle cx="12" cy="11" r="3"/><path d="M9 17h6"/>'
+};
+const CURSED_ICONS = {
+  "通灵板": '<rect x="4" y="5" width="16" height="14" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M4 9h16"/>',
+  "音乐盒": '<rect x="5" y="9" width="14" height="11" rx="1.5"/><circle cx="12" cy="5.5" r="2"/><path d="M12 11v3l2.5 1.5"/>',
+  "猴爪": '<path d="M7 11V6M11 11V4M15 11V6M18 12c0 4-3 8-6.5 8S6 16 6 12"/>',
+  "巫毒娃娃": '<circle cx="12" cy="8" r="3.4"/><path d="M9 12l-2 8h10l-2-8"/><path d="M12 4V2"/>',
+  "魔镜": '<circle cx="12" cy="10" r="6"/><path d="M9 20h6M12 16v4"/>',
+  "塔罗牌": '<rect x="6.5" y="4" width="11" height="16" rx="1.5" transform="rotate(6 12 12)"/><path d="M12 8l1.1 2.8 3 .2-2.3 1.9.8 2.9-2.6-1.6-2.6 1.6.8-2.9-2.3-1.9 3-.2z"/>',
+  "召唤法阵": '<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 3.5v2M12 18.5v2M3.5 12h2M18.5 12h2"/>'
+};
+const FALLBACK_ICON = '<circle cx="12" cy="12" r="8"/>';
+
 /* ============================================================
    视图：物品页（道具一览 + 详情）
    ============================================================ */
@@ -2470,7 +2564,7 @@ function renderItemsLeft(){
   return '<div class="page-title">物品</div>' +
     '<p class="pencil-note">调查装备一览，点击查看详情：</p>' +
     '<div class="item-list">' + ITEMS.map((it,i)=>
-      '<button class="item-name' + (i===selItemId ? " on" : "") + '" data-item="' + i + '">' + it.num + '. ' + esc(it.name) + '<small>' + esc(it.price) + '</small></button>'
+      '<button class="item-name' + (i===selItemId ? " on" : "") + '" data-item="' + i + '"><span class="item-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">' + (ITEM_ICONS[it.name] || FALLBACK_ICON) + '</svg></span><span class="item-lbl">' + esc(it.name) + '<small>' + esc(it.price) + '</small></span></button>'
     ).join("") + '</div>';
 }
 function itemDetailHTML(it){
@@ -2496,7 +2590,7 @@ function renderCursedLeft(){
   return '<div class="page-title">诅咒道具</div>' +
     '<p class="pencil-note">每局只会生成其中一件，固定在地图特定位置。点击查看玩法：</p>' +
     '<div class="item-list">' + CURSED.map((c,i)=>
-      '<button class="item-name' + (i===selCursedId ? " on" : "") + '" data-cursed="' + i + '">' + esc(c.name) + '<small>' + esc(c.en) + '</small></button>'
+      '<button class="item-name' + (i===selCursedId ? " on" : "") + '" data-cursed="' + i + '"><span class="item-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">' + (CURSED_ICONS[c.name] || FALLBACK_ICON) + '</svg></span><span class="item-lbl">' + esc(c.name) + '<small>' + esc(c.en) + '</small></span></button>'
     ).join("") + '</div>';
 }
 function cursedDetailHTML(c){
@@ -2524,7 +2618,7 @@ function renderCursedRight(){
 function renderMediaLeft(){
   const photo = MEDIA.find(m=>m.id==="photo") || MEDIA[0];
   return '<div class="page-title">媒体</div>' +
-    '<p class="pencil-note">三类设备能记录的内容一览 · 分点速查</p>' +
+    '<p class="pencil-note">每类内容首次记录（Unique）全额，重复记录贬值；二 / 三级设备每件再 +$1 / +$2。下表按奖励从高到低排列。</p>' +
     mediaBlock(photo);
 }
 function renderMediaRight(){
@@ -2538,11 +2632,16 @@ function mediaBlock(m){
     cam:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="15" height="12" rx="2.5"/><path d="M17 10l5-3v10l-5-3"/><circle cx="7" cy="12" r="2.5"/></svg>',
     rec:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2.5"/><circle cx="8" cy="12" r="3"/><circle cx="16" cy="12" r="3"/><rect x="4.5" y="16.2" width="15" height="1.6" rx="0.8"/></svg>'
   };
-  const rows = (m.items || []).map((it,i)=>
-    '<div class="media-item"><span class="media-num">' + (i+1) + '</span><div class="media-txt"><b>' + esc(it.t) + '</b>' + (it.d ? '<span>——' + esc(it.d) + '</span>' : '') + '</div>' + (it.bonus ? '<span class="media-bonus">' + esc(it.bonus) + '</span>' : '') + '</div>'
-  ).join("");
+  const val = b => parseInt(String(b||'').replace(/[^0-9]/g,''),10)||0;
+  const items = (m.items || []).slice().sort((a,b)=> val(b.bonus)-val(a.bonus));
+  const maxV = items.length ? Math.max.apply(null, items.map(it=>val(it.bonus))) : 0;
+  const rows = items.map(it=>{
+    const v = val(it.bonus);
+    const lv = v>=20 ? 'lv3' : (v>=10 ? 'lv2' : 'lv1');
+    return '<div class="media-item"><div class="media-txt"><b>' + esc(it.t) + '</b>' + (it.d ? '<span>——' + esc(it.d) + '</span>' : '') + '</div>' + (it.bonus ? '<span class="media-bonus '+lv+'">' + esc(it.bonus) + '</span>' : '') + '</div>';
+  }).join("");
   return '<div class="media-block">' +
-    '<div class="media-head"><span class="media-ico">' + (icons[m.id] || icons.photo) + '</span><h3>' + esc(m.name) + '</h3></div>' +
+    '<div class="media-head"><span class="media-ico">' + (icons[m.id] || icons.photo) + '</span><h3>' + esc(m.name) + '</h3><span class="media-count">' + items.length + ' 类 · 最高 $' + maxV + '</span></div>' +
     '<div class="media-list">' + rows + '</div>' +
   '</div>';
 }
@@ -2615,21 +2714,22 @@ function showNewsPopup(){
 }
 
 function renderMapsLeft(){
-  return '<div class="page-title">地图</div>' +
-    '<p class="pencil-note">全部已知区域 · 平面图总览（点击放大）</p>' +
-    '<button class="map-overview" data-overview="1" title="点击放大全屏"><img src="' + MAP_OVERVIEW + '" alt="地图总览" loading="lazy" /></button>';
-}
-function renderMapsRight(){
-  const cards = MAPS.map(m=>
-    '<button class="map-card" data-map="' + m.id + '">' +
-      '<img src="' + m.img + '" alt="' + esc(m.name) + '" loading="lazy" />' +
-      '<span class="map-card-name">' + esc(m.name) + '</span>' +
-      '<span class="map-card-en">' + esc(m.en) + '</span>' +
+  const items = MAPS.map(m=>
+    '<button class="map-list-item' + (m.id === selMapId ? ' active' : '') + '" data-map="' + m.id + '">' +
+      '<span class="map-list-name">' + esc(m.name) + '</span>' +
+      '<span class="map-list-en">' + esc(m.en) + '</span>' +
     '</button>'
   ).join("");
-  return '<div class="page-title">选择地图</div>' +
-    '<p class="pencil-note">点击任意地图，原图放大全屏显示</p>' +
-    '<div class="map-grid">' + cards + '</div>';
+  return '<div class="page-title">地图</div>' +
+    '<p class="pencil-note">点击地图名称，在右侧放大显示；点击右侧图片可全屏查看</p>' +
+    '<div class="map-list">' + items + '</div>';
+}
+function renderMapsRight(){
+  const m = MAPS.find(x=>x.id===selMapId) || MAPS[0];
+  return '<div class="page-title">' + esc(m.name) + '</div>' +
+    '<p class="map-en">' + esc(m.en) + '</p>' +
+    '<img class="map-detail-img" src="' + m.img + '" alt="' + esc(m.name) + '" ' +
+      'data-zoom-img="1" data-zoom-title="' + esc(m.name) + '" data-zoom-sub="' + esc(m.en) + '" loading="lazy" />';
 }
 function openMapFull(name, en, url){
   const modal = document.getElementById("ghostModal");
@@ -2779,12 +2879,14 @@ document.addEventListener("click", e=>{
 
   const mp = e.target.closest("[data-map]");
   if(mp){
-    const m = MAPS.find(x=>x.id===mp.dataset.map);
-    if(m) openMapFull(m.name, m.en, m.img);
+    selMapId = mp.dataset.map;
+    renderAll();
+    if(!isPC()){
+      const el = document.getElementById("pageRight");
+      if(el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
     return;
   }
-  const ov = e.target.closest("[data-overview]");
-  if(ov){ openMapFull("地图总览", "Map Selection", MAP_OVERVIEW); return; }
 
   const trc = e.target.closest("[data-trait]");
   if(trc){ toggleTrait(trc.dataset.trait); persist(); renderAll(); return; }
