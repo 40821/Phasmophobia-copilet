@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
-<title>恐鬼症 · 推鬼助手</title>
+<title>恐鬼症|推鬼助手</title>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://sf3-scmcdn-cn.feishucdn.com" crossorigin>
 <link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Ma+Shan+Zheng&text=%E3%80%81%E3%80%82%E3%80%8A%E3%80%8B%E4%B8%80%E4%B8%89%E4%B8%8A%E4%B8%8B%E4%B8%8D%E4%B8%8E%E4%B8%94%E4%B8%A4%E4%B8%AA%E4%B8%AD%E4%B8%BA%E4%B8%BB%E4%B9%88%E4%B9%8B%E4%B9%90%E4%B9%9F%E4%BA%86%E4%BA%8B%E4%BA%8C%E4%BA%92%E4%BA%94%E4%BA%A1%E4%BA%A4%E4%BA%AE%E4%BA%BA%E4%BB%8B%E4%BB%8E%E4%BB%A3%E4%BB%A5%E4%BB%AA%E4%BB%B6%E4%BB%B7%E4%BC%8A%E4%BC%8D%E4%BC%9A%E4%BC%A0%E4%BC%BC%E4%BD%86%E4%BD%8D%E4%BD%8E%E4%BD%93%E4%BD%9C%E4%BD%BF%E4%BE%9B%E4%BE%9D%E4%BF%A1%E5%80%8D%E5%80%92%E5%80%BC%E5%83%8F%E5%85%88%E5%85%89%E5%85%8B%E5%85%A5%E5%85%A8%E5%85%AB%E5%85%B3%E5%85%B6%E5%85%B7%E5%86%85%E5%86%9C%E5%86%B7%E5%87%86%E5%87%8F%E5%87%A0%E5%87%BA%E5%88%86%E5%88%87%E5%88%A4%E5%88%AB%E5%88%B0%E5%88%B6%E5%88%B9%E5%88%BA%E5%88%BB%E5%89%8D%E5%8A%9B%E5%8A%9F%E5%8A%A0%E5%8A%A8%E5%8A%A9%E5%8A%B1%E5%8C%BA%E5%8D%81%E5%8D%87%E5%8D%8A%E5%8D%8E%E5%8D%9A%E5%8D%B0%E5%8D%B3%E5%8D%B4%E5%8E%85%E5%8E%A2%E5%8F%82%E5%8F%8A%E5%8F%8B%E5%8F%91%E5%8F%96%E5%8F%98%E5%8F%A0%E5%8F%AA%E5%8F%AB%E5%8F%AC%E5%8F%AF%E5%8F%B3%E5%8F%B7%E5%8F%B8%E5%90%84%E5%90%88%E5%90%8A%E5%90%8C%E5%90%8D%E5%90%8E%E5%90%91%E5%90%AF%E5%90%B8%E5%90%B9%E5%91%98%E5%91%BC%E5%91%BD%E5%92%8C%E5%92%92%E5%93%81%E5%93%88%E5%93%AD%E5%94%A4%E5%99%A8%E5%9B%9E%E5%9B%B0%E5%9B%B4%E5%9B%BE%E5%9C%86%E5%9C%88%E5%9C%A8%E5%9C%B0%E5%9D%A6%E5%9E%8B%E5%9F%83%E5%9F%9F%E5%9F%BA%E5%A0%86%E5%A1%94%E5%A2%83%E5%A2%99%E5%A2%9E%E5%A3%B0%E5%A4%87%E5%A4%8D%E5%A4%96%E5%A4%9A%E5%A4%9C%E5%A4%9F%E5%A4%A7%E5%A4%AA%E5%A4%AB%E5%A4%AE%E5%A4%B1%E5%A4%B4%E5%A5%87%E5%A5%94%E5%A5%96%E5%A5%A5%E5%A5%B3%E5%A6%82%E5%A6%96%E5%A8%83%E5%A9%B4%E5%AA%92%E5%AD%90%E5%AD%97%E5%AD%AA%E5%AE%83%E5%AE%8C%E5%AE%98%E5%AE%9A%E5%AE%9E%E5%AE%B6%E5%AE%B9%E5%AF%92%E5%AF%B9%E5%B0%84%E5%B0%86%E5%B0%8F%E5%B0%91%E5%B0%94%E5%B0%96%E5%B0%A4%E5%B0%B1%E5%B0%B8%E5%B0%BC%E5%B1%80%E5%B1%8F%E5%B7%A5%E5%B7%A6%E5%B7%A8%E5%B7%AB%E5%B7%AE%E5%B7%B1%E5%B7%B2%E5%B8%83%E5%B8%8C%E5%B8%B8%E5%B9%85%E5%B9%95%E5%B9%B6%E5%B9%BB%E5%B9%BD%E5%B9%BF%E5%BA%8F%E5%BA%94%E5%BA%95%E5%BA%A6%E5%BB%93%E5%BC%80%E5%BC%8F%E5%BC%A0%E5%BC%BA%E5%BD%92%E5%BD%93%E5%BD%95%E5%BD%A2%E5%BD%A6%E5%BD%B1%E5%BE%81%E5%BE%84%E5%BE%88%E5%BE%97%E5%BE%A1%E5%BE%B7%E5%BF%85%E5%BF%97%E5%BF%AB%E6%80%81%E6%80%A7%E6%80%A8%E6%80%AA%E6%81%90%E6%81%A2%E6%81%AF%E6%81%B6%E6%84%8F%E6%84%9A%E6%84%9F%E6%85%A2%E6%88%8F%E6%88%90%E6%88%96%E6%88%B4%E6%88%BF%E6%89%80%E6%89%8B%E6%89%8D%E6%89%93%E6%89%94%E6%89%A3%E6%89%AB%E6%89%BE%E6%8A%95%E6%8A%9B%E6%8A%BD%E6%8B%89%E6%8B%8D%E6%8B%9F%E6%8B%A5%E6%8B%BF%E6%8C%81%E6%8C%87%E6%8C%89%E6%8C%A1%E6%8D%A2%E6%8D%A3%E6%8D%AE%E6%8E%92%E6%8E%A2%E6%8E%A5%E6%8E%A8%E6%8F%8F%E6%8F%90%E6%91%84%E6%91%98%E6%92%AD%E6%94%B6%E6%94%BE%E6%95%88%E6%95%B0%E6%95%B4%E6%96%87%E6%96%AD%E6%96%AF%E6%96%B0%E6%96%B9%E6%97%8B%E6%97%A0%E6%97%A5%E6%97%B6%E6%97%BA%E6%98%8E%E6%98%93%E6%98%BE%E6%99%AE%E6%99%BA%E6%9A%97%E6%9B%B4%E6%9B%BE%E6%9C%80%E6%9C%88%E6%9C%89%E6%9C%8D%E6%9C%9B%E6%9C%9F%E6%9C%AC%E6%9C%BA%E6%9D%80%E6%9D%9F%E6%9D%A1%E6%9D%A5%E6%9D%BE%E6%9D%BF%E6%9E%97%E6%9E%9C%E6%9E%AB%E6%9E%B6%E6%9F%A5%E6%9F%B3%E6%A0%87%E6%A0%91%E6%A0%B7%E6%A0%B9%E6%A0%BC%E6%A2%A6%E6%A3%80%E6%A3%92%E6%A8%A1%E6%AC%A1%E6%AD%A2%E6%AD%A3%E6%AD%A4%E6%AD%BB%E6%AF%81%E6%AF%8F%E6%AF%92%E6%AF%94%E6%B0%8F%E6%B0%94%E6%B0%B4%E6%B0%B8%E6%B1%A1%E6%B2%A1%E6%B3%95%E6%B3%9B%E6%B3%A2%E6%B3%A8%E6%B4%9B%E6%B4%BB%E6%B5%81%E6%B5%8B%E6%B6%88%E6%B8%A9%E6%B8%B8%E6%BA%90%E6%BF%80%E7%81%AB%E7%81%AD%E7%81%AF%E7%81%B5%E7%82%B8%E7%82%B9%E7%83%81%E7%83%88%E7%83%9B%E7%83%A7%E7%84%B0%E7%84%B6%E7%85%A7%E7%86%84%E7%86%8F%E7%87%83%E7%88%AA%E7%89%88%E7%89%8C%E7%89%A7%E7%89%A9%E7%89%B9%E7%8A%B6%E7%8B%A9%E7%8B%AD%E7%8B%B1%E7%8C%8E%E7%8C%B4%E7%8E%87%E7%8E%A9%E7%8E%AF%E7%8E%B0%E7%8F%A0%E7%8F%AD%E7%90%83%E7%90%86%E7%94%A8%E7%94%B1%E7%94%B5%E7%94%B7%E7%95%8C%E7%95%99%E7%97%87%E7%99%BD%E7%9A%84%E7%9B%90%E7%9B%91%E7%9B%92%E7%9B%AE%E7%9B%B2%E7%9B%B4%E7%9B%B8%E7%9C%8B%E7%9D%80%E7%9E%AC%E7%9F%AD%E7%9F%B3%E7%A1%80%E7%A1%AE%E7%A4%BA%E7%A5%9E%E7%A5%AD%E7%A6%81%E7%A6%BB%E7%A7%92%E7%A7%B0%E7%A7%BB%E7%A9%BF%E7%AA%84%E7%AB%8B%E7%AC%91%E7%AC%94%E7%AD%89%E7%AD%92%E7%AD%94%E7%AE%80%E7%AE%AD%E7%B1%B3%E7%B1%BB%E7%B2%89%E7%B4%A2%E7%B4%AB%E7%B9%81%E7%BA%A2%E7%BA%A6%E7%BA%A7%E7%BA%B3%E7%BA%B9%E7%BA%BF%E7%BB%84%E7%BB%8F%E7%BB%AD%E7%BB%B4%E7%BB%BF%E7%BC%93%E7%BD%97%E7%BD%AE%E7%BF%BB%E8%80%83%E8%80%85%E8%80%8C%E8%80%97%E8%80%B6%E8%81%9A%E8%83%BD%E8%84%8F%E8%84%9A%E8%87%AA%E8%87%B3%E8%87%B4%E8%88%8D%E8%88%AC%E8%89%B2%E8%8B%B1%E8%8C%83%E8%8D%A1%E8%8D%A7%E8%8D%AF%E8%8E%B1%E8%8F%B2%E8%90%A5%E8%9B%8B%E8%9C%A1%E8%A1%8C%E8%A1%97%E8%A1%A8%E8%A2%AB%E8%A3%85%E8%A4%90%E8%A7%81%E8%A7%86%E8%A7%92%E8%A7%A3%E8%A7%A6%E8%AE%A1%E8%AE%A4%E8%AE%A9%E8%AE%B0%E8%AE%BE%E8%AF%81%E8%AF%85%E8%AF%91%E8%AF%95%E8%AF%9D%E8%AF%AD%E8%AF%AF%E8%AF%B4%E8%AF%BB%E8%B0%83%E8%B4%A7%E8%B5%96%E8%B5%A4%E8%B5%B7%E8%B6%85%E8%B7%91%E8%B7%9D%E8%B7%AF%E8%B8%A9%E8%BA%AB%E8%BD%A6%E8%BD%AC%E8%BD%AE%E8%BE%83%E8%BE%93%E8%BE%B9%E8%BE%BE%E8%BF%87%E8%BF%90%E8%BF%91%E8%BF%94%E8%BF%98%E8%BF%99%E8%BF%9B%E8%BF%9C%E8%BF%B9%E9%80%81%E9%80%8F%E9%80%9A%E9%80%9F%E9%81%93%E9%82%A3%E9%83%A8%E9%83%BD%E9%87%8A%E9%87%8C%E9%87%8D%E9%87%8F%E9%89%B4%E9%92%9F%E9%94%81%E9%94%A2%E9%94%A5%E9%94%AE%E9%95%9C%E9%95%BF%E9%97%A8%E9%97%AA%E9%97%AD%E9%97%B4%E9%97%B8%E9%98%88%E9%98%94%E9%98%9F%E9%98%B2%E9%98%B3%E9%98%B4%E9%98%B5%E9%98%BB%E9%98%BF%E9%99%84%E9%99%8D%E9%99%90%E9%99%A2%E9%99%A4%E9%9A%8F%E9%9A%90%E9%9B%B6%E9%9B%B7%E9%9B%BE%E9%9C%80%E9%9D%9E%E9%9D%A2%E9%9E%8B%E9%9F%B3%E9%A1%B5%E9%A1%BA%E9%A1%BF%E9%A2%91%E9%A2%9D%E9%A3%8E%E9%A3%9E%E9%A4%90%E9%A6%99%E9%AA%A8%E9%AA%B8%E9%AB%98%E9%AC%BC%E9%AD%82%E9%AD%84%E9%AD%85%E9%AD%87%E9%AD%94%E9%B2%81%E9%BA%A6%E9%BB%91%E9%BB%98%E9%BE%99%EF%BC%81%EF%BC%88%EF%BC%89%EF%BC%8C%EF%BC%9A%EF%BC%9B">
@@ -28,6 +28,13 @@
   --bg-0:#06080c;
   --bg-1:#0c0f16;
   --noise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  /* 字体栈（收敛重复声明） */
+  --hand:"Ma Shan Zheng","Kaiti SC","KaiTi","STKaiti","Xingkai SC","STXingkai","Yuanti SC","STYuanti-SC",serif;
+  --hand-b:"Ma Shan Zheng","Kaiti SC","KaiTi","Xingkai SC","STXingkai","Yuanti SC",serif;
+  --hand-s:"Ma Shan Zheng","Kaiti SC",serif;
+  --hand-k:"Ma Shan Zheng","Kaiti SC","KaiTi",serif;
+  --serif:"Noto Serif SC","Songti SC","SimSun","STSong",serif;
+  --serif-s:"Noto Serif SC","Songti SC",serif;
 }
 
 /* ============================================================
@@ -36,7 +43,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
-  font-family:"Noto Serif SC","Songti SC","SimSun","STSong",serif;
+  font-family:var(--serif);
   background:var(--bg-0);
   color:var(--ink);
   min-height:100vh;
@@ -77,7 +84,7 @@ body::before{
 .dock .tab{
   appearance:none;border:0;cursor:pointer;
   display:inline-flex;align-items:center;gap:8px;
-  font-family:"Noto Serif SC","Songti SC",serif;
+  font-family:var(--serif-s);
   font-size:15px;letter-spacing:2px;color:rgba(232,220,192,.64);
   background:rgba(232,220,192,.05);
   border:1px solid rgba(232,220,192,.14);
@@ -100,7 +107,7 @@ body::before{
   display:flex;align-items:baseline;gap:12px;margin-bottom:10px;
 }
 .brand .zh{
-  font-family:"Ma Shan Zheng","Kaiti SC","KaiTi","STKaiti","Xingkai SC","STXingkai","Yuanti SC","STYuanti-SC",serif;
+  font-family:var(--hand);
   font-size:30px;color:var(--cream);letter-spacing:2px;
   text-shadow:0 2px 8px rgba(0,0,0,.7);
 }
@@ -117,8 +124,6 @@ body::before{
   display:grid;grid-template-columns:minmax(0,1fr) 30px minmax(0,1fr);
   border-radius:12px;
   box-shadow:0 30px 80px rgba(0,0,0,.65),0 6px 22px rgba(0,0,0,.5);
-  transform:none;
-  transition:none;
 }
 .spine{
   background:
@@ -147,16 +152,9 @@ body::before{
 }
 .page-left{border-radius:12px 0 0 12px;box-shadow:inset -16px 0 22px -14px rgba(70,45,10,.42),inset 0 1px 0 rgba(255,255,255,.45)}
 .page-right{border-radius:0 12px 12px 0;box-shadow:inset 16px 0 22px -14px rgba(70,45,10,.42),inset 0 1px 0 rgba(255,255,255,.45)}
-.page-num{
-  position:absolute;bottom:14px;font-family:"Ma Shan Zheng","Kaiti SC","Xingkai SC","STXingkai","Yuanti SC",serif;
-  font-size:15px;color:var(--pencil);opacity:.8;
-}
-.page-left .page-num{left:22px}
-.page-right .page-num{right:22px}
-
 /* 页面标题 */
 .page-title{
-  font-family:"Ma Shan Zheng","Kaiti SC","KaiTi","Xingkai SC","STXingkai","Yuanti SC",serif;
+  font-family:var(--hand-b);
   font-size:34px;color:var(--ink);letter-spacing:4px;position:relative;display:inline-block;
 }
 .page-title::after{
@@ -167,10 +165,6 @@ body::before{
 .pencil-note{
   font-size:13px;color:var(--ink-soft);margin:14px 0 18px;letter-spacing:1px;opacity:.85;
 }
-.hand-note{
-  font-family:"Ma Shan Zheng","Kaiti SC",serif;font-size:15px;color:var(--red-deep);
-}
-
 /* ============================================================
    左页：证据清单
    ============================================================ */
@@ -198,7 +192,6 @@ body::before{
 .ev-row.struck .ev-icon{opacity:.28;color:#4a3f2e}
 .ev-row.struck .box{border-color:rgba(46,36,26,.4);background:rgba(46,36,26,.08)}
 .ev-row.struck .box svg{opacity:1;transform:scale(1);stroke:#5a4f3c}
-.ev-row input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
 .box{
   flex:none;width:21px;height:21px;margin-top:2px;border:2px solid rgba(46,36,26,.55);
   border-radius:4px;position:relative;background:rgba(255,255,255,.25);
@@ -214,7 +207,7 @@ body::before{
 .ev-meta b{font-size:17px;font-weight:600;letter-spacing:1px;color:var(--ink)}
 .ev-meta small{font-size:12.5px;line-height:1.55;color:var(--ink-soft);opacity:.88}
 .ink-btn{
-  appearance:none;cursor:pointer;font-family:"Noto Serif SC","Songti SC",serif;
+  appearance:none;cursor:pointer;font-family:var(--serif-s);
   font-size:14px;letter-spacing:2px;color:var(--ink);
   background:rgba(255,255,255,.3);border:1.5px solid rgba(46,36,26,.55);
   border-radius:7px;padding:7px 18px;margin-top:20px;
@@ -232,14 +225,14 @@ body::before{
 }
 .counter b{font-size:19px;color:var(--red-deep);font-weight:700}
 .counter .excl{font-size:12.5px;color:var(--pencil)}
-.solo-note{margin-left:auto;font-family:"Ma Shan Zheng","Kaiti SC",serif;font-size:16px;color:var(--red-deep);transform:rotate(-2deg)}
+.solo-note{margin-left:auto;font-family:var(--hand-s);font-size:16px;color:var(--red-deep);transform:rotate(-2deg)}
 .ghost-grid{
   display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
   gap:9px 16px;align-content:start;
 }
 .ghost-name{
   appearance:none;border:0;background:transparent;cursor:pointer;text-align:left;
-  font-family:"Ma Shan Zheng","Kaiti SC","KaiTi",serif;
+  font-family:var(--hand-k);
   font-size:27px;letter-spacing:1px;color:var(--ink);
   padding:5px 9px;border-radius:4px;position:relative;white-space:nowrap;
   transition:opacity .2s ease,color .2s ease,transform .12s ease;
@@ -253,7 +246,6 @@ body::before{
   border:2px solid rgba(166,59,42,.8);border-radius:50% 46% 54% 48%;
 }
 .legend{margin-top:16px;font-size:12px;color:var(--pencil);letter-spacing:1px}
-.legend i{font-style:normal;color:var(--ink)}
 .warn-box{
   margin-top:16px;padding:10px 14px;border:1.5px dashed rgba(166,59,42,.55);
   border-radius:8px;background:rgba(166,59,42,.06);
@@ -264,15 +256,14 @@ body::before{
    空白页
    ============================================================ */
 .blank{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center}
-.blank .b-hand{font-family:"Ma Shan Zheng","Kaiti SC",serif;font-size:30px;color:var(--pencil);opacity:.75}
-.blank .b-note{font-size:13px;color:var(--ink-soft);opacity:.6;letter-spacing:2px}
+.blank .b-hand{font-family:var(--hand-s);font-size:30px;color:var(--pencil);opacity:.75}
 
 /* ============================================================
    主页（调查员手册）
    ============================================================ */
 .manual p{font-size:14.5px;line-height:1.85;color:var(--ink);margin-bottom:14px;text-align:justify}
 .manual .hl{color:var(--red-deep);font-weight:600}
-.manual .sub{font-family:"Ma Shan Zheng","Kaiti SC",serif;font-size:22px;margin:8px 0 14px;color:var(--ink)}
+.manual .sub{font-family:var(--hand-s);font-size:22px;margin:8px 0 14px;color:var(--ink)}
 .ev-quick{display:flex;flex-direction:column;gap:9px}
 .ev-q{display:flex;align-items:center;gap:11px;padding:7px 10px;border-radius:7px;background:rgba(70,45,10,.05)}
 .ev-q .ev-icon{width:28px;height:28px;flex:none;color:var(--ink-soft)}
@@ -289,7 +280,7 @@ body::before{
 .ghost-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px 16px;align-content:start}
 .ghost-item{
   appearance:none;border:0;background:transparent;cursor:pointer;text-align:left;
-  font-family:"Ma Shan Zheng","Kaiti SC",serif;font-size:27px;color:var(--ink);
+  font-family:var(--hand-s);font-size:27px;color:var(--ink);
   padding:5px 9px;border-radius:4px;position:relative;white-space:nowrap;
 }
 .ghost-item:hover{color:var(--red-deep)}
@@ -300,10 +291,10 @@ body::before{
 }
 .detail{display:flex;flex-direction:column;gap:14px}
 .d-name{
-  font-family:"Ma Shan Zheng","Kaiti SC",serif;font-size:42px;color:var(--ink);letter-spacing:3px;
+  font-family:var(--hand-s);font-size:42px;color:var(--ink);letter-spacing:3px;
   display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
 }
-.d-name span{font-family:"Noto Serif SC",serif;font-size:14px;letter-spacing:2px;color:var(--pencil)}
+.d-name span{font-family:var(--serif-s);font-size:14px;letter-spacing:2px;color:var(--pencil)}
 .d-stats{display:grid;grid-template-columns:1fr;gap:7px;padding:11px 14px;background:rgba(70,45,10,.06);border-radius:8px}
 .d-stats > div{display:flex;gap:10px;font-size:13.5px;line-height:1.6}
 .d-stats dt{flex:none;width:76px;color:var(--pencil)}
@@ -333,7 +324,7 @@ body::before{
 .item-list{display:flex;flex-direction:column;gap:9px}
 .item-name{
   appearance:none;border:0;background:transparent;cursor:pointer;text-align:left;
-  font-family:"Ma Shan Zheng","Kaiti SC",serif;font-size:20px;color:var(--ink);
+  font-family:var(--hand-s);font-size:20px;color:var(--ink);
   padding:9px 10px;border-radius:9px;position:relative;white-space:normal;line-height:1.35;
   display:flex;align-items:center;gap:11px;
 }
@@ -344,7 +335,7 @@ body::before{
 }
 .item-ico svg{width:22px;height:22px;display:block}
 .item-lbl{flex:1;min-width:0}
-.item-name small{font-family:"Noto Serif SC",serif;font-size:12px;color:var(--pencil);letter-spacing:1px;margin-left:6px}
+.item-name small{font-family:var(--serif-s);font-size:12px;color:var(--pencil);letter-spacing:1px;margin-left:6px}
 .item-name:hover{color:var(--red-deep);background:rgba(166,59,42,.06)}
 .item-name.on{color:var(--red-deep);background:rgba(166,59,42,.12)}
 .item-name.on .item-ico{color:var(--red-deep)}
@@ -374,14 +365,6 @@ body::before{
 .tr-chip{appearance:none;border:1.5px solid rgba(46,36,26,.35);background:rgba(255,255,255,.42);color:var(--ink-2);border-radius:14px;padding:5px 10px;font-size:12px;cursor:pointer;transition:all .15s ease;font-family:inherit}
 .tr-chip:hover{border-color:var(--red);color:var(--ink)}
 .tr-chip.on{background:rgba(166,59,42,.88);border-color:var(--red);color:#f6ead0;box-shadow:0 1px 6px rgba(166,59,42,.35)}
-.map-detail img{width:100%;display:block;border-radius:10px;box-shadow:0 2px 14px rgba(46,36,26,.28)}
-.map-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.map-card{appearance:none;background:rgba(255,255,255,.55);border:1.5px solid rgba(46,36,26,.28);border-radius:12px;padding:8px;cursor:pointer;text-align:left;font-family:inherit;transition:all .15s ease;display:flex;flex-direction:column;gap:4px}
-.map-card:hover{border-color:var(--red);box-shadow:0 3px 12px rgba(46,36,26,.2)}
-.map-card img{width:100%;height:108px;object-fit:cover;border-radius:8px;display:block;background:#1c1410}
-.map-card-name{font-size:13px;font-weight:700;color:var(--ink);line-height:1.3}
-.map-card-en{font-size:10px;color:var(--ink-soft);letter-spacing:.4px;line-height:1.3;font-weight:600}
-.map-info{padding-top:6px}
 /* 地图：左侧列表 + 右侧大图（v1.1） */
 .map-list{display:flex;flex-direction:column;gap:8px;max-height:calc(100vh - 195px);overflow-y:auto;padding-right:4px}
 .map-list::-webkit-scrollbar{width:6px}
@@ -432,7 +415,7 @@ body::before{
   .news-pop.show{opacity:1;pointer-events:auto}
   .news-pop .np-card{width:min(480px,94vw);max-height:82vh;overflow:auto;background:linear-gradient(180deg,var(--paper-1),var(--paper-3));border:1px solid rgba(232,220,192,.5);border-radius:16px;padding:20px 22px;box-shadow:0 24px 70px rgba(0,0,0,.6);transform:translateY(10px);transition:transform .22s ease}
   .news-pop.show .np-card{transform:translateY(0)}
-  .np-title{font-family:"Ma Shan Zheng","Kaiti SC","KaiTi","STKaiti","Xingkai SC","STXingkai","Yuanti SC","STYuanti-SC",serif;font-size:23px;color:var(--red);margin:0 0 4px}
+  .np-title{font-family:var(--hand);font-size:23px;color:var(--red);margin:0 0 4px}
   .np-ver{font-size:13px;color:var(--ink-soft);margin:0 0 12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
   .np-list{margin:0 0 16px;padding-left:18px}
   .np-list li{font-size:13px;line-height:1.7;color:var(--ink);margin-bottom:5px}
@@ -560,8 +543,7 @@ body.modal-open{overflow:hidden}
   .item-img{width:auto;max-width:100%;max-height:500px;margin:4px auto 10px}
   .tier-row{gap:6px;margin-bottom:8px}
   .tier-card{padding:7px 10px;gap:4px}
-  .item-note{padding:8px 12px}
-  .item-note{font-size:13px;line-height:1.8}
+  .item-note{padding:8px 12px;font-size:13px;line-height:1.8}
 
   /* 媒体页 */
   .media-block{margin-bottom:10px}
@@ -576,11 +558,6 @@ body.modal-open{overflow:hidden}
   .media-bonus{font-size:12px;padding:2px 8px}
 
   /* 地图页 */
-  .map-grid{grid-template-columns:repeat(3,1fr);gap:6px}
-  .map-card{padding:5px}
-  .map-card img{height:76px}
-  .map-card-name{font-size:12px}
-  .map-card-en{font-size:9px}
 }
 /* 较矮屏幕（901-1100px 高）再紧凑一档 */
 @media (min-width:901px) and (max-height:1100px){
@@ -601,8 +578,6 @@ body.modal-open{overflow:hidden}
   .ghost-name{font-size:25px}
   .ghost-item{font-size:25px}
   .media-item{padding:3px 8px}
-  .map-grid{gap:5px}
-  .map-card img{height:70px}
 }
 
 /* ============================================================
@@ -623,7 +598,6 @@ body.modal-open{overflow:hidden}
   .ghost-grid,.ghost-list{grid-template-columns:repeat(3,minmax(0,1fr))}
   .ghost-name{font-size:22px}
   .brand .zh{font-size:26px}
-  .book{transform:none}
   .stage{margin:10px auto 0;padding:0 10px}
   .page-title{font-size:27px}
   .page-title.small{font-size:22px}
@@ -738,7 +712,9 @@ const TRAITS = [
   {id:"teleport",   name:"会传送",     d:"会瞬移或传送到玩家附近"},
   {id:"fast",       name:"高移速",     d:"猎杀速度可达 2.5m/s 以上"},
   {id:"aggro",      name:"猎杀阈值高", d:"更容易发动猎杀"},
-  {id:"male",       name:"男鬼模型",   d:"鬼魂以男性模型现身（排除女模型鬼：女妖、达彦）"}
+  {id:"male",       name:"男鬼模型",   d:"鬼魂以男性模型现身（排除女模型鬼：女妖、达彦）"},
+  {id:"lights",     name:"会开灯",     d:"会主动打开电灯开关（梦魇绝不开灯）"},
+  {id:"salt",       name:"会踩盐",     d:"会踩过盐堆并留下痕迹（魅影永不踩盐）"}
 ];
 
 /* ============================================================
@@ -762,7 +738,10 @@ const GHOSTS = [
   "tip": "",
   "hunt": "同左",
   "desc": "传闻以鲜血和尸体为食，阿斯旺凶残野蛮，却又能够混迹于城市之中。（译自官方英文图鉴）",
-  "tr": []
+  "tr": [
+   "lights",
+   "salt"
+  ]
  },
  {
   "id": "banshee",
@@ -780,7 +759,10 @@ const GHOSTS = [
   "tip": "",
   "hunt": "只追杀一个目标，对队友无感",
   "desc": "女妖通过歌声吸引猎物。它在发起致命一击前会挑选猎物。互动和攻击都只锁定一名玩家。",
-  "tr": []
+  "tr": [
+   "lights",
+   "salt"
+  ]
  },
  {
   "id": "dayan",
@@ -800,7 +782,9 @@ const GHOSTS = [
   "desc": "达彦源自于生前遭受了残酷生活者的灵魂。如今，即便已逝，她对任何靠近“起舞”的人都会保持高度警惕。",
   "tr": [
    "interact",
-   "aggro"
+   "aggro",
+   "lights",
+   "salt"
   ]
  },
  {
@@ -820,7 +804,9 @@ const GHOSTS = [
   "hunt": "猎杀阈值50%（团队平均理智）",
   "desc": "生前毁坏他人财产的界灵，死后对每一件不在原位的物品都念念不忘。它更习惯在调查初期占据上风，而生者与亡者都能通过移动物品减缓它的速度。（译自官方图鉴）",
   "tr": [
-   "fast"
+   "fast",
+   "lights",
+   "salt"
   ]
  },
  {
@@ -840,7 +826,9 @@ const GHOSTS = [
   "hunt": "猎杀阈值更高（70%），间隔最短20秒",
   "desc": "恶魔是我们遇到过最凶残的鬼。它会无缘无故地发起攻击，它似乎很享受猎杀的快感。恶魔会更早发猎杀。",
   "tr": [
-   "aggro"
+   "aggro",
+   "lights",
+   "salt"
   ]
  },
  {
@@ -859,7 +847,10 @@ const GHOSTS = [
   "tip": "",
   "hunt": "永远知道玩家位置，无法躲藏",
   "desc": "藏影于雾，化形于光。多年来它一直在躲避猎鬼师。据说这种鬼能追踪到最为隐蔽的猎物。它会不断地感知活人，你可以跑，但不能躲。",
-  "tr": []
+  "tr": [
+   "lights",
+   "salt"
+  ]
  },
  {
   "id": "gallu",
@@ -877,7 +868,10 @@ const GHOSTS = [
   "tip": "",
   "hunt": "普通/狂暴/虚弱三形态循环，踩盐触发切换",
   "desc": "作为恶魔的另一种形态，加鲁提醒着所有人：死亡终将降临。使用防护装备会激怒它，直到装备不再奏效。（译自官方英文图鉴）",
-  "tr": []
+  "tr": [
+   "lights",
+   "salt"
+  ]
  },
  {
   "id": "goryo",
@@ -895,7 +889,10 @@ const GHOSTS = [
   "tip": "",
   "hunt": "不换房",
   "desc": "御灵在通过点阵投影仪时，只有用摄像机才能看见。它通常只在周围没人的情况下才会出现在镜头内。",
-  "tr": []
+  "tr": [
+   "lights",
+   "salt"
+  ]
  },
  {
   "id": "hantu",
@@ -915,7 +912,9 @@ const GHOSTS = [
   "desc": "寒魔是一种罕见的鬼魂，它通常出现在炎热的环境里。它通常在寒冷的环境下发动攻击。低温会加快寒魔的移速。",
   "tr": [
    "breaker",
-   "fast"
+   "fast",
+   "lights",
+   "salt"
   ]
  },
  {
@@ -935,7 +934,9 @@ const GHOSTS = [
   "hunt": "远距离加速，靠近减速",
   "desc": "巨灵是一种地域意识很强的鬼魂，受到威胁时会发动攻击。它能以相当快的速度移动。如果目标在奔跑，它会以更快的速度移动。",
   "tr": [
-   "no_breaker"
+   "no_breaker",
+   "lights",
+   "salt"
   ]
  },
  {
@@ -954,7 +955,10 @@ const GHOSTS = [
   "tip": "猎杀时手持熏香静止+闭嘴+关闭所有电子设备，如果鬼魂经过没有触发击杀，可定位盲灵",
   "hunt": "玩家不动它就随机巡逻",
   "desc": "盲灵的名字意为“看不见之物”。它双目失明，却依靠异常敏锐的听觉追踪猎物。（译自官方英文图鉴）",
-  "tr": []
+  "tr": [
+   "lights",
+   "salt"
+  ]
  },
  {
   "id": "mare",
@@ -973,7 +977,8 @@ const GHOSTS = [
   "hunt": "开灯时降低攻击性（猎杀阈值开灯60%/黑暗40%）",
   "desc": "梦魇是噩梦之源，它是黑暗中最强大的梦魇。它在黑暗中更有可能攻击你。",
   "tr": [
-   "aggro"
+   "aggro",
+   "salt"
   ]
  },
  {
@@ -992,7 +997,10 @@ const GHOSTS = [
   "tip": "",
   "hunt": "猎杀时必给灵球证据",
   "desc": "魔洛伊吸血鬼从坟墓中复活，从活人身上吸取能量，它会对受害者施加诅咒。只有通过解毒剂或者远距离移动才能治愈。目标越弱小，它越强大。",
-  "tr": []
+  "tr": [
+   "lights",
+   "salt"
+  ]
  },
  {
   "id": "myling",
@@ -1010,7 +1018,10 @@ const GHOSTS = [
   "tip": "",
   "hunt": "脚步声12米外听不到（普通20米）",
   "desc": "鬼婴是一种非常健谈和活跃的鬼魂。据说它在猎杀时悄无声息。无声猎杀。",
-  "tr": []
+  "tr": [
+   "lights",
+   "salt"
+  ]
  },
  {
   "id": "obake",
@@ -1028,7 +1039,10 @@ const GHOSTS = [
   "tip": "",
   "hunt": "有时不留指纹；6.67%概率变换鬼魂模型",
   "desc": "幻妖是一种可怕的变形鬼，它有多种形态。据说它会变化为人形吸引猎物。它与环境互动时很少留下痕迹。",
-  "tr": []
+  "tr": [
+   "lights",
+   "salt"
+  ]
  },
  {
   "id": "obambo",
@@ -1046,7 +1060,10 @@ const GHOSTS = [
   "tip": "",
   "hunt": "平静时更慢更难追，狂暴时更快",
   "desc": "奥班博是某个从未真正安息的幽灵。它善变且防御性强，时而平静，时而激烈。",
-  "tr": []
+  "tr": [
+   "lights",
+   "salt"
+  ]
  },
  {
   "id": "oni",
@@ -1064,7 +1081,10 @@ const GHOSTS = [
   "tip": "",
   "hunt": "猎杀时几乎不隐身（闪烁时间短）",
   "desc": "赤鬼的特征和恶魔相似，拥有超强的力量。传言道周围有猎物时它会更加活跃。当有人在附近时，它会更加活跃。赤鬼也可以高速移动物品。",
-  "tr": []
+  "tr": [
+   "lights",
+   "salt"
+  ]
  },
  {
   "id": "onryo",
@@ -1082,7 +1102,11 @@ const GHOSTS = [
   "tip": "",
   "hunt": "蜡烛被吹灭后可能立刻开猎",
   "desc": "怨灵通常称为“愤怒的灵魂”。它窃取垂死之人的灵魂以求复仇。它害怕任何形式的火焰。它会在熄灭火焰时发起攻击。",
-  "tr": []
+  "tr": [
+   "aggro",
+   "lights",
+   "salt"
+  ]
  },
  {
   "id": "phantom",
@@ -1101,7 +1125,9 @@ const GHOSTS = [
   "hunt": "猎杀时基本不可见（闪烁极短）",
   "desc": "幻影是种能附身的鬼魂，它会让周围的人感到恐惧。用通灵板很容易召唤出来。注视幻影会大幅度降低理智。",
   "tr": [
-   "teleport"
+   "teleport",
+   "lights",
+   "salt"
   ]
  },
  {
@@ -1121,7 +1147,9 @@ const GHOSTS = [
   "hunt": "猎杀时每0.5秒互动一次",
   "desc": "捣蛋鬼是最著名的一种鬼。它可以通过操纵周围的物体来散播恐惧。它可以一次性投掷大量物体。",
   "tr": [
-   "interact"
+   "interact",
+   "lights",
+   "salt"
   ]
  },
  {
@@ -1142,7 +1170,9 @@ const GHOSTS = [
   "desc": "雷曾是一种以电流为生的恶魔。虽然通常它很平静，但它充满电能时会躁动。它通过吸取附近电子设备的能量来加速。",
   "tr": [
    "interact",
-   "fast"
+   "fast",
+   "lights",
+   "salt"
   ]
  },
  {
@@ -1162,7 +1192,9 @@ const GHOSTS = [
   "hunt": "发现玩家后高速移动至最后位置",
   "desc": "亡魂移动缓慢，它会肆意攻击。它发现猎物时会高速移动。",
   "tr": [
-   "fast"
+   "fast",
+   "lights",
+   "salt"
   ]
  },
  {
@@ -1181,7 +1213,10 @@ const GHOSTS = [
   "tip": "",
   "hunt": "同左",
   "desc": "暗影是个害羞鬼。只要人够多它就不敢活动。它更难被发现。",
-  "tr": []
+  "tr": [
+   "lights",
+   "salt"
+  ]
  },
  {
   "id": "spirit",
@@ -1199,7 +1234,10 @@ const GHOSTS = [
   "tip": "",
   "hunt": "同上",
   "desc": "魂魄是最常见的鬼魂。它只在有必要时才发动攻击。它极力捍卫自己的死亡之地，它会杀死任何久留此地的人。",
-  "tr": []
+  "tr": [
+   "lights",
+   "salt"
+  ]
  },
  {
   "id": "thaye",
@@ -1218,7 +1256,9 @@ const GHOSTS = [
   "hunt": "猎杀时间越长阈值越低",
   "desc": "即使在灵界，它也会随着时间的推移迅速衰老。从我们所了解的情况来看，它在活人面前似乎衰老得更快。有人进入调查区域后，它会变得活跃、警戒和敏捷。",
   "tr": [
-   "fast"
+   "fast",
+   "lights",
+   "salt"
   ]
  },
  {
@@ -1237,7 +1277,10 @@ const GHOSTS = [
   "tip": "",
   "hunt": "复制其他鬼能力，行为不稳定",
   "desc": "拟魂是一种变化无常的神秘鬼魂，它会模仿出其他鬼魂的特征和行为。我们不确定这种鬼有什么能力。",
-  "tr": []
+  "tr": [
+   "lights",
+   "salt"
+  ]
  },
  {
   "id": "twins",
@@ -1255,7 +1298,10 @@ const GHOSTS = [
   "tip": "",
   "hunt": "两个猎杀速度（一快一慢）",
   "desc": "孪魂会模仿各自行动。它们会交替攻击以迷惑猎物。它们都可以被激怒并对猎物发起攻击。",
-  "tr": []
+  "tr": [
+   "lights",
+   "salt"
+  ]
  },
  {
   "id": "wraith",
@@ -1274,7 +1320,8 @@ const GHOSTS = [
   "hunt": "同上",
   "desc": "魅影是最危险的鬼魂之一。它也是唯一已知的会飞的鬼魂。有时它还会穿墙传送。它几乎不接触地面，没有足迹。",
   "tr": [
-   "teleport"
+   "teleport",
+   "lights"
   ]
  },
  {
@@ -1295,7 +1342,9 @@ const GHOSTS = [
   "desc": "妖怪是一种常见的鬼魂，它对人类的声音感兴趣。它通常出没在人类家中。在它附近说话会激怒它，增加攻击欲望。",
   "tr": [
    "interact",
-   "aggro"
+   "aggro",
+   "lights",
+   "salt"
   ]
  },
  {
@@ -1314,7 +1363,10 @@ const GHOSTS = [
   "tip": "非猎杀时间/非鬼魂事件关大门可定为幽灵",
   "hunt": "同上",
   "desc": "幽灵是回到现实世界的复仇之魂。它会让你丧失更多的理智。",
-  "tr": []
+  "tr": [
+   "lights",
+   "salt"
+  ]
  }
 ];
 
@@ -2536,8 +2588,8 @@ function toggleEvState(id){
 /* ============================================================
    渲染辅助
    ============================================================ */
-function evChips(evIds, big){
-  return '<div class="ev-chips' + (big ? " big" : "") + '">' + evIds.map(id=>{
+function evChips(evIds){
+  return '<div class="ev-chips">' + evIds.map(id=>{
     const e = EV_MAP[id];
     return '<span class="ev-chip">' + ICONS[id] + e.name + "</span>";
   }).join("") + "</div>";
@@ -2548,6 +2600,8 @@ function escAttr(s){
 function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
 /* 标红标记：编辑器中的【红】文字【/红】 → 红色文字 */
 function fmt(s){ return esc(s).replace(/【红】([\s\S]*?)【\/红】/g, '<span class="red">$1</span>'); }
+/* 奖励金额解析：$20 → 20 */
+function bonusVal(b){ return parseInt(String(b||'').replace(/[^0-9]/g,''),10)||0; }
 
 /* ============================================================
    视图：证据页（工具主界面）
@@ -2757,7 +2811,7 @@ function renderItemsLeft(){
 }
 function itemDetailHTML(it){
   return '<div class="d-name">' + it.num + '. ' + esc(it.name) + '<span>' + esc(it.price) + '</span></div>' +
-    '<img class="item-img click-zoom" src="' + it.img + '" alt="' + esc(it.name) + '" loading="lazy" title="点击放大全屏" data-zoom-img data-zoom-title="' + escAttr(it.num + '. ' + it.name) + '" data-zoom-sub="' + escAttr(it.price) + '">' +
+    '<img class="item-img click-zoom" src="' + it.img + '" alt="' + esc(it.name) + '" loading="lazy" decoding="async" title="点击放大全屏" data-zoom-img data-zoom-title="' + escAttr(it.num + '. ' + it.name) + '" data-zoom-sub="' + escAttr(it.price) + '">' +
     '<div class="tier-row">' + it.tiers.map(t=>
       '<div class="tier-card"><h4>' + esc(t.t) + '</h4><p>' + fmt(t.d) + '</p></div>'
     ).join("") + '</div>' +
@@ -2783,11 +2837,11 @@ function renderCursedLeft(){
 }
 function cursedDetailHTML(c){
   let html = '<div class="d-name">' + esc(c.name) + '<span>' + esc(c.en) + '</span></div>' +
-    '<img class="item-img click-zoom" src="' + c.img + '" alt="' + esc(c.name) + '" loading="lazy" title="点击放大全屏" data-zoom-img data-zoom-title="' + escAttr(c.name) + '" data-zoom-sub="' + escAttr(c.en) + '">' +
+    '<img class="item-img click-zoom" src="' + c.img + '" alt="' + esc(c.name) + '" loading="lazy" decoding="async" title="点击放大全屏" data-zoom-img data-zoom-title="' + escAttr(c.name) + '" data-zoom-sub="' + escAttr(c.en) + '">' +
     '<div class="d-block"><h4>玩法与机制</h4><ul class="d-list">' + c.use.map(s=>'<li>' + fmt(s) + '</li>').join("") + '</ul></div>';
   if(c.cards && c.cards.length){
     html += '<div class="d-block"><h4>牌面一览</h4><div class="card-grid">' +
-      c.cards.map(k=>'<div class="card-cell"><img src="' + k.img + '" alt="' + esc(k.en) + '" loading="lazy" title="点击放大全屏" data-zoom-img data-zoom-title="' + escAttr(k.name + '（' + k.en + '）') + '" data-zoom-sub="' + escAttr(k.d) + '"><b>' + esc(k.name) + '</b><i>' + esc(k.en) + '</i><span>' + fmt(k.d) + '</span></div>'
+      c.cards.map(k=>'<div class="card-cell"><img src="' + k.img + '" alt="' + esc(k.en) + '" loading="lazy" decoding="async" title="点击放大全屏" data-zoom-img data-zoom-title="' + escAttr(k.name + '（' + k.en + '）') + '" data-zoom-sub="' + escAttr(k.d) + '"><b>' + esc(k.name) + '</b><i>' + esc(k.en) + '</i><span>' + fmt(k.d) + '</span></div>'
       ).join("") + '</div></div>';
   }
   html += '<p class="d-note">诅咒道具（Cursed Possessions）：使用会扣除理智，并可能触发<b>诅咒猎杀</b>——比普通猎杀持续时间更长、无视宽限期立即开始。使用前先确认躲藏点与熏香位置。</p>';
@@ -2809,8 +2863,8 @@ const MEDIA_ICONS = {
   rec:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2.5"/><circle cx="8" cy="12" r="3"/><circle cx="16" cy="12" r="3"/><rect x="4.5" y="16.2" width="15" height="1.6" rx="0.8"/></svg>'
 };
 function mediaMaxBonus(m){
-  const val = b => parseInt(String(b||'').replace(/[^0-9]/g,''),10)||0;
-  let mx = 0; (m.items||[]).forEach(it=>{ mx = Math.max(mx, val(it.bonus)); });
+  let mx = 0;
+  (m.items||[]).forEach(it=>{ mx = Math.max(mx, bonusVal(it.bonus)); });
   return mx;
 }
 function renderMediaLeft(){
@@ -2828,21 +2882,15 @@ function renderMediaRight(){
   return mediaBlock(m);
 }
 function mediaBlock(m){
-  const icons = {
-    photo: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="3"/><circle cx="12" cy="14" r="4.5"/><path d="M8.5 7L10 4h4l1.5 3"/></svg>',
-    cam:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="15" height="12" rx="2.5"/><path d="M17 10l5-3v10l-5-3"/><circle cx="7" cy="12" r="2.5"/></svg>',
-    rec:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2.5"/><circle cx="8" cy="12" r="3"/><circle cx="16" cy="12" r="3"/><rect x="4.5" y="16.2" width="15" height="1.6" rx="0.8"/></svg>'
-  };
-  const val = b => parseInt(String(b||'').replace(/[^0-9]/g,''),10)||0;
-  const items = (m.items || []).slice().sort((a,b)=> val(b.bonus)-val(a.bonus));
-  const maxV = items.length ? Math.max.apply(null, items.map(it=>val(it.bonus))) : 0;
+  const items = (m.items || []).slice().sort((a,b)=> bonusVal(b.bonus)-bonusVal(a.bonus));
+  const maxV = items.length ? Math.max.apply(null, items.map(it=>bonusVal(it.bonus))) : 0;
   const rows = items.map(it=>{
-    const v = val(it.bonus);
+    const v = bonusVal(it.bonus);
     const lv = v>=20 ? 'lv3' : (v>=10 ? 'lv2' : 'lv1');
     return '<div class="media-item"><div class="media-txt"><b>' + esc(it.t) + '</b>' + (it.d ? '<span>——' + esc(it.d) + '</span>' : '') + '</div>' + (it.bonus ? '<span class="media-bonus '+lv+'">' + esc(it.bonus) + '</span>' : '') + '</div>';
   }).join("");
   return '<div class="media-block">' +
-    '<div class="media-head"><span class="media-ico">' + (icons[m.id] || icons.photo) + '</span><h3>' + esc(m.name) + '</h3><span class="media-count">' + items.length + ' 类 · 最高 $' + maxV + '</span></div>' +
+    '<div class="media-head"><span class="media-ico">' + (MEDIA_ICONS[m.id] || MEDIA_ICONS.photo) + '</span><h3>' + esc(m.name) + '</h3><span class="media-count">' + items.length + ' 类 · 最高 $' + maxV + '</span></div>' +
     '<div class="media-list">' + rows + '</div>' +
   '</div>';
 }
@@ -2930,21 +2978,8 @@ function renderMapsRight(){
   return '<div class="page-title">' + esc(m.name) + '</div>' +
     '<p class="map-en">' + esc(m.en) + '</p>' +
     '<img class="map-detail-img" src="' + m.img + '" alt="' + esc(m.name) + '" ' +
-      'data-zoom-img="1" data-zoom-title="' + esc(m.name) + '" data-zoom-sub="' + esc(m.en) + '" loading="lazy" />';
+      'data-zoom-img="1" data-zoom-title="' + esc(m.name) + '" data-zoom-sub="' + esc(m.en) + '" loading="lazy" decoding="async" />';
 }
-function openMapFull(name, en, url){
-  const modal = document.getElementById("ghostModal");
-  modal.querySelector(".modal-paper").classList.add("fullimg");
-  modal.querySelector(".modal-body").innerHTML =
-    '<h3 class="map-full-name">' + esc(name) + '</h3>' +
-    '<p class="map-full-en">' + esc(en) + '</p>' +
-    '<img class="map-full-img" src="' + url + '" alt="' + esc(name) + '" />';
-  wireImgs(modal.querySelector(".modal-body"));
-  modal.hidden = false;
-  requestAnimationFrame(()=>modal.classList.add("show"));
-  document.body.classList.add("modal-open");
-}
-
 function wireImgs(root){
   if(!root) return;
   root.querySelectorAll("img").forEach(img=>{
@@ -2966,23 +3001,26 @@ function openImgFull(title, sub, url){
   modal.querySelector(".modal-body").innerHTML =
     '<h3 class="map-full-name">' + esc(title) + '</h3>' +
     (sub ? '<p class="map-full-en">' + esc(sub) + '</p>' : '') +
-    '<img class="map-full-img" src="' + url + '" alt="' + esc(title) + '" />';
+    '<img class="map-full-img" src="' + url + '" alt="' + esc(title) + '" decoding="async" />';
   wireImgs(modal.querySelector(".modal-body"));
   modal.hidden = false;
   requestAnimationFrame(()=>modal.classList.add("show"));
   document.body.classList.add("modal-open");
 }
 
-function renderBlank(){
-  return '<div class="blank">' +
-    '<p class="b-hand">此页空白</p>' +
-    '<p class="b-note">—— 案件笔记尚未记录 ——</p>' +
-    "</div>";
-}
-
 /* ============================================================
    总渲染
    ============================================================ */
+const VIEWS = {
+  evidence:[renderEvidenceLeft,renderEvidenceRight],
+  home:[renderHomeLeft,renderHomeRight],
+  ghost:[renderGhostList,renderGhostDetail],
+  items:[renderItemsLeft,renderItemsRight],
+  cursed:[renderCursedLeft,renderCursedRight],
+  maps:[renderMapsLeft,renderMapsRight],
+  media:[renderMediaLeft,renderMediaRight],
+  news:[renderNewsLeft,renderNewsRight]
+};
 function renderAll(){
   const { route, id } = parseHash();
   if(route === "ghost" && id) selGhostId = id;
@@ -2994,37 +3032,9 @@ function renderAll(){
 
   const L = document.getElementById("pageLeft");
   const R = document.getElementById("pageRight");
-
-  if(route === "evidence"){
-    L.innerHTML = renderEvidenceLeft();
-    R.innerHTML = renderEvidenceRight();
-  } else if(route === "home"){
-    L.innerHTML = renderHomeLeft();
-    R.innerHTML = renderHomeRight();
-  } else if(route === "ghost"){
-    L.innerHTML = renderGhostList();
-    R.innerHTML = renderGhostDetail();
-  } else if(route === "items"){
-    L.innerHTML = renderItemsLeft();
-    R.innerHTML = renderItemsRight();
-  } else if(route === "cursed"){
-    L.innerHTML = renderCursedLeft();
-    R.innerHTML = renderCursedRight();
-  } else if(route === "maps"){
-    L.innerHTML = renderMapsLeft();
-    R.innerHTML = renderMapsRight();
-  } else if(route === "media"){
-    L.innerHTML = renderMediaLeft();
-    R.innerHTML = renderMediaRight();
-  } else if(route === "news"){
-    L.innerHTML = renderNewsLeft();
-    R.innerHTML = renderNewsRight();
-  } else {
-    L.innerHTML = renderBlank();
-    R.innerHTML = renderBlank();
-  }
-  L.classList.toggle("page-left", true);
-  R.classList.toggle("page-right", true);
+  const [lf, rf] = VIEWS[route] || VIEWS.evidence;
+  L.innerHTML = lf();
+  R.innerHTML = rf();
   wireImgs(L);
   wireImgs(R);
 }
@@ -3115,7 +3125,7 @@ let _rt;
 window.addEventListener("resize", ()=>{
   clearTimeout(_rt);
   _rt = setTimeout(()=>{
-    const route = (location.hash || "#/home").slice(2) || "home";
+    const { route } = parseHash();
     if(isPC() && (route === "items" || route === "cursed")) closeModal();
     renderAll();
   }, 150);

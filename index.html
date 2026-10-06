@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
@@ -28,6 +28,13 @@
   --bg-0:#06080c;
   --bg-1:#0c0f16;
   --noise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  /* 字体栈（收敛重复声明） */
+  --hand:"Ma Shan Zheng","Kaiti SC","KaiTi","STKaiti","Xingkai SC","STXingkai","Yuanti SC","STYuanti-SC",serif;
+  --hand-b:"Ma Shan Zheng","Kaiti SC","KaiTi","Xingkai SC","STXingkai","Yuanti SC",serif;
+  --hand-s:"Ma Shan Zheng","Kaiti SC",serif;
+  --hand-k:"Ma Shan Zheng","Kaiti SC","KaiTi",serif;
+  --serif:"Noto Serif SC","Songti SC","SimSun","STSong",serif;
+  --serif-s:"Noto Serif SC","Songti SC",serif;
 }
 
 /* ============================================================
@@ -36,7 +43,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
-  font-family:"Noto Serif SC","Songti SC","SimSun","STSong",serif;
+  font-family:var(--serif);
   background:var(--bg-0);
   color:var(--ink);
   min-height:100vh;
@@ -77,7 +84,7 @@ body::before{
 .dock .tab{
   appearance:none;border:0;cursor:pointer;
   display:inline-flex;align-items:center;gap:8px;
-  font-family:"Noto Serif SC","Songti SC",serif;
+  font-family:var(--serif-s);
   font-size:15px;letter-spacing:2px;color:rgba(232,220,192,.64);
   background:rgba(232,220,192,.05);
   border:1px solid rgba(232,220,192,.14);
@@ -100,7 +107,7 @@ body::before{
   display:flex;align-items:baseline;gap:12px;margin-bottom:10px;
 }
 .brand .zh{
-  font-family:"Ma Shan Zheng","Kaiti SC","KaiTi","STKaiti","Xingkai SC","STXingkai","Yuanti SC","STYuanti-SC",serif;
+  font-family:var(--hand);
   font-size:30px;color:var(--cream);letter-spacing:2px;
   text-shadow:0 2px 8px rgba(0,0,0,.7);
 }
@@ -117,8 +124,6 @@ body::before{
   display:grid;grid-template-columns:minmax(0,1fr) 30px minmax(0,1fr);
   border-radius:12px;
   box-shadow:0 30px 80px rgba(0,0,0,.65),0 6px 22px rgba(0,0,0,.5);
-  transform:none;
-  transition:none;
 }
 .spine{
   background:
@@ -147,16 +152,9 @@ body::before{
 }
 .page-left{border-radius:12px 0 0 12px;box-shadow:inset -16px 0 22px -14px rgba(70,45,10,.42),inset 0 1px 0 rgba(255,255,255,.45)}
 .page-right{border-radius:0 12px 12px 0;box-shadow:inset 16px 0 22px -14px rgba(70,45,10,.42),inset 0 1px 0 rgba(255,255,255,.45)}
-.page-num{
-  position:absolute;bottom:14px;font-family:"Ma Shan Zheng","Kaiti SC","Xingkai SC","STXingkai","Yuanti SC",serif;
-  font-size:15px;color:var(--pencil);opacity:.8;
-}
-.page-left .page-num{left:22px}
-.page-right .page-num{right:22px}
-
 /* 页面标题 */
 .page-title{
-  font-family:"Ma Shan Zheng","Kaiti SC","KaiTi","Xingkai SC","STXingkai","Yuanti SC",serif;
+  font-family:var(--hand-b);
   font-size:34px;color:var(--ink);letter-spacing:4px;position:relative;display:inline-block;
 }
 .page-title::after{
@@ -167,10 +165,6 @@ body::before{
 .pencil-note{
   font-size:13px;color:var(--ink-soft);margin:14px 0 18px;letter-spacing:1px;opacity:.85;
 }
-.hand-note{
-  font-family:"Ma Shan Zheng","Kaiti SC",serif;font-size:15px;color:var(--red-deep);
-}
-
 /* ============================================================
    左页：证据清单
    ============================================================ */
@@ -198,7 +192,6 @@ body::before{
 .ev-row.struck .ev-icon{opacity:.28;color:#4a3f2e}
 .ev-row.struck .box{border-color:rgba(46,36,26,.4);background:rgba(46,36,26,.08)}
 .ev-row.struck .box svg{opacity:1;transform:scale(1);stroke:#5a4f3c}
-.ev-row input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
 .box{
   flex:none;width:21px;height:21px;margin-top:2px;border:2px solid rgba(46,36,26,.55);
   border-radius:4px;position:relative;background:rgba(255,255,255,.25);
@@ -214,7 +207,7 @@ body::before{
 .ev-meta b{font-size:17px;font-weight:600;letter-spacing:1px;color:var(--ink)}
 .ev-meta small{font-size:12.5px;line-height:1.55;color:var(--ink-soft);opacity:.88}
 .ink-btn{
-  appearance:none;cursor:pointer;font-family:"Noto Serif SC","Songti SC",serif;
+  appearance:none;cursor:pointer;font-family:var(--serif-s);
   font-size:14px;letter-spacing:2px;color:var(--ink);
   background:rgba(255,255,255,.3);border:1.5px solid rgba(46,36,26,.55);
   border-radius:7px;padding:7px 18px;margin-top:20px;
@@ -232,14 +225,14 @@ body::before{
 }
 .counter b{font-size:19px;color:var(--red-deep);font-weight:700}
 .counter .excl{font-size:12.5px;color:var(--pencil)}
-.solo-note{margin-left:auto;font-family:"Ma Shan Zheng","Kaiti SC",serif;font-size:16px;color:var(--red-deep);transform:rotate(-2deg)}
+.solo-note{margin-left:auto;font-family:var(--hand-s);font-size:16px;color:var(--red-deep);transform:rotate(-2deg)}
 .ghost-grid{
   display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
   gap:9px 16px;align-content:start;
 }
 .ghost-name{
   appearance:none;border:0;background:transparent;cursor:pointer;text-align:left;
-  font-family:"Ma Shan Zheng","Kaiti SC","KaiTi",serif;
+  font-family:var(--hand-k);
   font-size:27px;letter-spacing:1px;color:var(--ink);
   padding:5px 9px;border-radius:4px;position:relative;white-space:nowrap;
   transition:opacity .2s ease,color .2s ease,transform .12s ease;
@@ -253,7 +246,6 @@ body::before{
   border:2px solid rgba(166,59,42,.8);border-radius:50% 46% 54% 48%;
 }
 .legend{margin-top:16px;font-size:12px;color:var(--pencil);letter-spacing:1px}
-.legend i{font-style:normal;color:var(--ink)}
 .warn-box{
   margin-top:16px;padding:10px 14px;border:1.5px dashed rgba(166,59,42,.55);
   border-radius:8px;background:rgba(166,59,42,.06);
@@ -264,15 +256,14 @@ body::before{
    空白页
    ============================================================ */
 .blank{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center}
-.blank .b-hand{font-family:"Ma Shan Zheng","Kaiti SC",serif;font-size:30px;color:var(--pencil);opacity:.75}
-.blank .b-note{font-size:13px;color:var(--ink-soft);opacity:.6;letter-spacing:2px}
+.blank .b-hand{font-family:var(--hand-s);font-size:30px;color:var(--pencil);opacity:.75}
 
 /* ============================================================
    主页（调查员手册）
    ============================================================ */
 .manual p{font-size:14.5px;line-height:1.85;color:var(--ink);margin-bottom:14px;text-align:justify}
 .manual .hl{color:var(--red-deep);font-weight:600}
-.manual .sub{font-family:"Ma Shan Zheng","Kaiti SC",serif;font-size:22px;margin:8px 0 14px;color:var(--ink)}
+.manual .sub{font-family:var(--hand-s);font-size:22px;margin:8px 0 14px;color:var(--ink)}
 .ev-quick{display:flex;flex-direction:column;gap:9px}
 .ev-q{display:flex;align-items:center;gap:11px;padding:7px 10px;border-radius:7px;background:rgba(70,45,10,.05)}
 .ev-q .ev-icon{width:28px;height:28px;flex:none;color:var(--ink-soft)}
@@ -289,7 +280,7 @@ body::before{
 .ghost-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px 16px;align-content:start}
 .ghost-item{
   appearance:none;border:0;background:transparent;cursor:pointer;text-align:left;
-  font-family:"Ma Shan Zheng","Kaiti SC",serif;font-size:27px;color:var(--ink);
+  font-family:var(--hand-s);font-size:27px;color:var(--ink);
   padding:5px 9px;border-radius:4px;position:relative;white-space:nowrap;
 }
 .ghost-item:hover{color:var(--red-deep)}
@@ -300,10 +291,10 @@ body::before{
 }
 .detail{display:flex;flex-direction:column;gap:14px}
 .d-name{
-  font-family:"Ma Shan Zheng","Kaiti SC",serif;font-size:42px;color:var(--ink);letter-spacing:3px;
+  font-family:var(--hand-s);font-size:42px;color:var(--ink);letter-spacing:3px;
   display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
 }
-.d-name span{font-family:"Noto Serif SC",serif;font-size:14px;letter-spacing:2px;color:var(--pencil)}
+.d-name span{font-family:var(--serif-s);font-size:14px;letter-spacing:2px;color:var(--pencil)}
 .d-stats{display:grid;grid-template-columns:1fr;gap:7px;padding:11px 14px;background:rgba(70,45,10,.06);border-radius:8px}
 .d-stats > div{display:flex;gap:10px;font-size:13.5px;line-height:1.6}
 .d-stats dt{flex:none;width:76px;color:var(--pencil)}
@@ -333,7 +324,7 @@ body::before{
 .item-list{display:flex;flex-direction:column;gap:9px}
 .item-name{
   appearance:none;border:0;background:transparent;cursor:pointer;text-align:left;
-  font-family:"Ma Shan Zheng","Kaiti SC",serif;font-size:20px;color:var(--ink);
+  font-family:var(--hand-s);font-size:20px;color:var(--ink);
   padding:9px 10px;border-radius:9px;position:relative;white-space:normal;line-height:1.35;
   display:flex;align-items:center;gap:11px;
 }
@@ -344,7 +335,7 @@ body::before{
 }
 .item-ico svg{width:22px;height:22px;display:block}
 .item-lbl{flex:1;min-width:0}
-.item-name small{font-family:"Noto Serif SC",serif;font-size:12px;color:var(--pencil);letter-spacing:1px;margin-left:6px}
+.item-name small{font-family:var(--serif-s);font-size:12px;color:var(--pencil);letter-spacing:1px;margin-left:6px}
 .item-name:hover{color:var(--red-deep);background:rgba(166,59,42,.06)}
 .item-name.on{color:var(--red-deep);background:rgba(166,59,42,.12)}
 .item-name.on .item-ico{color:var(--red-deep)}
@@ -374,14 +365,6 @@ body::before{
 .tr-chip{appearance:none;border:1.5px solid rgba(46,36,26,.35);background:rgba(255,255,255,.42);color:var(--ink-2);border-radius:14px;padding:5px 10px;font-size:12px;cursor:pointer;transition:all .15s ease;font-family:inherit}
 .tr-chip:hover{border-color:var(--red);color:var(--ink)}
 .tr-chip.on{background:rgba(166,59,42,.88);border-color:var(--red);color:#f6ead0;box-shadow:0 1px 6px rgba(166,59,42,.35)}
-.map-detail img{width:100%;display:block;border-radius:10px;box-shadow:0 2px 14px rgba(46,36,26,.28)}
-.map-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.map-card{appearance:none;background:rgba(255,255,255,.55);border:1.5px solid rgba(46,36,26,.28);border-radius:12px;padding:8px;cursor:pointer;text-align:left;font-family:inherit;transition:all .15s ease;display:flex;flex-direction:column;gap:4px}
-.map-card:hover{border-color:var(--red);box-shadow:0 3px 12px rgba(46,36,26,.2)}
-.map-card img{width:100%;height:108px;object-fit:cover;border-radius:8px;display:block;background:#1c1410}
-.map-card-name{font-size:13px;font-weight:700;color:var(--ink);line-height:1.3}
-.map-card-en{font-size:10px;color:var(--ink-soft);letter-spacing:.4px;line-height:1.3;font-weight:600}
-.map-info{padding-top:6px}
 /* 地图：左侧列表 + 右侧大图（v1.1） */
 .map-list{display:flex;flex-direction:column;gap:8px;max-height:calc(100vh - 195px);overflow-y:auto;padding-right:4px}
 .map-list::-webkit-scrollbar{width:6px}
@@ -432,7 +415,7 @@ body::before{
   .news-pop.show{opacity:1;pointer-events:auto}
   .news-pop .np-card{width:min(480px,94vw);max-height:82vh;overflow:auto;background:linear-gradient(180deg,var(--paper-1),var(--paper-3));border:1px solid rgba(232,220,192,.5);border-radius:16px;padding:20px 22px;box-shadow:0 24px 70px rgba(0,0,0,.6);transform:translateY(10px);transition:transform .22s ease}
   .news-pop.show .np-card{transform:translateY(0)}
-  .np-title{font-family:"Ma Shan Zheng","Kaiti SC","KaiTi","STKaiti","Xingkai SC","STXingkai","Yuanti SC","STYuanti-SC",serif;font-size:23px;color:var(--red);margin:0 0 4px}
+  .np-title{font-family:var(--hand);font-size:23px;color:var(--red);margin:0 0 4px}
   .np-ver{font-size:13px;color:var(--ink-soft);margin:0 0 12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
   .np-list{margin:0 0 16px;padding-left:18px}
   .np-list li{font-size:13px;line-height:1.7;color:var(--ink);margin-bottom:5px}
@@ -560,8 +543,7 @@ body.modal-open{overflow:hidden}
   .item-img{width:auto;max-width:100%;max-height:500px;margin:4px auto 10px}
   .tier-row{gap:6px;margin-bottom:8px}
   .tier-card{padding:7px 10px;gap:4px}
-  .item-note{padding:8px 12px}
-  .item-note{font-size:13px;line-height:1.8}
+  .item-note{padding:8px 12px;font-size:13px;line-height:1.8}
 
   /* 媒体页 */
   .media-block{margin-bottom:10px}
@@ -576,11 +558,6 @@ body.modal-open{overflow:hidden}
   .media-bonus{font-size:12px;padding:2px 8px}
 
   /* 地图页 */
-  .map-grid{grid-template-columns:repeat(3,1fr);gap:6px}
-  .map-card{padding:5px}
-  .map-card img{height:76px}
-  .map-card-name{font-size:12px}
-  .map-card-en{font-size:9px}
 }
 /* 较矮屏幕（901-1100px 高）再紧凑一档 */
 @media (min-width:901px) and (max-height:1100px){
@@ -601,8 +578,6 @@ body.modal-open{overflow:hidden}
   .ghost-name{font-size:25px}
   .ghost-item{font-size:25px}
   .media-item{padding:3px 8px}
-  .map-grid{gap:5px}
-  .map-card img{height:70px}
 }
 
 /* ============================================================
@@ -623,7 +598,6 @@ body.modal-open{overflow:hidden}
   .ghost-grid,.ghost-list{grid-template-columns:repeat(3,minmax(0,1fr))}
   .ghost-name{font-size:22px}
   .brand .zh{font-size:26px}
-  .book{transform:none}
   .stage{margin:10px auto 0;padding:0 10px}
   .page-title{font-size:27px}
   .page-title.small{font-size:22px}
@@ -2349,6 +2323,16 @@ const MEDIA = [
 ];
 const NEWS = [
  {
+  "ver": "2026-10-01",
+  "date": "2026-10-01",
+  "tag": "官方公告",
+  "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1845383656381482",
+  "title": "The Crimson Eye Approaches Once More",
+  "items": [
+   "再来，调查员们，让我们向血月致以敬意，致敬我们珍贵的赤红之眼。今天，我们很高兴地宣布，本年度赤红之眼活动将于 2026 年 10 月 8 日开启，持续至 2026 年 11 月 1 日。包含本次活动的更新将于 10 月 6 日推送。和往年的活动一样，赤红之眼将会在《恐鬼症》里的多个地点显现。"
+  ]
+ },
+ {
   "ver": "2026-08-11",
   "date": "2026-08-11",
   "tag": "开发预览",
@@ -2614,8 +2598,8 @@ function toggleEvState(id){
 /* ============================================================
    渲染辅助
    ============================================================ */
-function evChips(evIds, big){
-  return '<div class="ev-chips' + (big ? " big" : "") + '">' + evIds.map(id=>{
+function evChips(evIds){
+  return '<div class="ev-chips">' + evIds.map(id=>{
     const e = EV_MAP[id];
     return '<span class="ev-chip">' + ICONS[id] + e.name + "</span>";
   }).join("") + "</div>";
@@ -2626,6 +2610,8 @@ function escAttr(s){
 function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
 /* 标红标记：编辑器中的【红】文字【/红】 → 红色文字 */
 function fmt(s){ return esc(s).replace(/【红】([\s\S]*?)【\/红】/g, '<span class="red">$1</span>'); }
+/* 奖励金额解析：$20 → 20 */
+function bonusVal(b){ return parseInt(String(b||'').replace(/[^0-9]/g,''),10)||0; }
 
 /* ============================================================
    视图：证据页（工具主界面）
@@ -2835,7 +2821,7 @@ function renderItemsLeft(){
 }
 function itemDetailHTML(it){
   return '<div class="d-name">' + it.num + '. ' + esc(it.name) + '<span>' + esc(it.price) + '</span></div>' +
-    '<img class="item-img click-zoom" src="' + it.img + '" alt="' + esc(it.name) + '" loading="lazy" title="点击放大全屏" data-zoom-img data-zoom-title="' + escAttr(it.num + '. ' + it.name) + '" data-zoom-sub="' + escAttr(it.price) + '">' +
+    '<img class="item-img click-zoom" src="' + it.img + '" alt="' + esc(it.name) + '" loading="lazy" decoding="async" title="点击放大全屏" data-zoom-img data-zoom-title="' + escAttr(it.num + '. ' + it.name) + '" data-zoom-sub="' + escAttr(it.price) + '">' +
     '<div class="tier-row">' + it.tiers.map(t=>
       '<div class="tier-card"><h4>' + esc(t.t) + '</h4><p>' + fmt(t.d) + '</p></div>'
     ).join("") + '</div>' +
@@ -2861,11 +2847,11 @@ function renderCursedLeft(){
 }
 function cursedDetailHTML(c){
   let html = '<div class="d-name">' + esc(c.name) + '<span>' + esc(c.en) + '</span></div>' +
-    '<img class="item-img click-zoom" src="' + c.img + '" alt="' + esc(c.name) + '" loading="lazy" title="点击放大全屏" data-zoom-img data-zoom-title="' + escAttr(c.name) + '" data-zoom-sub="' + escAttr(c.en) + '">' +
+    '<img class="item-img click-zoom" src="' + c.img + '" alt="' + esc(c.name) + '" loading="lazy" decoding="async" title="点击放大全屏" data-zoom-img data-zoom-title="' + escAttr(c.name) + '" data-zoom-sub="' + escAttr(c.en) + '">' +
     '<div class="d-block"><h4>玩法与机制</h4><ul class="d-list">' + c.use.map(s=>'<li>' + fmt(s) + '</li>').join("") + '</ul></div>';
   if(c.cards && c.cards.length){
     html += '<div class="d-block"><h4>牌面一览</h4><div class="card-grid">' +
-      c.cards.map(k=>'<div class="card-cell"><img src="' + k.img + '" alt="' + esc(k.en) + '" loading="lazy" title="点击放大全屏" data-zoom-img data-zoom-title="' + escAttr(k.name + '（' + k.en + '）') + '" data-zoom-sub="' + escAttr(k.d) + '"><b>' + esc(k.name) + '</b><i>' + esc(k.en) + '</i><span>' + fmt(k.d) + '</span></div>'
+      c.cards.map(k=>'<div class="card-cell"><img src="' + k.img + '" alt="' + esc(k.en) + '" loading="lazy" decoding="async" title="点击放大全屏" data-zoom-img data-zoom-title="' + escAttr(k.name + '（' + k.en + '）') + '" data-zoom-sub="' + escAttr(k.d) + '"><b>' + esc(k.name) + '</b><i>' + esc(k.en) + '</i><span>' + fmt(k.d) + '</span></div>'
       ).join("") + '</div></div>';
   }
   html += '<p class="d-note">诅咒道具（Cursed Possessions）：使用会扣除理智，并可能触发<b>诅咒猎杀</b>——比普通猎杀持续时间更长、无视宽限期立即开始。使用前先确认躲藏点与熏香位置。</p>';
@@ -2887,8 +2873,8 @@ const MEDIA_ICONS = {
   rec:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2.5"/><circle cx="8" cy="12" r="3"/><circle cx="16" cy="12" r="3"/><rect x="4.5" y="16.2" width="15" height="1.6" rx="0.8"/></svg>'
 };
 function mediaMaxBonus(m){
-  const val = b => parseInt(String(b||'').replace(/[^0-9]/g,''),10)||0;
-  let mx = 0; (m.items||[]).forEach(it=>{ mx = Math.max(mx, val(it.bonus)); });
+  let mx = 0;
+  (m.items||[]).forEach(it=>{ mx = Math.max(mx, bonusVal(it.bonus)); });
   return mx;
 }
 function renderMediaLeft(){
@@ -2906,21 +2892,15 @@ function renderMediaRight(){
   return mediaBlock(m);
 }
 function mediaBlock(m){
-  const icons = {
-    photo: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="3"/><circle cx="12" cy="14" r="4.5"/><path d="M8.5 7L10 4h4l1.5 3"/></svg>',
-    cam:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="15" height="12" rx="2.5"/><path d="M17 10l5-3v10l-5-3"/><circle cx="7" cy="12" r="2.5"/></svg>',
-    rec:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2.5"/><circle cx="8" cy="12" r="3"/><circle cx="16" cy="12" r="3"/><rect x="4.5" y="16.2" width="15" height="1.6" rx="0.8"/></svg>'
-  };
-  const val = b => parseInt(String(b||'').replace(/[^0-9]/g,''),10)||0;
-  const items = (m.items || []).slice().sort((a,b)=> val(b.bonus)-val(a.bonus));
-  const maxV = items.length ? Math.max.apply(null, items.map(it=>val(it.bonus))) : 0;
+  const items = (m.items || []).slice().sort((a,b)=> bonusVal(b.bonus)-bonusVal(a.bonus));
+  const maxV = items.length ? Math.max.apply(null, items.map(it=>bonusVal(it.bonus))) : 0;
   const rows = items.map(it=>{
-    const v = val(it.bonus);
+    const v = bonusVal(it.bonus);
     const lv = v>=20 ? 'lv3' : (v>=10 ? 'lv2' : 'lv1');
     return '<div class="media-item"><div class="media-txt"><b>' + esc(it.t) + '</b>' + (it.d ? '<span>——' + esc(it.d) + '</span>' : '') + '</div>' + (it.bonus ? '<span class="media-bonus '+lv+'">' + esc(it.bonus) + '</span>' : '') + '</div>';
   }).join("");
   return '<div class="media-block">' +
-    '<div class="media-head"><span class="media-ico">' + (icons[m.id] || icons.photo) + '</span><h3>' + esc(m.name) + '</h3><span class="media-count">' + items.length + ' 类 · 最高 $' + maxV + '</span></div>' +
+    '<div class="media-head"><span class="media-ico">' + (MEDIA_ICONS[m.id] || MEDIA_ICONS.photo) + '</span><h3>' + esc(m.name) + '</h3><span class="media-count">' + items.length + ' 类 · 最高 $' + maxV + '</span></div>' +
     '<div class="media-list">' + rows + '</div>' +
   '</div>';
 }
@@ -3008,21 +2988,8 @@ function renderMapsRight(){
   return '<div class="page-title">' + esc(m.name) + '</div>' +
     '<p class="map-en">' + esc(m.en) + '</p>' +
     '<img class="map-detail-img" src="' + m.img + '" alt="' + esc(m.name) + '" ' +
-      'data-zoom-img="1" data-zoom-title="' + esc(m.name) + '" data-zoom-sub="' + esc(m.en) + '" loading="lazy" />';
+      'data-zoom-img="1" data-zoom-title="' + esc(m.name) + '" data-zoom-sub="' + esc(m.en) + '" loading="lazy" decoding="async" />';
 }
-function openMapFull(name, en, url){
-  const modal = document.getElementById("ghostModal");
-  modal.querySelector(".modal-paper").classList.add("fullimg");
-  modal.querySelector(".modal-body").innerHTML =
-    '<h3 class="map-full-name">' + esc(name) + '</h3>' +
-    '<p class="map-full-en">' + esc(en) + '</p>' +
-    '<img class="map-full-img" src="' + url + '" alt="' + esc(name) + '" />';
-  wireImgs(modal.querySelector(".modal-body"));
-  modal.hidden = false;
-  requestAnimationFrame(()=>modal.classList.add("show"));
-  document.body.classList.add("modal-open");
-}
-
 function wireImgs(root){
   if(!root) return;
   root.querySelectorAll("img").forEach(img=>{
@@ -3044,23 +3011,26 @@ function openImgFull(title, sub, url){
   modal.querySelector(".modal-body").innerHTML =
     '<h3 class="map-full-name">' + esc(title) + '</h3>' +
     (sub ? '<p class="map-full-en">' + esc(sub) + '</p>' : '') +
-    '<img class="map-full-img" src="' + url + '" alt="' + esc(title) + '" />';
+    '<img class="map-full-img" src="' + url + '" alt="' + esc(title) + '" decoding="async" />';
   wireImgs(modal.querySelector(".modal-body"));
   modal.hidden = false;
   requestAnimationFrame(()=>modal.classList.add("show"));
   document.body.classList.add("modal-open");
 }
 
-function renderBlank(){
-  return '<div class="blank">' +
-    '<p class="b-hand">此页空白</p>' +
-    '<p class="b-note">—— 案件笔记尚未记录 ——</p>' +
-    "</div>";
-}
-
 /* ============================================================
    总渲染
    ============================================================ */
+const VIEWS = {
+  evidence:[renderEvidenceLeft,renderEvidenceRight],
+  home:[renderHomeLeft,renderHomeRight],
+  ghost:[renderGhostList,renderGhostDetail],
+  items:[renderItemsLeft,renderItemsRight],
+  cursed:[renderCursedLeft,renderCursedRight],
+  maps:[renderMapsLeft,renderMapsRight],
+  media:[renderMediaLeft,renderMediaRight],
+  news:[renderNewsLeft,renderNewsRight]
+};
 function renderAll(){
   const { route, id } = parseHash();
   if(route === "ghost" && id) selGhostId = id;
@@ -3072,37 +3042,9 @@ function renderAll(){
 
   const L = document.getElementById("pageLeft");
   const R = document.getElementById("pageRight");
-
-  if(route === "evidence"){
-    L.innerHTML = renderEvidenceLeft();
-    R.innerHTML = renderEvidenceRight();
-  } else if(route === "home"){
-    L.innerHTML = renderHomeLeft();
-    R.innerHTML = renderHomeRight();
-  } else if(route === "ghost"){
-    L.innerHTML = renderGhostList();
-    R.innerHTML = renderGhostDetail();
-  } else if(route === "items"){
-    L.innerHTML = renderItemsLeft();
-    R.innerHTML = renderItemsRight();
-  } else if(route === "cursed"){
-    L.innerHTML = renderCursedLeft();
-    R.innerHTML = renderCursedRight();
-  } else if(route === "maps"){
-    L.innerHTML = renderMapsLeft();
-    R.innerHTML = renderMapsRight();
-  } else if(route === "media"){
-    L.innerHTML = renderMediaLeft();
-    R.innerHTML = renderMediaRight();
-  } else if(route === "news"){
-    L.innerHTML = renderNewsLeft();
-    R.innerHTML = renderNewsRight();
-  } else {
-    L.innerHTML = renderBlank();
-    R.innerHTML = renderBlank();
-  }
-  L.classList.toggle("page-left", true);
-  R.classList.toggle("page-right", true);
+  const [lf, rf] = VIEWS[route] || VIEWS.evidence;
+  L.innerHTML = lf();
+  R.innerHTML = rf();
   wireImgs(L);
   wireImgs(R);
 }
@@ -3193,7 +3135,7 @@ let _rt;
 window.addEventListener("resize", ()=>{
   clearTimeout(_rt);
   _rt = setTimeout(()=>{
-    const route = (location.hash || "#/home").slice(2) || "home";
+    const { route } = parseHash();
     if(isPC() && (route === "items" || route === "cursed")) closeModal();
     renderAll();
   }, 150);
