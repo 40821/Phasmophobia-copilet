@@ -97,6 +97,14 @@ body.dev-loading{overflow:hidden}
   .dev-bottom{bottom:11%}
   .dev-bar{width:56vw}
 }
+
+/* ===== 板块切换动画（route 变化时） ===== */
+.page{transition:opacity .34s cubic-bezier(.22,.6,.3,1), transform .34s cubic-bezier(.22,.6,.3,1);will-change:opacity,transform}
+.page.enter{opacity:0;transform:scale(.985) translateY(4px)}
+@media (prefers-reduced-motion:reduce){
+  .page{transition:none;will-change:auto}
+  .page.enter{opacity:0;transform:none}
+}
 </style>
 
 <title>恐鬼症|推鬼助手</title>
@@ -3216,6 +3224,7 @@ const VIEWS = {
   media:[renderMediaLeft,renderMediaRight],
   news:[renderNewsLeft,renderNewsRight]
 };
+let lastRoute = "";
 function renderAll(){
   const { route, id } = parseHash();
   if(route === "ghost" && id) selGhostId = id;
@@ -3228,10 +3237,28 @@ function renderAll(){
   const L = document.getElementById("pageLeft");
   const R = document.getElementById("pageRight");
   const [lf, rf] = VIEWS[route] || VIEWS.evidence;
-  L.innerHTML = lf();
-  R.innerHTML = rf();
-  wireImgs(L);
-  wireImgs(R);
+
+  function renderInto(){
+    L.innerHTML = lf();
+    R.innerHTML = rf();
+    wireImgs(L);
+    wireImgs(R);
+  }
+
+  /* 板块切换：transition 双段过渡（旧面板淡出缩小 -> 新面板淡入放大），无中间态 */
+  const changed = route !== lastRoute;
+  lastRoute = route;
+  if(changed){
+    L.classList.add("enter");
+    R.classList.add("enter");
+    setTimeout(function(){
+      renderInto();
+      L.classList.remove("enter");
+      R.classList.remove("enter");
+    }, 340);
+  } else {
+    renderInto();
+  }
 }
 
 /* ============================================================
